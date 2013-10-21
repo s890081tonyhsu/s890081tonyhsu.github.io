@@ -1,0 +1,46 @@
+/* line 1, ../scss/menu.scss */
+div.hr {
+  background: #fff  no-repeat scroll center;
+  margin-left: 15em;
+  margin-right: 15em;
+  width: 50em;
+  height: .05em;
+}
+
+/* line 9, ../scss/menu.scss */
+div.hr hr {
+  display: none;
+}
+
+/* line 12, ../scss/menu.scss */
+#line {
+  position: fixed;
+  bottom: 20%;
+  width: 100%;
+  z-index: 2;
+}
+
+/* line 18, ../scss/menu.scss */
+#title_nav {
+  z-index: 1;
+  position: fixed;
+  bottom: 4%;
+  width: 80%;
+  color: white;
+  margin: 0px auto;
+}
+/* line 25, ../scss/menu.scss */
+#title_nav h1 {
+  padding: 10px;
+  max-width: 400px;
+  display: inline;
+  float: left;
+  text-align: center;
+}
+/* line 32, ../scss/menu.scss */
+#title_nav #github {
+  float: right;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
