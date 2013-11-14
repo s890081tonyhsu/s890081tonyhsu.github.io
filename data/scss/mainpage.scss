@@ -1,0 +1,16 @@
+@import "background/_BlackAndWhite";
+@import "menu/main.scss";
+
+#left{
+	img{
+		position:relative;
+		right:1%;
+	}
+}
+
+#right{
+	img{
+		position:relative;
+		left:1%;
+	}
+}

@@ -1,0 +1,59 @@
+/* line 1, ../scss/background/_BlackAndWhite.scss */
+body {
+  background-image: linear-gradient(270deg, #000000 0%, #000000 50%, #ffffff 51%, #ffffff 100%);
+  background-attachment: fixed;
+}
+
+/* line 6, ../scss/background/_BlackAndWhite.scss */
+#left {
+  position: absolute;
+  left: 0;
+  width: 49%;
+  height: 100%;
+  color: black;
+}
+
+/* line 14, ../scss/background/_BlackAndWhite.scss */
+#right {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  float: left;
+  color: white;
+}
+
+/* line 1, ../scss/menu/_main.scss */
+#menu {
+  position: absolute;
+  bottom: 5%;
+  width: 99%;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 7, ../scss/menu/_main.scss */
+#menu .item {
+  float: left;
+  margin-left: 16%;
+}
+/* line 10, ../scss/menu/_main.scss */
+#menu .item h3 {
+  color: red;
+}
+
+/* line 16, ../scss/menu/_main.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 5, ../scss/mainpage.scss */
+#left img {
+  position: relative;
+  right: 1%;
+}
+
+/* line 12, ../scss/mainpage.scss */
+#right img {
+  position: relative;
+  left: 1%;
+}
