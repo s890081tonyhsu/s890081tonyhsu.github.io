@@ -23,6 +23,11 @@ body {
   color: white;
 }
 
+/* line 23, ../scss/background/_BlackAndWhite.scss */
+#justfont-badge {
+  display: none !important;
+}
+
 /* line 1, ../scss/menu/_main.scss */
 #menu {
   position: absolute;
@@ -47,13 +52,13 @@ a {
 }
 
 /* line 5, ../scss/mainpage.scss */
-#left img {
+#left img, #left p {
   position: relative;
-  right: 1%;
+  margin: 0 auto;
 }
 
 /* line 12, ../scss/mainpage.scss */
-#right img {
+#right img, #right p {
   position: relative;
-  left: 1%;
+  margin: 0 auto;
 }

@@ -2,15 +2,15 @@
 @import "menu/main.scss";
 
 #left{
-	img{
+	img, p{
 		position:relative;
-		right:1%;
+		margin:0 auto;
 	}
 }
 
 #right{
-	img{
+	img, p{
 		position:relative;
-		left:1%;
+		margin:0 auto;
 	}
 }
