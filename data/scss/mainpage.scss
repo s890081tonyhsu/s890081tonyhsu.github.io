@@ -1,16 +1,15 @@
-@import "background/_BlackAndWhite";
-@import "menu/main.scss";
-
-#left{
-	img, p{
-		position:relative;
-		margin:0 auto;
-	}
+body{
+	background-image:url(./../images/wallpaper.jpg);
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	opacity:.45;
 }
-
-#right{
-	img, p{
-		position:relative;
-		margin:0 auto;
-	}
+body.xy{
+	background-size:100% auto;
+}
+body.yx{
+	background-size:auto 100%;
+}
+body *{
+	opacity:1;
 }
