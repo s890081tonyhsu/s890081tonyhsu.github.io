@@ -31,6 +31,7 @@ function InitPage(){
 function LoadPage(Detail){
 	if(Detail == "return"){
 		$("#content").fadeOut();
+		$(".jspPane").text("");
 		return;
 	}
 	if($("#content").css("display")=="block"){
