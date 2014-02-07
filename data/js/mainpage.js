@@ -10,7 +10,7 @@ function checkXY(){
 	var y = $(window).height();
 	var x = $(window).width();
 	$("#background").css({"width":x-25,"height":y-25});
-	if(x > y){
+	if(x*3 > y*4){
 		$("#background").removeClass("yx");
 		$("#background").addClass("xy");
 	}else{
