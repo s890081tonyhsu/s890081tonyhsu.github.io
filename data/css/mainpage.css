@@ -1,3 +1,4 @@
+@import url(jquery.jscrollpane.css);
 /* line 1, ../scss/background/_win8ball.scss */
 body {
   background: #000;
@@ -398,43 +399,99 @@ body {
   }
 }
 
-/* line 3, ../scss/mainpage.scss */
+/* line 4, ../scss/mainpage.scss */
 body {
   position: relative;
   background-color: #000;
+  font-family: Gotham, Lucida Grande, Arial;
+}
+/* line 8, ../scss/mainpage.scss */
+body a {
+  text-decoration: none;
 }
 
-/* line 8, ../scss/mainpage.scss */
+/* line 13, ../scss/mainpage.scss */
 #loading {
   position: absolute;
   left: 50%;
   margin-left: -45px;
   margin-top: 100px;
 }
+/* line 18, ../scss/mainpage.scss */
+#loading p {
+  color: white;
+}
 
-/* line 15, ../scss/mainpage.scss */
+/* line 23, ../scss/mainpage.scss */
 #background {
-  display: none;
   background-image: url(./../images/wallpaper.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  opacity: .65;
+  opacity: .55;
   top: 0;
   left: 0;
 }
-/* line 23, ../scss/mainpage.scss */
+/* line 30, ../scss/mainpage.scss */
 #background.xy {
   background-size: 100% auto;
 }
-/* line 26, ../scss/mainpage.scss */
+/* line 33, ../scss/mainpage.scss */
 #background.yx {
   background-size: auto 100%;
 }
 
-/* line 30, ../scss/mainpage.scss */
+/* line 37, ../scss/mainpage.scss */
 #mainpage {
-  display: none;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 20px;
+  left: 10px;
+  margin: auto;
+  width: 95%;
+  height: 95%;
+}
+/* line 44, ../scss/mainpage.scss */
+#mainpage #bar {
+  width: 100%;
+}
+/* line 46, ../scss/mainpage.scss */
+#mainpage #bar h1 {
+  width: 50%;
+  display: inline;
+  vertical-align: bottom;
+}
+/* line 51, ../scss/mainpage.scss */
+#mainpage #bar #menu {
+  float: right;
+  display: inline;
+  position: relative;
+  bottom: 0px;
+}
+/* line 56, ../scss/mainpage.scss */
+#mainpage #bar #menu a {
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 30px;
+}
+/* line 59, ../scss/mainpage.scss */
+#mainpage #bar #menu a:before {
+  content: "#";
+}
+/* line 62, ../scss/mainpage.scss */
+#mainpage #bar #menu a:after {
+  content: " ";
+}
+/* line 67, ../scss/mainpage.scss */
+#mainpage #bar hr {
+  color: rgba(255, 255, 255, 0.5);
+  vertical-align: bottom;
+}
+/* line 72, ../scss/mainpage.scss */
+#mainpage #content {
+  width: 80%;
+  height: 80%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  padding: 10px;
 }

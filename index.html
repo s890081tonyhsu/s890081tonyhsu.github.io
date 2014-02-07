@@ -9,6 +9,16 @@
 <script language="javascript" src="data/js/mainpage.js"></script>
 <link rel="Shortcut Icon"  	href="data/images/favicon.ico"	type="image/x-icon" />
 <title>Blacken_Angel Private World</title>
+<script>
+$(function()
+				{
+				$('.scroll-pane').jScrollPane(
+						{
+autoReinitialise: true
+}
+);
+				});
+</script>
 </head>
 <body>
 <div id="loading">
@@ -34,15 +44,20 @@
 						</div>
 				</div>
 		</div>
+		<p>Now loading, please wait....</p>
 </div>
-	<div id="background">&nbsp;</div>
-	<div id="mainpage">
-			<h3>Blacken_Angel Private World</h3>
-			<div id="menu">
-					<a href="">About Me</a>
-					<a href="">Wiki</a>
-					<a href="">Contact Me</a>
-					<a href="">GitHub Page</a>
+	<div id="background" style="display:none;">&nbsp;</div>
+	<div id="mainpage" style="display:none;">	
+			<div id="bar">
+				<h1 onclick="LoadPage('return');">Blacken_Angel Private World</h1>
+				<div id="menu">
+						<a onclick="LoadPage('introduce');">About Me</a>
+						<a href="">Wiki</a>
+						<a href="">Contact Me</a>
+				</div>
+				<hr width="100%">
+			</div>
+			<div id="content" class="scroll-pane" style="display:none;">
 			</div>
 	</div>
 </body>

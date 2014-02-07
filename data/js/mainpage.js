@@ -1,7 +1,10 @@
 function mm_includejs (jsFile){
 	document .write('<script type="text/javascript" src="data/js/' +jsFile + '"></script>');
 }
-mm_includejs('font.js');
+
+mm_includejs("jquery.jscrollpane.min.js");
+mm_includejs("jquery.mousewheel.js");
+mm_includejs("mwheelIntent.js");
 
 function checkXY(){
 	var y = $(window).height();
@@ -18,13 +21,28 @@ function checkXY(){
 
 function InitPage(){
 	checkXY();
-	setTimeout(
-		function() 
-			{
-				$("body > div").each(function(){
-					$(this).fadeToggle("slow");
-				});
-			}, 1500);
+	$(window).load(function(){
+		$("body > div").each(function(){
+			$(this).fadeToggle("slow");
+		});
+	});
+}
+
+function LoadPage(Detail){
+	if(Detail == "return"){
+		$("#content").fadeOut();
+		return;
+	}
+	if($("#content").css("display")=="block"){
+		$(".jspPane").fadeOut();
+		$(".jspPane").text("");
+	}
+	$.get("views/"+Detail+".html",function(data){
+		$(".jspPane").append(data);
+		$("#content").css("background-color","rgba(20,20,20,0.5)");
+	});
+		$("#content").fadeIn();
+		$(".jspPane").fadeIn();
 }
 
 $(document).ready(InitPage);

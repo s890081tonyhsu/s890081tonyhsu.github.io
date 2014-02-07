@@ -1,8 +1,13 @@
 @import "background/win8ball";
+@import url(jquery.jscrollpane.css);
 
 body{
 	position:relative;
 	background-color:#000;
+	font-family:Gotham, Lucida Grande, Arial;
+	a{
+		text-decoration:none;
+	}
 }
 
 #loading{
@@ -10,14 +15,16 @@ body{
 	left:50%;
 	margin-left:-45px;
 	margin-top:100px;
+	p{
+		color:white;
+	}
 }
 
 #background{
-	display:none;
 	background-image:url(./../images/wallpaper.jpg);
 	background-repeat:no-repeat;
 	background-attachment:fixed;
-	opacity:.65;
+	opacity:.55;
 	top:0;
 	left:0;
 	&.xy{
@@ -28,8 +35,48 @@ body{
 	}
 }
 #mainpage{
-	display:none;
 	position:absolute;
-	top:0;
-	left:0;
+	top:20px;
+	left:10px;
+	margin:auto;
+	width:95%;
+	height:95%;	
+	#bar{
+		width:100%;
+		h1{
+			width:50%;
+			display:inline;
+			vertical-align:bottom;
+		}
+		#menu{
+			float:right;
+			display:inline;
+			position:relative;
+			bottom:0px;
+			a{
+				color:rgba(255,255,255,0.5);
+				margin-left:30px;
+				&:before{
+					content:"#";
+				}
+				&:after{
+					content:" ";
+				}
+			}
+		}
+		hr{
+			color:rgba(255,255,255,0.5);
+			vertical-align:bottom;
+		}
+	}
+	#content{
+		width:80%;
+		height:80%;
+		overflow-y:scroll;
+		overflow-x:hidden;
+		margin-left:auto;
+		margin-right:auto;
+		color:white;
+		padding:10px;
+	}
 }
