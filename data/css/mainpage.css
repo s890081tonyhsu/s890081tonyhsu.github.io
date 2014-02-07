@@ -1,22 +1,440 @@
-/* line 1, ../scss/mainpage.scss */
+/* line 1, ../scss/background/_win8ball.scss */
 body {
+  background: #000;
+}
+
+/* line 4, ../scss/background/_win8ball.scss */
+.windows8 {
+  position: relative;
+  width: 90px;
+  height: 90px;
+}
+
+/* line 10, ../scss/background/_win8ball.scss */
+.windows8 .wBall {
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  opacity: 0;
+  -moz-transform: rotate(225deg);
+  -moz-animation: orbit 4.4s infinite;
+  -webkit-transform: rotate(225deg);
+  -webkit-animation: orbit 4.4s infinite;
+  -ms-transform: rotate(225deg);
+  -ms-animation: orbit 4.4s infinite;
+  -o-transform: rotate(225deg);
+  -o-animation: orbit 4.4s infinite;
+  transform: rotate(225deg);
+  animation: orbit 4.4s infinite;
+}
+
+/* line 27, ../scss/background/_win8ball.scss */
+.windows8 .wBall .wInnerBall {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  background: #FFFFFF;
+  left: 0px;
+  top: 0px;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+}
+
+/* line 41, ../scss/background/_win8ball.scss */
+.windows8 #wBall_1 {
+  -moz-animation-delay: 0.96s;
+  -webkit-animation-delay: 0.96s;
+  -ms-animation-delay: 0.96s;
+  -o-animation-delay: 0.96s;
+  animation-delay: 0.96s;
+}
+
+/* line 49, ../scss/background/_win8ball.scss */
+.windows8 #wBall_2 {
+  -moz-animation-delay: 0.19s;
+  -webkit-animation-delay: 0.19s;
+  -ms-animation-delay: 0.19s;
+  -o-animation-delay: 0.19s;
+  animation-delay: 0.19s;
+}
+
+/* line 57, ../scss/background/_win8ball.scss */
+.windows8 #wBall_3 {
+  -moz-animation-delay: 0.38s;
+  -webkit-animation-delay: 0.38s;
+  -ms-animation-delay: 0.38s;
+  -o-animation-delay: 0.38s;
+  animation-delay: 0.38s;
+}
+
+/* line 65, ../scss/background/_win8ball.scss */
+.windows8 #wBall_4 {
+  -moz-animation-delay: 0.58s;
+  -webkit-animation-delay: 0.58s;
+  -ms-animation-delay: 0.58s;
+  -o-animation-delay: 0.58s;
+  animation-delay: 0.58s;
+}
+
+/* line 73, ../scss/background/_win8ball.scss */
+.windows8 #wBall_5 {
+  -moz-animation-delay: 0.77s;
+  -webkit-animation-delay: 0.77s;
+  -ms-animation-delay: 0.77s;
+  -o-animation-delay: 0.77s;
+  animation-delay: 0.77s;
+}
+
+@-moz-keyframes orbit {
+  /* line 82, ../scss/background/_win8ball.scss */
+  0% {
+    opacity: 1;
+    z-index: 99;
+    -moz-transform: rotate(180deg);
+    -moz-animation-timing-function: ease-out;
+  }
+
+  /* line 89, ../scss/background/_win8ball.scss */
+  7% {
+    opacity: 1;
+    -moz-transform: rotate(300deg);
+    -moz-animation-timing-function: linear;
+    -moz-origin: 0%;
+  }
+
+  /* line 96, ../scss/background/_win8ball.scss */
+  30% {
+    opacity: 1;
+    -moz-transform: rotate(410deg);
+    -moz-animation-timing-function: ease-in-out;
+    -moz-origin: 7%;
+  }
+
+  /* line 103, ../scss/background/_win8ball.scss */
+  39% {
+    opacity: 1;
+    -moz-transform: rotate(645deg);
+    -moz-animation-timing-function: linear;
+    -moz-origin: 30%;
+  }
+
+  /* line 110, ../scss/background/_win8ball.scss */
+  70% {
+    opacity: 1;
+    -moz-transform: rotate(770deg);
+    -moz-animation-timing-function: ease-out;
+    -moz-origin: 39%;
+  }
+
+  /* line 117, ../scss/background/_win8ball.scss */
+  75% {
+    opacity: 1;
+    -moz-transform: rotate(900deg);
+    -moz-animation-timing-function: ease-out;
+    -moz-origin: 70%;
+  }
+
+  /* line 124, ../scss/background/_win8ball.scss */
+  76% {
+    opacity: 0;
+    -moz-transform: rotate(900deg);
+  }
+
+  /* line 129, ../scss/background/_win8ball.scss */
+  100% {
+    opacity: 0;
+    -moz-transform: rotate(900deg);
+  }
+}
+
+@-webkit-keyframes orbit {
+  /* line 137, ../scss/background/_win8ball.scss */
+  0% {
+    opacity: 1;
+    z-index: 99;
+    -webkit-transform: rotate(180deg);
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  /* line 144, ../scss/background/_win8ball.scss */
+  7% {
+    opacity: 1;
+    -webkit-transform: rotate(300deg);
+    -webkit-animation-timing-function: linear;
+    -webkit-origin: 0%;
+  }
+
+  /* line 151, ../scss/background/_win8ball.scss */
+  30% {
+    opacity: 1;
+    -webkit-transform: rotate(410deg);
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-origin: 7%;
+  }
+
+  /* line 158, ../scss/background/_win8ball.scss */
+  39% {
+    opacity: 1;
+    -webkit-transform: rotate(645deg);
+    -webkit-animation-timing-function: linear;
+    -webkit-origin: 30%;
+  }
+
+  /* line 165, ../scss/background/_win8ball.scss */
+  70% {
+    opacity: 1;
+    -webkit-transform: rotate(770deg);
+    -webkit-animation-timing-function: ease-out;
+    -webkit-origin: 39%;
+  }
+
+  /* line 172, ../scss/background/_win8ball.scss */
+  75% {
+    opacity: 1;
+    -webkit-transform: rotate(900deg);
+    -webkit-animation-timing-function: ease-out;
+    -webkit-origin: 70%;
+  }
+
+  /* line 179, ../scss/background/_win8ball.scss */
+  76% {
+    opacity: 0;
+    -webkit-transform: rotate(900deg);
+  }
+
+  /* line 184, ../scss/background/_win8ball.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(900deg);
+  }
+}
+
+@-ms-keyframes orbit {
+  /* line 192, ../scss/background/_win8ball.scss */
+  0% {
+    opacity: 1;
+    z-index: 99;
+    -ms-transform: rotate(180deg);
+    -ms-animation-timing-function: ease-out;
+  }
+
+  /* line 199, ../scss/background/_win8ball.scss */
+  7% {
+    opacity: 1;
+    -ms-transform: rotate(300deg);
+    -ms-animation-timing-function: linear;
+    -ms-origin: 0%;
+  }
+
+  /* line 206, ../scss/background/_win8ball.scss */
+  30% {
+    opacity: 1;
+    -ms-transform: rotate(410deg);
+    -ms-animation-timing-function: ease-in-out;
+    -ms-origin: 7%;
+  }
+
+  /* line 213, ../scss/background/_win8ball.scss */
+  39% {
+    opacity: 1;
+    -ms-transform: rotate(645deg);
+    -ms-animation-timing-function: linear;
+    -ms-origin: 30%;
+  }
+
+  /* line 220, ../scss/background/_win8ball.scss */
+  70% {
+    opacity: 1;
+    -ms-transform: rotate(770deg);
+    -ms-animation-timing-function: ease-out;
+    -ms-origin: 39%;
+  }
+
+  /* line 227, ../scss/background/_win8ball.scss */
+  75% {
+    opacity: 1;
+    -ms-transform: rotate(900deg);
+    -ms-animation-timing-function: ease-out;
+    -ms-origin: 70%;
+  }
+
+  /* line 234, ../scss/background/_win8ball.scss */
+  76% {
+    opacity: 0;
+    -ms-transform: rotate(900deg);
+  }
+
+  /* line 239, ../scss/background/_win8ball.scss */
+  100% {
+    opacity: 0;
+    -ms-transform: rotate(900deg);
+  }
+}
+
+@-o-keyframes orbit {
+  /* line 247, ../scss/background/_win8ball.scss */
+  0% {
+    opacity: 1;
+    z-index: 99;
+    -o-transform: rotate(180deg);
+    -o-animation-timing-function: ease-out;
+  }
+
+  /* line 254, ../scss/background/_win8ball.scss */
+  7% {
+    opacity: 1;
+    -o-transform: rotate(300deg);
+    -o-animation-timing-function: linear;
+    -o-origin: 0%;
+  }
+
+  /* line 261, ../scss/background/_win8ball.scss */
+  30% {
+    opacity: 1;
+    -o-transform: rotate(410deg);
+    -o-animation-timing-function: ease-in-out;
+    -o-origin: 7%;
+  }
+
+  /* line 268, ../scss/background/_win8ball.scss */
+  39% {
+    opacity: 1;
+    -o-transform: rotate(645deg);
+    -o-animation-timing-function: linear;
+    -o-origin: 30%;
+  }
+
+  /* line 275, ../scss/background/_win8ball.scss */
+  70% {
+    opacity: 1;
+    -o-transform: rotate(770deg);
+    -o-animation-timing-function: ease-out;
+    -o-origin: 39%;
+  }
+
+  /* line 282, ../scss/background/_win8ball.scss */
+  75% {
+    opacity: 1;
+    -o-transform: rotate(900deg);
+    -o-animation-timing-function: ease-out;
+    -o-origin: 70%;
+  }
+
+  /* line 289, ../scss/background/_win8ball.scss */
+  76% {
+    opacity: 0;
+    -o-transform: rotate(900deg);
+  }
+
+  /* line 294, ../scss/background/_win8ball.scss */
+  100% {
+    opacity: 0;
+    -o-transform: rotate(900deg);
+  }
+}
+
+@keyframes orbit {
+  /* line 302, ../scss/background/_win8ball.scss */
+  0% {
+    opacity: 1;
+    z-index: 99;
+    transform: rotate(180deg);
+    animation-timing-function: ease-out;
+  }
+
+  /* line 309, ../scss/background/_win8ball.scss */
+  7% {
+    opacity: 1;
+    transform: rotate(300deg);
+    animation-timing-function: linear;
+    origin: 0%;
+  }
+
+  /* line 316, ../scss/background/_win8ball.scss */
+  30% {
+    opacity: 1;
+    transform: rotate(410deg);
+    animation-timing-function: ease-in-out;
+    origin: 7%;
+  }
+
+  /* line 323, ../scss/background/_win8ball.scss */
+  39% {
+    opacity: 1;
+    transform: rotate(645deg);
+    animation-timing-function: linear;
+    origin: 30%;
+  }
+
+  /* line 330, ../scss/background/_win8ball.scss */
+  70% {
+    opacity: 1;
+    transform: rotate(770deg);
+    animation-timing-function: ease-out;
+    origin: 39%;
+  }
+
+  /* line 337, ../scss/background/_win8ball.scss */
+  75% {
+    opacity: 1;
+    transform: rotate(900deg);
+    animation-timing-function: ease-out;
+    origin: 70%;
+  }
+
+  /* line 344, ../scss/background/_win8ball.scss */
+  76% {
+    opacity: 0;
+    transform: rotate(900deg);
+  }
+
+  /* line 349, ../scss/background/_win8ball.scss */
+  100% {
+    opacity: 0;
+    transform: rotate(900deg);
+  }
+}
+
+/* line 3, ../scss/mainpage.scss */
+body {
+  position: relative;
+  background-color: #000;
+}
+
+/* line 8, ../scss/mainpage.scss */
+#loading {
+  position: absolute;
+  left: 50%;
+  margin-left: -45px;
+  margin-top: 100px;
+}
+
+/* line 15, ../scss/mainpage.scss */
+#background {
+  display: none;
   background-image: url(./../images/wallpaper.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  opacity: .45;
+  opacity: .65;
+  top: 0;
+  left: 0;
 }
-
-/* line 7, ../scss/mainpage.scss */
-body.xy {
+/* line 23, ../scss/mainpage.scss */
+#background.xy {
   background-size: 100% auto;
 }
-
-/* line 10, ../scss/mainpage.scss */
-body.yx {
+/* line 26, ../scss/mainpage.scss */
+#background.yx {
   background-size: auto 100%;
 }
 
-/* line 13, ../scss/mainpage.scss */
-body * {
-  opacity: 1;
+/* line 30, ../scss/mainpage.scss */
+#mainpage {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

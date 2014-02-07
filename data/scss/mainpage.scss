@@ -1,15 +1,35 @@
+@import "background/win8ball";
+
 body{
+	position:relative;
+	background-color:#000;
+}
+
+#loading{
+	position:absolute;
+	left:50%;
+	margin-left:-45px;
+	margin-top:100px;
+}
+
+#background{
+	display:none;
 	background-image:url(./../images/wallpaper.jpg);
 	background-repeat:no-repeat;
 	background-attachment:fixed;
-	opacity:.45;
+	opacity:.65;
+	top:0;
+	left:0;
+	&.xy{
+		background-size:100% auto;
+	}
+	&.yx{
+		background-size:auto 100%;
+	}
 }
-body.xy{
-	background-size:100% auto;
-}
-body.yx{
-	background-size:auto 100%;
-}
-body *{
-	opacity:1;
+#mainpage{
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
 }

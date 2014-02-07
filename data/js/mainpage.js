@@ -6,12 +6,26 @@ mm_includejs('font.js');
 function checkXY(){
 	var y = $(window).height();
 	var x = $(window).width();
+	$("#background").css({"width":x-25,"height":y-25});
 	if(x > y){
-		$("body").addClass("xy");
+		$("#background").removeClass("yx");
+		$("#background").addClass("xy");
 	}else{
-		$("body").addClass("yx");
+		$("#background").removeClass("xy");
+		$("#background").addClass("yx");
 	}
 }
 
-$(document).ready(checkXY);
+function InitPage(){
+	checkXY();
+	setTimeout(
+		function() 
+			{
+				$("body > div").each(function(){
+					$(this).fadeToggle("slow");
+				});
+			}, 1500);
+}
+
+$(document).ready(InitPage);
 $(window).resize(checkXY);
