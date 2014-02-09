@@ -411,18 +411,25 @@ body a {
 }
 
 /* line 13, ../scss/mainpage.scss */
+#bar > h1 {
+  font: 100 25px/0.7 'Oleo Script', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* line 19, ../scss/mainpage.scss */
 #loading {
   position: absolute;
   left: 50%;
   margin-left: -45px;
   margin-top: 100px;
 }
-/* line 18, ../scss/mainpage.scss */
+/* line 24, ../scss/mainpage.scss */
 #loading p {
   color: white;
 }
 
-/* line 23, ../scss/mainpage.scss */
+/* line 29, ../scss/mainpage.scss */
 #background {
   background-image: url(./../images/wallpaper.jpg);
   background-repeat: no-repeat;
@@ -431,16 +438,16 @@ body a {
   top: 0;
   left: 0;
 }
-/* line 30, ../scss/mainpage.scss */
+/* line 36, ../scss/mainpage.scss */
 #background.xy {
   background-size: 100% auto;
 }
-/* line 33, ../scss/mainpage.scss */
+/* line 39, ../scss/mainpage.scss */
 #background.yx {
   background-size: auto 100%;
 }
 
-/* line 37, ../scss/mainpage.scss */
+/* line 43, ../scss/mainpage.scss */
 #mainpage {
   position: absolute;
   top: 20px;
@@ -449,42 +456,43 @@ body a {
   width: 95%;
   height: 95%;
 }
-/* line 44, ../scss/mainpage.scss */
+/* line 50, ../scss/mainpage.scss */
 #mainpage #bar {
   width: 100%;
 }
-/* line 46, ../scss/mainpage.scss */
+/* line 52, ../scss/mainpage.scss */
 #mainpage #bar h1 {
   width: 50%;
   display: inline;
   vertical-align: bottom;
 }
-/* line 51, ../scss/mainpage.scss */
+/* line 57, ../scss/mainpage.scss */
 #mainpage #bar #menu {
   float: right;
   display: inline;
   position: relative;
   bottom: 0px;
 }
-/* line 56, ../scss/mainpage.scss */
+/* line 62, ../scss/mainpage.scss */
 #mainpage #bar #menu a {
   color: rgba(255, 255, 255, 0.5);
   margin-left: 30px;
+  cursor: pointer;
 }
-/* line 59, ../scss/mainpage.scss */
+/* line 66, ../scss/mainpage.scss */
 #mainpage #bar #menu a:before {
   content: "#";
 }
-/* line 62, ../scss/mainpage.scss */
+/* line 69, ../scss/mainpage.scss */
 #mainpage #bar #menu a:after {
   content: " ";
 }
-/* line 67, ../scss/mainpage.scss */
+/* line 74, ../scss/mainpage.scss */
 #mainpage #bar hr {
   color: rgba(255, 255, 255, 0.5);
   vertical-align: bottom;
 }
-/* line 72, ../scss/mainpage.scss */
+/* line 79, ../scss/mainpage.scss */
 #mainpage #content {
   width: 80%;
   height: 80%;
