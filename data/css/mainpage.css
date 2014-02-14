@@ -398,6 +398,342 @@ body {
   }
 }
 
+/*
+    Example usage: 
+    @include animation(changecolour, 5s, 10s)
+ */
+/* line 9, ../scss/menu/_bubble.scss */
+.two {
+  width: 300px;
+  float: left;
+}
+
+/* line 14, ../scss/menu/_bubble.scss */
+.ball {
+  cursor: pointer;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  position: relative;
+  background: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 245, 255, 0.5)), color-stop(40%, rgba(240, 245, 255, 0.5)), color-stop(60%, rgba(225, 238, 255, 0.4)), color-stop(100%, rgba(43, 130, 255, 0.2)));
+  background-image: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 245, 255, 0.5)), color-stop(40%, rgba(240, 245, 255, 0.5)), color-stop(60%, rgba(225, 238, 255, 0.4)), color-stop(100%, rgba(43, 130, 255, 0.2)));
+  background-image: -webkit-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
+  background-image: -moz-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
+  background-image: -o-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
+  background-image: radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
+}
+/* line 26, ../scss/menu/_bubble.scss */
+.ball:active, .ball:hover {
+  -webkit-animation: bubble-anim 2s ease-out 1;
+  -moz-animation: bubble-anim 2s ease-out 1;
+  -o-animation: bubble-anim 2s ease-out 1;
+  -ms-animation: bubble-anim 2s ease-out 1;
+  animation: bubble-anim 2s ease-out 1;
+}
+/* line 29, ../scss/menu/_bubble.scss */
+.ball p {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  color: black;
+}
+/* line 35, ../scss/menu/_bubble.scss */
+.ball:before {
+  /* Sheen on the bottom right */
+  content: "";
+  position: absolute;
+  top: 1%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  -webkit-filter: blur(0);
+  height: 80%;
+  width: 40%;
+  background: -webkit-gradient(radial, 130% 130%, 0, 130% 130%, 100, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(46%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.2)), color-stop(58%, rgba(255, 255, 255, 0.2)), color-stop(60%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-gradient(radial, 130% 130%, 0, 130% 130%, 100, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(46%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.8)), color-stop(58%, rgba(255, 255, 255, 0.2)), color-stop(60%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+  background-image: -moz-radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+  background-image: radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+  -webkit-transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
+  -moz-transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
+  -ms-transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
+  -o-transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
+  transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
+}
+/* line 51, ../scss/menu/_bubble.scss */
+.ball:after {
+  /* Top left highlight */
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  border-radius: 100%;
+  background: -webkit-gradient(radial, 50% 80%, 0, 50% 80%, 100, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(74%, rgba(255, 255, 255, 0)), color-stop(80%, white), color-stop(84%, white), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-gradient(radial, 50% 80%, 0, 50% 80%, 100, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(74%, rgba(255, 255, 255, 0)), color-stop(80%, #ffffff), color-stop(84%, #ffffff), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-radial-gradient(50% 80%, circle cover, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 74%, #ffffff 80%, #ffffff 84%, rgba(255, 255, 255, 0) 100%);
+  background-image: -moz-radial-gradient(50% 80%, circle cover, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 74%, #ffffff 80%, #ffffff 84%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-radial-gradient(50% 80%, circle cover, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 74%, #ffffff 80%, #ffffff 84%, rgba(255, 255, 255, 0) 100%);
+  background-image: radial-gradient(50% 80%, circle cover, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 74%, #ffffff 80%, #ffffff 84%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0.2;
+  -webkit-filter: blur(1px);
+  z-index: 2;
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+
+/* line 68, ../scss/menu/_bubble.scss */
+.stage {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  margin: 20px;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -ms-perspective: 1200px;
+  -o-perspective: 1200px;
+  perspective: 1200px;
+  -webkit-perspective-origin: 50% 50%;
+  -moz-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+}
+
+@-webkit-keyframes bubble-anim {
+  /* line 78, ../scss/menu/_bubble.scss */
+  0% {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  /* line 81, ../scss/menu/_bubble.scss */
+  20% {
+    -webkit-transform: scale(1.05, 0.95);
+    -moz-transform: scale(1.05, 0.95);
+    -ms-transform: scale(1.05, 0.95);
+    -o-transform: scale(1.05, 0.95);
+    transform: scale(1.05, 0.95);
+  }
+
+  /* line 84, ../scss/menu/_bubble.scss */
+  48% {
+    -webkit-transform: scale(0.9, 1.1);
+    -moz-transform: scale(0.9, 1.1);
+    -ms-transform: scale(0.9, 1.1);
+    -o-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  /* line 87, ../scss/menu/_bubble.scss */
+  68% {
+    -webkit-transform: scale(1.02, 0.98);
+    -moz-transform: scale(1.02, 0.98);
+    -ms-transform: scale(1.02, 0.98);
+    -o-transform: scale(1.02, 0.98);
+    transform: scale(1.02, 0.98);
+  }
+
+  /* line 90, ../scss/menu/_bubble.scss */
+  80% {
+    -webkit-transform: scale(0.98, 1.02);
+    -moz-transform: scale(0.98, 1.02);
+    -ms-transform: scale(0.98, 1.02);
+    -o-transform: scale(0.98, 1.02);
+    transform: scale(0.98, 1.02);
+  }
+
+  /* line 93, ../scss/menu/_bubble.scss */
+  97%, 100% {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@-moz-keyframes bubble-anim {
+  /* line 78, ../scss/menu/_bubble.scss */
+  0% {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  /* line 81, ../scss/menu/_bubble.scss */
+  20% {
+    -webkit-transform: scale(1.05, 0.95);
+    -moz-transform: scale(1.05, 0.95);
+    -ms-transform: scale(1.05, 0.95);
+    -o-transform: scale(1.05, 0.95);
+    transform: scale(1.05, 0.95);
+  }
+
+  /* line 84, ../scss/menu/_bubble.scss */
+  48% {
+    -webkit-transform: scale(0.9, 1.1);
+    -moz-transform: scale(0.9, 1.1);
+    -ms-transform: scale(0.9, 1.1);
+    -o-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  /* line 87, ../scss/menu/_bubble.scss */
+  68% {
+    -webkit-transform: scale(1.02, 0.98);
+    -moz-transform: scale(1.02, 0.98);
+    -ms-transform: scale(1.02, 0.98);
+    -o-transform: scale(1.02, 0.98);
+    transform: scale(1.02, 0.98);
+  }
+
+  /* line 90, ../scss/menu/_bubble.scss */
+  80% {
+    -webkit-transform: scale(0.98, 1.02);
+    -moz-transform: scale(0.98, 1.02);
+    -ms-transform: scale(0.98, 1.02);
+    -o-transform: scale(0.98, 1.02);
+    transform: scale(0.98, 1.02);
+  }
+
+  /* line 93, ../scss/menu/_bubble.scss */
+  97%, 100% {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@-o-keyframes bubble-anim {
+  /* line 78, ../scss/menu/_bubble.scss */
+  0% {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  /* line 81, ../scss/menu/_bubble.scss */
+  20% {
+    -webkit-transform: scale(1.05, 0.95);
+    -moz-transform: scale(1.05, 0.95);
+    -ms-transform: scale(1.05, 0.95);
+    -o-transform: scale(1.05, 0.95);
+    transform: scale(1.05, 0.95);
+  }
+
+  /* line 84, ../scss/menu/_bubble.scss */
+  48% {
+    -webkit-transform: scale(0.9, 1.1);
+    -moz-transform: scale(0.9, 1.1);
+    -ms-transform: scale(0.9, 1.1);
+    -o-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  /* line 87, ../scss/menu/_bubble.scss */
+  68% {
+    -webkit-transform: scale(1.02, 0.98);
+    -moz-transform: scale(1.02, 0.98);
+    -ms-transform: scale(1.02, 0.98);
+    -o-transform: scale(1.02, 0.98);
+    transform: scale(1.02, 0.98);
+  }
+
+  /* line 90, ../scss/menu/_bubble.scss */
+  80% {
+    -webkit-transform: scale(0.98, 1.02);
+    -moz-transform: scale(0.98, 1.02);
+    -ms-transform: scale(0.98, 1.02);
+    -o-transform: scale(0.98, 1.02);
+    transform: scale(0.98, 1.02);
+  }
+
+  /* line 93, ../scss/menu/_bubble.scss */
+  97%, 100% {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes bubble-anim {
+  /* line 78, ../scss/menu/_bubble.scss */
+  0% {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  /* line 81, ../scss/menu/_bubble.scss */
+  20% {
+    -webkit-transform: scale(1.05, 0.95);
+    -moz-transform: scale(1.05, 0.95);
+    -ms-transform: scale(1.05, 0.95);
+    -o-transform: scale(1.05, 0.95);
+    transform: scale(1.05, 0.95);
+  }
+
+  /* line 84, ../scss/menu/_bubble.scss */
+  48% {
+    -webkit-transform: scale(0.9, 1.1);
+    -moz-transform: scale(0.9, 1.1);
+    -ms-transform: scale(0.9, 1.1);
+    -o-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  /* line 87, ../scss/menu/_bubble.scss */
+  68% {
+    -webkit-transform: scale(1.02, 0.98);
+    -moz-transform: scale(1.02, 0.98);
+    -ms-transform: scale(1.02, 0.98);
+    -o-transform: scale(1.02, 0.98);
+    transform: scale(1.02, 0.98);
+  }
+
+  /* line 90, ../scss/menu/_bubble.scss */
+  80% {
+    -webkit-transform: scale(0.98, 1.02);
+    -moz-transform: scale(0.98, 1.02);
+    -ms-transform: scale(0.98, 1.02);
+    -o-transform: scale(0.98, 1.02);
+    transform: scale(0.98, 1.02);
+  }
+
+  /* line 93, ../scss/menu/_bubble.scss */
+  97%, 100% {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
 /* line 5, ../scss/mainpage.scss */
 body {
   position: relative;
@@ -501,287 +837,4 @@ body a {
   margin-right: auto;
   color: white;
   padding: 10px;
-}
-
-/* line 92, ../scss/mainpage.scss */
-.ball {
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  margin: 0;
-  border-radius: 50%;
-  position: relative;
-  background: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 245, 255, 0.9)), color-stop(40%, rgba(240, 245, 255, 0.9)), color-stop(60%, rgba(225, 238, 255, 0.8)), color-stop(100%, rgba(43, 130, 255, 0.4)));
-  background: -webkit-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.9), rgba(240, 245, 255, 0.9) 40%, rgba(225, 238, 255, 0.8) 60%, rgba(43, 130, 255, 0.4));
-  background: -moz-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.9), rgba(240, 245, 255, 0.9) 40%, rgba(225, 238, 255, 0.8) 60%, rgba(43, 130, 255, 0.4));
-  background: -o-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.9), rgba(240, 245, 255, 0.9) 40%, rgba(225, 238, 255, 0.8) 60%, rgba(43, 130, 255, 0.4));
-  background: radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.9), rgba(240, 245, 255, 0.9) 40%, rgba(225, 238, 255, 0.8) 60%, rgba(43, 130, 255, 0.4));
-}
-/* line 104, ../scss/mainpage.scss */
-.ball:active, .ball:hover {
-  -webkit-animation: bubble-anim 2s ease-out infinite;
-  -moz-animation: bubble-anim 2s ease-out infinite;
-  -o-animation: bubble-anim 2s ease-out infinite;
-  -ms-animation: bubble-anim 2s ease-out infinite;
-  animation: bubble-anim 2s ease-out infinite;
-  animation-itration-count:1;
-}
-/* line 111, ../scss/mainpage.scss */
-.ball p {
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  color: black;
-}
-
-/* line 118, ../scss/mainpage.scss */
-.ball:before {
-  /* Sheen on the bottom right */
-  content: "";
-  position: absolute;
-  top: 1%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-  border-radius: 50%;
-  -webkit-filter: blur(0);
-  height: 80%;
-  width: 40%;
-  background: -webkit-gradient(radial, 130% 130%, 0, 130% 130%, 100, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(46%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.8)), color-stop(58%, rgba(255, 255, 255, 0.8)), color-stop(60%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
-  background: -webkit-radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
-  background: -moz-radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
-  background: -o-radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
-  background: radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
-  -webkit-transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
-  -moz-transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
-  -ms-transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
-  -o-transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
-  transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
-}
-
-/* line 141, ../scss/mainpage.scss */
-.ball:after {
-  /* Top left highlight */
-  content: "";
-  position: absolute;
-  top: 5%;
-  left: 10%;
-  width: 80%;
-  height: 80%;
-  border-radius: 100%;
-  background: -webkit-gradient(radial, 50% 80%, 0, 50% 80%, 100, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(74%, rgba(255, 255, 255, 0)), color-stop(80%, white), color-stop(84%, white), color-stop(100%, rgba(255, 255, 255, 0)));
-  background: -webkit-radial-gradient(50% 80%, circle cover, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 74%, white 80%, white 84%, rgba(255, 255, 255, 0) 100%);
-  background: -moz-radial-gradient(50% 80%, circle cover, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 74%, white 80%, white 84%, rgba(255, 255, 255, 0) 100%);
-  background: -o-radial-gradient(50% 80%, circle cover, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 74%, white 80%, white 84%, rgba(255, 255, 255, 0) 100%);
-  background: radial-gradient(50% 80%, circle cover, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 74%, #ffffff 80%, #ffffff 84%, rgba(255, 255, 255, 0) 100%);
-  opacity: 0.6;
-  -webkit-filter: blur(1px);
-  z-index: 2;
-  -webkit-transform: rotateZ(-30deg);
-  -moz-transform: rotateZ(-30deg);
-  -ms-transform: rotateZ(-30deg);
-  -o-transform: rotateZ(-30deg);
-  transform: rotateZ(-30deg);
-}
-
-/* line 164, ../scss/mainpage.scss */
-.stage {
-  width: 250px;
-  height: 250px;
-  display: inline-block;
-  margin: 20px;
-  -webkit-perspective: 1200px;
-  -moz-perspective: 1200px;
-  -ms-perspective: 1200px;
-  -o-perspective: 1200px;
-  perspective: 1200px;
-  -webkit-perspective-origin: 50% 50%;
-  -moz-perspective-origin: 50% 50%;
-  -ms-perspective-origin: 50% 50%;
-  -o-perspective-origin: 50% 50%;
-  perspective-origin: 50% 50%;
-}
-
-@-moz-keyframes bubble-anim {
-  /* line 182, ../scss/mainpage.scss */
-  0% {
-    -moz-transform: scale(1);
-    transform: scale(1);
-  }
-
-  /* line 186, ../scss/mainpage.scss */
-  20% {
-    -moz-transform: scaleY(0.95) scaleX(1.05);
-    transform: scaleY(0.95) scaleX(1.05);
-  }
-
-  /* line 190, ../scss/mainpage.scss */
-  48% {
-    -moz-transform: scaleY(1.1) scaleX(0.9);
-    transform: scaleY(1.1) scaleX(0.9);
-  }
-
-  /* line 194, ../scss/mainpage.scss */
-  68% {
-    -moz-transform: scaleY(0.98) scaleX(1.02);
-    transform: scaleY(0.98) scaleX(1.02);
-  }
-
-  /* line 198, ../scss/mainpage.scss */
-  80% {
-    -moz-transform: scaleY(1.02) scaleX(0.98);
-    transform: scaleY(1.02) scaleX(0.98);
-  }
-
-  /* line 202, ../scss/mainpage.scss */
-  97%, 100% {
-    -moz-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@-webkit-keyframes bubble-anim {
-  /* line 207, ../scss/mainpage.scss */
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-
-  /* line 211, ../scss/mainpage.scss */
-  20% {
-    -webkit-transform: scaleY(0.95) scaleX(1.05);
-    transform: scaleY(0.95) scaleX(1.05);
-  }
-
-  /* line 215, ../scss/mainpage.scss */
-  48% {
-    -webkit-transform: scaleY(1.1) scaleX(0.9);
-    transform: scaleY(1.1) scaleX(0.9);
-  }
-
-  /* line 219, ../scss/mainpage.scss */
-  68% {
-    -webkit-transform: scaleY(0.98) scaleX(1.02);
-    transform: scaleY(0.98) scaleX(1.02);
-  }
-
-  /* line 223, ../scss/mainpage.scss */
-  80% {
-    -webkit-transform: scaleY(1.02) scaleX(0.98);
-    transform: scaleY(1.02) scaleX(0.98);
-  }
-
-  /* line 227, ../scss/mainpage.scss */
-  97%, 100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@-o-keyframes bubble-anim {
-  /* line 232, ../scss/mainpage.scss */
-  0% {
-    -o-transform: scale(1);
-    transform: scale(1);
-  }
-
-  /* line 236, ../scss/mainpage.scss */
-  20% {
-    -o-transform: scaleY(0.95) scaleX(1.05);
-    transform: scaleY(0.95) scaleX(1.05);
-  }
-
-  /* line 240, ../scss/mainpage.scss */
-  48% {
-    -o-transform: scaleY(1.1) scaleX(0.9);
-    transform: scaleY(1.1) scaleX(0.9);
-  }
-
-  /* line 244, ../scss/mainpage.scss */
-  68% {
-    -o-transform: scaleY(0.98) scaleX(1.02);
-    transform: scaleY(0.98) scaleX(1.02);
-  }
-
-  /* line 248, ../scss/mainpage.scss */
-  80% {
-    -o-transform: scaleY(1.02) scaleX(0.98);
-    transform: scaleY(1.02) scaleX(0.98);
-  }
-
-  /* line 252, ../scss/mainpage.scss */
-  97%, 100% {
-    -o-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@-ms-keyframes bubble-anim {
-  /* line 257, ../scss/mainpage.scss */
-  0% {
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-
-  /* line 261, ../scss/mainpage.scss */
-  20% {
-    -ms-transform: scaleY(0.95) scaleX(1.05);
-    transform: scaleY(0.95) scaleX(1.05);
-  }
-
-  /* line 265, ../scss/mainpage.scss */
-  48% {
-    -ms-transform: scaleY(1.1) scaleX(0.9);
-    transform: scaleY(1.1) scaleX(0.9);
-  }
-
-  /* line 269, ../scss/mainpage.scss */
-  68% {
-    -ms-transform: scaleY(0.98) scaleX(1.02);
-    transform: scaleY(0.98) scaleX(1.02);
-  }
-
-  /* line 273, ../scss/mainpage.scss */
-  80% {
-    -ms-transform: scaleY(1.02) scaleX(0.98);
-    transform: scaleY(1.02) scaleX(0.98);
-  }
-
-  /* line 277, ../scss/mainpage.scss */
-  97%, 100% {
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@keyframes bubble-anim {
-  /* line 282, ../scss/mainpage.scss */
-  0% {
-    transform: scale(1);
-  }
-
-  /* line 285, ../scss/mainpage.scss */
-  20% {
-    transform: scaleY(0.95) scaleX(1.05);
-  }
-
-  /* line 288, ../scss/mainpage.scss */
-  48% {
-    transform: scaleY(1.1) scaleX(0.9);
-  }
-
-  /* line 291, ../scss/mainpage.scss */
-  68% {
-    transform: scaleY(0.98) scaleX(1.02);
-  }
-
-  /* line 294, ../scss/mainpage.scss */
-  80% {
-    transform: scaleY(1.02) scaleX(0.98);
-  }
-
-  /* line 297, ../scss/mainpage.scss */
-  97%, 100% {
-    transform: scale(1);
-  }
 }
