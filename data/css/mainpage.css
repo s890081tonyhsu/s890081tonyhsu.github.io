@@ -524,6 +524,7 @@ body a {
   -o-animation: bubble-anim 2s ease-out infinite;
   -ms-animation: bubble-anim 2s ease-out infinite;
   animation: bubble-anim 2s ease-out infinite;
+  animation-itration-count:1;
 }
 /* line 111, ../scss/mainpage.scss */
 .ball p {
