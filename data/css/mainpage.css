@@ -402,13 +402,13 @@ body {
     Example usage: 
     @include animation(changecolour, 5s, 10s)
  */
-/* line 9, ../scss/menu/_bubble.scss */
+/* line 11, ../scss/menu/_bubble.scss */
 .two {
   width: 300px;
   float: left;
 }
 
-/* line 14, ../scss/menu/_bubble.scss */
+/* line 16, ../scss/menu/_bubble.scss */
 .ball {
   cursor: pointer;
   display: inline-block;
@@ -426,7 +426,7 @@ body {
   background-image: -o-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
   background-image: radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
 }
-/* line 26, ../scss/menu/_bubble.scss */
+/* line 28, ../scss/menu/_bubble.scss */
 .ball:active, .ball:hover {
   -webkit-animation: bubble-anim 2s ease-out 1;
   -moz-animation: bubble-anim 2s ease-out 1;
@@ -434,14 +434,13 @@ body {
   -ms-animation: bubble-anim 2s ease-out 1;
   animation: bubble-anim 2s ease-out 1;
 }
-/* line 29, ../scss/menu/_bubble.scss */
+/* line 31, ../scss/menu/_bubble.scss */
 .ball p {
-  position: absolute;
-  top: 40%;
-  left: 30%;
+  text-align: center;
+  margin-top: 50px;
   color: black;
 }
-/* line 35, ../scss/menu/_bubble.scss */
+/* line 36, ../scss/menu/_bubble.scss */
 .ball:before {
   /* Sheen on the bottom right */
   content: "";
@@ -466,7 +465,7 @@ body {
   -o-transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
   transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
 }
-/* line 51, ../scss/menu/_bubble.scss */
+/* line 52, ../scss/menu/_bubble.scss */
 .ball:after {
   /* Top left highlight */
   content: "";
@@ -492,7 +491,7 @@ body {
   transform: rotate(-30deg);
 }
 
-/* line 68, ../scss/menu/_bubble.scss */
+/* line 69, ../scss/menu/_bubble.scss */
 .stage {
   width: 150px;
   height: 150px;
@@ -509,9 +508,45 @@ body {
   -o-perspective-origin: 50% 50%;
   perspective-origin: 50% 50%;
 }
+/* line 79, ../scss/menu/_bubble.scss */
+.stage[name=DropStone] .ball {
+  background: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 245, 255, 0.5)), color-stop(40%, rgba(240, 245, 255, 0.5)), color-stop(60%, rgba(225, 238, 255, 0.4)), color-stop(100%, rgba(43, 130, 255, 0.2)));
+  background-image: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 245, 255, 0.5)), color-stop(40%, rgba(240, 245, 255, 0.5)), color-stop(60%, rgba(225, 238, 255, 0.4)), color-stop(100%, rgba(43, 130, 255, 0.2)));
+  background-image: -webkit-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
+  background-image: -moz-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
+  background-image: -o-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
+  background-image: radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
+}
+/* line 79, ../scss/menu/_bubble.scss */
+.stage[name=DreamSakura] .ball {
+  background: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 255, 243, 0.5)), color-stop(40%, rgba(240, 255, 243, 0.5)), color-stop(60%, rgba(225, 255, 227, 0.4)), color-stop(100%, rgba(43, 255, 62, 0.2)));
+  background-image: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 255, 243, 0.5)), color-stop(40%, rgba(240, 255, 243, 0.5)), color-stop(60%, rgba(225, 255, 227, 0.4)), color-stop(100%, rgba(43, 255, 62, 0.2)));
+  background-image: -webkit-radial-gradient(50% 55%, circle cover, rgba(240, 255, 243, 0.5), rgba(240, 255, 243, 0.5) 40%, rgba(225, 255, 227, 0.4) 60%, rgba(43, 255, 62, 0.2));
+  background-image: -moz-radial-gradient(50% 55%, circle cover, rgba(240, 255, 243, 0.5), rgba(240, 255, 243, 0.5) 40%, rgba(225, 255, 227, 0.4) 60%, rgba(43, 255, 62, 0.2));
+  background-image: -o-radial-gradient(50% 55%, circle cover, rgba(240, 255, 243, 0.5), rgba(240, 255, 243, 0.5) 40%, rgba(225, 255, 227, 0.4) 60%, rgba(43, 255, 62, 0.2));
+  background-image: radial-gradient(50% 55%, circle cover, rgba(240, 255, 243, 0.5), rgba(240, 255, 243, 0.5) 40%, rgba(225, 255, 227, 0.4) 60%, rgba(43, 255, 62, 0.2));
+}
+/* line 79, ../scss/menu/_bubble.scss */
+.stage[name=RainSweet] .ball {
+  background: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(255, 250, 240, 0.5)), color-stop(40%, rgba(255, 250, 240, 0.5)), color-stop(60%, rgba(255, 242, 225, 0.4)), color-stop(100%, rgba(255, 168, 43, 0.2)));
+  background-image: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(255, 250, 240, 0.5)), color-stop(40%, rgba(255, 250, 240, 0.5)), color-stop(60%, rgba(255, 242, 225, 0.4)), color-stop(100%, rgba(255, 168, 43, 0.2)));
+  background-image: -webkit-radial-gradient(50% 55%, circle cover, rgba(255, 250, 240, 0.5), rgba(255, 250, 240, 0.5) 40%, rgba(255, 242, 225, 0.4) 60%, rgba(255, 168, 43, 0.2));
+  background-image: -moz-radial-gradient(50% 55%, circle cover, rgba(255, 250, 240, 0.5), rgba(255, 250, 240, 0.5) 40%, rgba(255, 242, 225, 0.4) 60%, rgba(255, 168, 43, 0.2));
+  background-image: -o-radial-gradient(50% 55%, circle cover, rgba(255, 250, 240, 0.5), rgba(255, 250, 240, 0.5) 40%, rgba(255, 242, 225, 0.4) 60%, rgba(255, 168, 43, 0.2));
+  background-image: radial-gradient(50% 55%, circle cover, rgba(255, 250, 240, 0.5), rgba(255, 250, 240, 0.5) 40%, rgba(255, 242, 225, 0.4) 60%, rgba(255, 168, 43, 0.2));
+}
+/* line 79, ../scss/menu/_bubble.scss */
+.stage[name=OtomeSound] .ball {
+  background: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(255, 240, 252, 0.5)), color-stop(40%, rgba(255, 240, 252, 0.5)), color-stop(60%, rgba(255, 225, 253, 0.4)), color-stop(100%, rgba(255, 43, 236, 0.2)));
+  background-image: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(255, 240, 252, 0.5)), color-stop(40%, rgba(255, 240, 252, 0.5)), color-stop(60%, rgba(255, 225, 253, 0.4)), color-stop(100%, rgba(255, 43, 236, 0.2)));
+  background-image: -webkit-radial-gradient(50% 55%, circle cover, rgba(255, 240, 252, 0.5), rgba(255, 240, 252, 0.5) 40%, rgba(255, 225, 253, 0.4) 60%, rgba(255, 43, 236, 0.2));
+  background-image: -moz-radial-gradient(50% 55%, circle cover, rgba(255, 240, 252, 0.5), rgba(255, 240, 252, 0.5) 40%, rgba(255, 225, 253, 0.4) 60%, rgba(255, 43, 236, 0.2));
+  background-image: -o-radial-gradient(50% 55%, circle cover, rgba(255, 240, 252, 0.5), rgba(255, 240, 252, 0.5) 40%, rgba(255, 225, 253, 0.4) 60%, rgba(255, 43, 236, 0.2));
+  background-image: radial-gradient(50% 55%, circle cover, rgba(255, 240, 252, 0.5), rgba(255, 240, 252, 0.5) 40%, rgba(255, 225, 253, 0.4) 60%, rgba(255, 43, 236, 0.2));
+}
 
 @-webkit-keyframes bubble-anim {
-  /* line 78, ../scss/menu/_bubble.scss */
+  /* line 88, ../scss/menu/_bubble.scss */
   0% {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -520,7 +555,7 @@ body {
     transform: scale(1, 1);
   }
 
-  /* line 81, ../scss/menu/_bubble.scss */
+  /* line 91, ../scss/menu/_bubble.scss */
   20% {
     -webkit-transform: scale(1.05, 0.95);
     -moz-transform: scale(1.05, 0.95);
@@ -529,7 +564,7 @@ body {
     transform: scale(1.05, 0.95);
   }
 
-  /* line 84, ../scss/menu/_bubble.scss */
+  /* line 94, ../scss/menu/_bubble.scss */
   48% {
     -webkit-transform: scale(0.9, 1.1);
     -moz-transform: scale(0.9, 1.1);
@@ -538,7 +573,7 @@ body {
     transform: scale(0.9, 1.1);
   }
 
-  /* line 87, ../scss/menu/_bubble.scss */
+  /* line 97, ../scss/menu/_bubble.scss */
   68% {
     -webkit-transform: scale(1.02, 0.98);
     -moz-transform: scale(1.02, 0.98);
@@ -547,7 +582,7 @@ body {
     transform: scale(1.02, 0.98);
   }
 
-  /* line 90, ../scss/menu/_bubble.scss */
+  /* line 100, ../scss/menu/_bubble.scss */
   80% {
     -webkit-transform: scale(0.98, 1.02);
     -moz-transform: scale(0.98, 1.02);
@@ -556,7 +591,7 @@ body {
     transform: scale(0.98, 1.02);
   }
 
-  /* line 93, ../scss/menu/_bubble.scss */
+  /* line 103, ../scss/menu/_bubble.scss */
   97%, 100% {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -567,7 +602,7 @@ body {
 }
 
 @-moz-keyframes bubble-anim {
-  /* line 78, ../scss/menu/_bubble.scss */
+  /* line 88, ../scss/menu/_bubble.scss */
   0% {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -576,7 +611,7 @@ body {
     transform: scale(1, 1);
   }
 
-  /* line 81, ../scss/menu/_bubble.scss */
+  /* line 91, ../scss/menu/_bubble.scss */
   20% {
     -webkit-transform: scale(1.05, 0.95);
     -moz-transform: scale(1.05, 0.95);
@@ -585,7 +620,7 @@ body {
     transform: scale(1.05, 0.95);
   }
 
-  /* line 84, ../scss/menu/_bubble.scss */
+  /* line 94, ../scss/menu/_bubble.scss */
   48% {
     -webkit-transform: scale(0.9, 1.1);
     -moz-transform: scale(0.9, 1.1);
@@ -594,7 +629,7 @@ body {
     transform: scale(0.9, 1.1);
   }
 
-  /* line 87, ../scss/menu/_bubble.scss */
+  /* line 97, ../scss/menu/_bubble.scss */
   68% {
     -webkit-transform: scale(1.02, 0.98);
     -moz-transform: scale(1.02, 0.98);
@@ -603,7 +638,7 @@ body {
     transform: scale(1.02, 0.98);
   }
 
-  /* line 90, ../scss/menu/_bubble.scss */
+  /* line 100, ../scss/menu/_bubble.scss */
   80% {
     -webkit-transform: scale(0.98, 1.02);
     -moz-transform: scale(0.98, 1.02);
@@ -612,7 +647,7 @@ body {
     transform: scale(0.98, 1.02);
   }
 
-  /* line 93, ../scss/menu/_bubble.scss */
+  /* line 103, ../scss/menu/_bubble.scss */
   97%, 100% {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -623,7 +658,7 @@ body {
 }
 
 @-o-keyframes bubble-anim {
-  /* line 78, ../scss/menu/_bubble.scss */
+  /* line 88, ../scss/menu/_bubble.scss */
   0% {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -632,7 +667,7 @@ body {
     transform: scale(1, 1);
   }
 
-  /* line 81, ../scss/menu/_bubble.scss */
+  /* line 91, ../scss/menu/_bubble.scss */
   20% {
     -webkit-transform: scale(1.05, 0.95);
     -moz-transform: scale(1.05, 0.95);
@@ -641,7 +676,7 @@ body {
     transform: scale(1.05, 0.95);
   }
 
-  /* line 84, ../scss/menu/_bubble.scss */
+  /* line 94, ../scss/menu/_bubble.scss */
   48% {
     -webkit-transform: scale(0.9, 1.1);
     -moz-transform: scale(0.9, 1.1);
@@ -650,7 +685,7 @@ body {
     transform: scale(0.9, 1.1);
   }
 
-  /* line 87, ../scss/menu/_bubble.scss */
+  /* line 97, ../scss/menu/_bubble.scss */
   68% {
     -webkit-transform: scale(1.02, 0.98);
     -moz-transform: scale(1.02, 0.98);
@@ -659,7 +694,7 @@ body {
     transform: scale(1.02, 0.98);
   }
 
-  /* line 90, ../scss/menu/_bubble.scss */
+  /* line 100, ../scss/menu/_bubble.scss */
   80% {
     -webkit-transform: scale(0.98, 1.02);
     -moz-transform: scale(0.98, 1.02);
@@ -668,7 +703,7 @@ body {
     transform: scale(0.98, 1.02);
   }
 
-  /* line 93, ../scss/menu/_bubble.scss */
+  /* line 103, ../scss/menu/_bubble.scss */
   97%, 100% {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -679,7 +714,7 @@ body {
 }
 
 @keyframes bubble-anim {
-  /* line 78, ../scss/menu/_bubble.scss */
+  /* line 88, ../scss/menu/_bubble.scss */
   0% {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -688,7 +723,7 @@ body {
     transform: scale(1, 1);
   }
 
-  /* line 81, ../scss/menu/_bubble.scss */
+  /* line 91, ../scss/menu/_bubble.scss */
   20% {
     -webkit-transform: scale(1.05, 0.95);
     -moz-transform: scale(1.05, 0.95);
@@ -697,7 +732,7 @@ body {
     transform: scale(1.05, 0.95);
   }
 
-  /* line 84, ../scss/menu/_bubble.scss */
+  /* line 94, ../scss/menu/_bubble.scss */
   48% {
     -webkit-transform: scale(0.9, 1.1);
     -moz-transform: scale(0.9, 1.1);
@@ -706,7 +741,7 @@ body {
     transform: scale(0.9, 1.1);
   }
 
-  /* line 87, ../scss/menu/_bubble.scss */
+  /* line 97, ../scss/menu/_bubble.scss */
   68% {
     -webkit-transform: scale(1.02, 0.98);
     -moz-transform: scale(1.02, 0.98);
@@ -715,7 +750,7 @@ body {
     transform: scale(1.02, 0.98);
   }
 
-  /* line 90, ../scss/menu/_bubble.scss */
+  /* line 100, ../scss/menu/_bubble.scss */
   80% {
     -webkit-transform: scale(0.98, 1.02);
     -moz-transform: scale(0.98, 1.02);
@@ -724,7 +759,7 @@ body {
     transform: scale(0.98, 1.02);
   }
 
-  /* line 93, ../scss/menu/_bubble.scss */
+  /* line 103, ../scss/menu/_bubble.scss */
   97%, 100% {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
