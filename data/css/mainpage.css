@@ -403,12 +403,16 @@ body {
     @include animation(changecolour, 5s, 10s)
  */
 /* line 11, ../scss/menu/_bubble.scss */
-.two {
-  width: 300px;
-  float: left;
+.wrapper {
+  float: right;
 }
 
-/* line 16, ../scss/menu/_bubble.scss */
+/* line 15, ../scss/menu/_bubble.scss */
+.about {
+  margin: 20px;
+}
+
+/* line 19, ../scss/menu/_bubble.scss */
 .ball {
   cursor: pointer;
   display: inline-block;
@@ -419,14 +423,14 @@ body {
   margin-right: auto;
   border-radius: 50%;
   position: relative;
-  background: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 245, 255, 0.5)), color-stop(40%, rgba(240, 245, 255, 0.5)), color-stop(60%, rgba(225, 238, 255, 0.4)), color-stop(100%, rgba(43, 130, 255, 0.2)));
-  background-image: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 245, 255, 0.5)), color-stop(40%, rgba(240, 245, 255, 0.5)), color-stop(60%, rgba(225, 238, 255, 0.4)), color-stop(100%, rgba(43, 130, 255, 0.2)));
-  background-image: -webkit-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
-  background-image: -moz-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
-  background-image: -o-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
-  background-image: radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
+  background: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 245, 255, 0.4)), color-stop(40%, rgba(240, 245, 255, 0.4)), color-stop(60%, rgba(225, 238, 255, 0.3)), color-stop(100%, rgba(43, 130, 255, 0.15)));
+  background-image: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 245, 255, 0.4)), color-stop(40%, rgba(240, 245, 255, 0.4)), color-stop(60%, rgba(225, 238, 255, 0.3)), color-stop(100%, rgba(43, 130, 255, 0.15)));
+  background-image: -webkit-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.4), rgba(240, 245, 255, 0.4) 40%, rgba(225, 238, 255, 0.3) 60%, rgba(43, 130, 255, 0.15));
+  background-image: -moz-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.4), rgba(240, 245, 255, 0.4) 40%, rgba(225, 238, 255, 0.3) 60%, rgba(43, 130, 255, 0.15));
+  background-image: -o-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.4), rgba(240, 245, 255, 0.4) 40%, rgba(225, 238, 255, 0.3) 60%, rgba(43, 130, 255, 0.15));
+  background-image: radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.4), rgba(240, 245, 255, 0.4) 40%, rgba(225, 238, 255, 0.3) 60%, rgba(43, 130, 255, 0.15));
 }
-/* line 28, ../scss/menu/_bubble.scss */
+/* line 31, ../scss/menu/_bubble.scss */
 .ball:active, .ball:hover {
   -webkit-animation: bubble-anim 2s ease-out 1;
   -moz-animation: bubble-anim 2s ease-out 1;
@@ -434,13 +438,13 @@ body {
   -ms-animation: bubble-anim 2s ease-out 1;
   animation: bubble-anim 2s ease-out 1;
 }
-/* line 31, ../scss/menu/_bubble.scss */
+/* line 34, ../scss/menu/_bubble.scss */
 .ball p {
   text-align: center;
   margin-top: 50px;
   color: black;
 }
-/* line 36, ../scss/menu/_bubble.scss */
+/* line 39, ../scss/menu/_bubble.scss */
 .ball:before {
   /* Sheen on the bottom right */
   content: "";
@@ -453,19 +457,19 @@ body {
   -webkit-filter: blur(0);
   height: 80%;
   width: 40%;
-  background: -webkit-gradient(radial, 130% 130%, 0, 130% 130%, 100, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(46%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.2)), color-stop(58%, rgba(255, 255, 255, 0.2)), color-stop(60%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
-  background-image: -webkit-gradient(radial, 130% 130%, 0, 130% 130%, 100, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(46%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.8)), color-stop(58%, rgba(255, 255, 255, 0.2)), color-stop(60%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
-  background-image: -webkit-radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
-  background-image: -moz-radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
-  background-image: -o-radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
-  background-image: radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.2) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-gradient(radial, 130% 130%, 0, 130% 130%, 100, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(46%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(58%, rgba(255, 255, 255, 0.15)), color-stop(60%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-gradient(radial, 130% 130%, 0, 130% 130%, 100, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(46%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(58%, rgba(255, 255, 255, 0.15)), color-stop(60%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+  background-image: -moz-radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+  background-image: radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
   -webkit-transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
   -moz-transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
   -ms-transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
   -o-transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
   transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
 }
-/* line 52, ../scss/menu/_bubble.scss */
+/* line 55, ../scss/menu/_bubble.scss */
 .ball:after {
   /* Top left highlight */
   content: "";
@@ -481,7 +485,7 @@ body {
   background-image: -moz-radial-gradient(50% 80%, circle cover, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 74%, #ffffff 80%, #ffffff 84%, rgba(255, 255, 255, 0) 100%);
   background-image: -o-radial-gradient(50% 80%, circle cover, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 74%, #ffffff 80%, #ffffff 84%, rgba(255, 255, 255, 0) 100%);
   background-image: radial-gradient(50% 80%, circle cover, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 74%, #ffffff 80%, #ffffff 84%, rgba(255, 255, 255, 0) 100%);
-  opacity: 0.2;
+  opacity: 0.1;
   -webkit-filter: blur(1px);
   z-index: 2;
   -webkit-transform: rotate(-30deg);
@@ -491,7 +495,7 @@ body {
   transform: rotate(-30deg);
 }
 
-/* line 69, ../scss/menu/_bubble.scss */
+/* line 72, ../scss/menu/_bubble.scss */
 .stage {
   width: 150px;
   height: 150px;
@@ -508,45 +512,45 @@ body {
   -o-perspective-origin: 50% 50%;
   perspective-origin: 50% 50%;
 }
-/* line 79, ../scss/menu/_bubble.scss */
+/* line 82, ../scss/menu/_bubble.scss */
 .stage[name=DropStone] .ball {
-  background: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 245, 255, 0.5)), color-stop(40%, rgba(240, 245, 255, 0.5)), color-stop(60%, rgba(225, 238, 255, 0.4)), color-stop(100%, rgba(43, 130, 255, 0.2)));
-  background-image: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 245, 255, 0.5)), color-stop(40%, rgba(240, 245, 255, 0.5)), color-stop(60%, rgba(225, 238, 255, 0.4)), color-stop(100%, rgba(43, 130, 255, 0.2)));
-  background-image: -webkit-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
-  background-image: -moz-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
-  background-image: -o-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
-  background-image: radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.5), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.4) 60%, rgba(43, 130, 255, 0.2));
+  background: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 245, 255, 0.4)), color-stop(40%, rgba(240, 245, 255, 0.4)), color-stop(60%, rgba(225, 238, 255, 0.3)), color-stop(100%, rgba(43, 130, 255, 0.15)));
+  background-image: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 245, 255, 0.4)), color-stop(40%, rgba(240, 245, 255, 0.4)), color-stop(60%, rgba(225, 238, 255, 0.3)), color-stop(100%, rgba(43, 130, 255, 0.15)));
+  background-image: -webkit-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.4), rgba(240, 245, 255, 0.4) 40%, rgba(225, 238, 255, 0.3) 60%, rgba(43, 130, 255, 0.15));
+  background-image: -moz-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.4), rgba(240, 245, 255, 0.4) 40%, rgba(225, 238, 255, 0.3) 60%, rgba(43, 130, 255, 0.15));
+  background-image: -o-radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.4), rgba(240, 245, 255, 0.4) 40%, rgba(225, 238, 255, 0.3) 60%, rgba(43, 130, 255, 0.15));
+  background-image: radial-gradient(50% 55%, circle cover, rgba(240, 245, 255, 0.4), rgba(240, 245, 255, 0.4) 40%, rgba(225, 238, 255, 0.3) 60%, rgba(43, 130, 255, 0.15));
 }
-/* line 79, ../scss/menu/_bubble.scss */
+/* line 82, ../scss/menu/_bubble.scss */
 .stage[name=DreamSakura] .ball {
-  background: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 255, 243, 0.5)), color-stop(40%, rgba(240, 255, 243, 0.5)), color-stop(60%, rgba(225, 255, 227, 0.4)), color-stop(100%, rgba(43, 255, 62, 0.2)));
-  background-image: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 255, 243, 0.5)), color-stop(40%, rgba(240, 255, 243, 0.5)), color-stop(60%, rgba(225, 255, 227, 0.4)), color-stop(100%, rgba(43, 255, 62, 0.2)));
-  background-image: -webkit-radial-gradient(50% 55%, circle cover, rgba(240, 255, 243, 0.5), rgba(240, 255, 243, 0.5) 40%, rgba(225, 255, 227, 0.4) 60%, rgba(43, 255, 62, 0.2));
-  background-image: -moz-radial-gradient(50% 55%, circle cover, rgba(240, 255, 243, 0.5), rgba(240, 255, 243, 0.5) 40%, rgba(225, 255, 227, 0.4) 60%, rgba(43, 255, 62, 0.2));
-  background-image: -o-radial-gradient(50% 55%, circle cover, rgba(240, 255, 243, 0.5), rgba(240, 255, 243, 0.5) 40%, rgba(225, 255, 227, 0.4) 60%, rgba(43, 255, 62, 0.2));
-  background-image: radial-gradient(50% 55%, circle cover, rgba(240, 255, 243, 0.5), rgba(240, 255, 243, 0.5) 40%, rgba(225, 255, 227, 0.4) 60%, rgba(43, 255, 62, 0.2));
+  background: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 255, 243, 0.4)), color-stop(40%, rgba(240, 255, 243, 0.4)), color-stop(60%, rgba(225, 255, 227, 0.3)), color-stop(100%, rgba(43, 255, 62, 0.15)));
+  background-image: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(240, 255, 243, 0.4)), color-stop(40%, rgba(240, 255, 243, 0.4)), color-stop(60%, rgba(225, 255, 227, 0.3)), color-stop(100%, rgba(43, 255, 62, 0.15)));
+  background-image: -webkit-radial-gradient(50% 55%, circle cover, rgba(240, 255, 243, 0.4), rgba(240, 255, 243, 0.4) 40%, rgba(225, 255, 227, 0.3) 60%, rgba(43, 255, 62, 0.15));
+  background-image: -moz-radial-gradient(50% 55%, circle cover, rgba(240, 255, 243, 0.4), rgba(240, 255, 243, 0.4) 40%, rgba(225, 255, 227, 0.3) 60%, rgba(43, 255, 62, 0.15));
+  background-image: -o-radial-gradient(50% 55%, circle cover, rgba(240, 255, 243, 0.4), rgba(240, 255, 243, 0.4) 40%, rgba(225, 255, 227, 0.3) 60%, rgba(43, 255, 62, 0.15));
+  background-image: radial-gradient(50% 55%, circle cover, rgba(240, 255, 243, 0.4), rgba(240, 255, 243, 0.4) 40%, rgba(225, 255, 227, 0.3) 60%, rgba(43, 255, 62, 0.15));
 }
-/* line 79, ../scss/menu/_bubble.scss */
+/* line 82, ../scss/menu/_bubble.scss */
 .stage[name=RainSweet] .ball {
-  background: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(255, 250, 240, 0.5)), color-stop(40%, rgba(255, 250, 240, 0.5)), color-stop(60%, rgba(255, 242, 225, 0.4)), color-stop(100%, rgba(255, 168, 43, 0.2)));
-  background-image: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(255, 250, 240, 0.5)), color-stop(40%, rgba(255, 250, 240, 0.5)), color-stop(60%, rgba(255, 242, 225, 0.4)), color-stop(100%, rgba(255, 168, 43, 0.2)));
-  background-image: -webkit-radial-gradient(50% 55%, circle cover, rgba(255, 250, 240, 0.5), rgba(255, 250, 240, 0.5) 40%, rgba(255, 242, 225, 0.4) 60%, rgba(255, 168, 43, 0.2));
-  background-image: -moz-radial-gradient(50% 55%, circle cover, rgba(255, 250, 240, 0.5), rgba(255, 250, 240, 0.5) 40%, rgba(255, 242, 225, 0.4) 60%, rgba(255, 168, 43, 0.2));
-  background-image: -o-radial-gradient(50% 55%, circle cover, rgba(255, 250, 240, 0.5), rgba(255, 250, 240, 0.5) 40%, rgba(255, 242, 225, 0.4) 60%, rgba(255, 168, 43, 0.2));
-  background-image: radial-gradient(50% 55%, circle cover, rgba(255, 250, 240, 0.5), rgba(255, 250, 240, 0.5) 40%, rgba(255, 242, 225, 0.4) 60%, rgba(255, 168, 43, 0.2));
+  background: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(255, 250, 240, 0.4)), color-stop(40%, rgba(255, 250, 240, 0.4)), color-stop(60%, rgba(255, 242, 225, 0.3)), color-stop(100%, rgba(255, 168, 43, 0.15)));
+  background-image: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(255, 250, 240, 0.4)), color-stop(40%, rgba(255, 250, 240, 0.4)), color-stop(60%, rgba(255, 242, 225, 0.3)), color-stop(100%, rgba(255, 168, 43, 0.15)));
+  background-image: -webkit-radial-gradient(50% 55%, circle cover, rgba(255, 250, 240, 0.4), rgba(255, 250, 240, 0.4) 40%, rgba(255, 242, 225, 0.3) 60%, rgba(255, 168, 43, 0.15));
+  background-image: -moz-radial-gradient(50% 55%, circle cover, rgba(255, 250, 240, 0.4), rgba(255, 250, 240, 0.4) 40%, rgba(255, 242, 225, 0.3) 60%, rgba(255, 168, 43, 0.15));
+  background-image: -o-radial-gradient(50% 55%, circle cover, rgba(255, 250, 240, 0.4), rgba(255, 250, 240, 0.4) 40%, rgba(255, 242, 225, 0.3) 60%, rgba(255, 168, 43, 0.15));
+  background-image: radial-gradient(50% 55%, circle cover, rgba(255, 250, 240, 0.4), rgba(255, 250, 240, 0.4) 40%, rgba(255, 242, 225, 0.3) 60%, rgba(255, 168, 43, 0.15));
 }
-/* line 79, ../scss/menu/_bubble.scss */
+/* line 82, ../scss/menu/_bubble.scss */
 .stage[name=OtomeSound] .ball {
-  background: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(255, 240, 252, 0.5)), color-stop(40%, rgba(255, 240, 252, 0.5)), color-stop(60%, rgba(255, 225, 253, 0.4)), color-stop(100%, rgba(255, 43, 236, 0.2)));
-  background-image: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(255, 240, 252, 0.5)), color-stop(40%, rgba(255, 240, 252, 0.5)), color-stop(60%, rgba(255, 225, 253, 0.4)), color-stop(100%, rgba(255, 43, 236, 0.2)));
-  background-image: -webkit-radial-gradient(50% 55%, circle cover, rgba(255, 240, 252, 0.5), rgba(255, 240, 252, 0.5) 40%, rgba(255, 225, 253, 0.4) 60%, rgba(255, 43, 236, 0.2));
-  background-image: -moz-radial-gradient(50% 55%, circle cover, rgba(255, 240, 252, 0.5), rgba(255, 240, 252, 0.5) 40%, rgba(255, 225, 253, 0.4) 60%, rgba(255, 43, 236, 0.2));
-  background-image: -o-radial-gradient(50% 55%, circle cover, rgba(255, 240, 252, 0.5), rgba(255, 240, 252, 0.5) 40%, rgba(255, 225, 253, 0.4) 60%, rgba(255, 43, 236, 0.2));
-  background-image: radial-gradient(50% 55%, circle cover, rgba(255, 240, 252, 0.5), rgba(255, 240, 252, 0.5) 40%, rgba(255, 225, 253, 0.4) 60%, rgba(255, 43, 236, 0.2));
+  background: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(255, 240, 252, 0.4)), color-stop(40%, rgba(255, 240, 252, 0.4)), color-stop(60%, rgba(255, 225, 253, 0.3)), color-stop(100%, rgba(255, 43, 236, 0.15)));
+  background-image: -webkit-gradient(radial, 50% 55%, 0, 50% 55%, 100, color-stop(0%, rgba(255, 240, 252, 0.4)), color-stop(40%, rgba(255, 240, 252, 0.4)), color-stop(60%, rgba(255, 225, 253, 0.3)), color-stop(100%, rgba(255, 43, 236, 0.15)));
+  background-image: -webkit-radial-gradient(50% 55%, circle cover, rgba(255, 240, 252, 0.4), rgba(255, 240, 252, 0.4) 40%, rgba(255, 225, 253, 0.3) 60%, rgba(255, 43, 236, 0.15));
+  background-image: -moz-radial-gradient(50% 55%, circle cover, rgba(255, 240, 252, 0.4), rgba(255, 240, 252, 0.4) 40%, rgba(255, 225, 253, 0.3) 60%, rgba(255, 43, 236, 0.15));
+  background-image: -o-radial-gradient(50% 55%, circle cover, rgba(255, 240, 252, 0.4), rgba(255, 240, 252, 0.4) 40%, rgba(255, 225, 253, 0.3) 60%, rgba(255, 43, 236, 0.15));
+  background-image: radial-gradient(50% 55%, circle cover, rgba(255, 240, 252, 0.4), rgba(255, 240, 252, 0.4) 40%, rgba(255, 225, 253, 0.3) 60%, rgba(255, 43, 236, 0.15));
 }
 
 @-webkit-keyframes bubble-anim {
-  /* line 88, ../scss/menu/_bubble.scss */
+  /* line 91, ../scss/menu/_bubble.scss */
   0% {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -555,7 +559,7 @@ body {
     transform: scale(1, 1);
   }
 
-  /* line 91, ../scss/menu/_bubble.scss */
+  /* line 94, ../scss/menu/_bubble.scss */
   20% {
     -webkit-transform: scale(1.05, 0.95);
     -moz-transform: scale(1.05, 0.95);
@@ -564,7 +568,7 @@ body {
     transform: scale(1.05, 0.95);
   }
 
-  /* line 94, ../scss/menu/_bubble.scss */
+  /* line 97, ../scss/menu/_bubble.scss */
   48% {
     -webkit-transform: scale(0.9, 1.1);
     -moz-transform: scale(0.9, 1.1);
@@ -573,7 +577,7 @@ body {
     transform: scale(0.9, 1.1);
   }
 
-  /* line 97, ../scss/menu/_bubble.scss */
+  /* line 100, ../scss/menu/_bubble.scss */
   68% {
     -webkit-transform: scale(1.02, 0.98);
     -moz-transform: scale(1.02, 0.98);
@@ -582,7 +586,7 @@ body {
     transform: scale(1.02, 0.98);
   }
 
-  /* line 100, ../scss/menu/_bubble.scss */
+  /* line 103, ../scss/menu/_bubble.scss */
   80% {
     -webkit-transform: scale(0.98, 1.02);
     -moz-transform: scale(0.98, 1.02);
@@ -591,7 +595,7 @@ body {
     transform: scale(0.98, 1.02);
   }
 
-  /* line 103, ../scss/menu/_bubble.scss */
+  /* line 106, ../scss/menu/_bubble.scss */
   97%, 100% {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -602,7 +606,7 @@ body {
 }
 
 @-moz-keyframes bubble-anim {
-  /* line 88, ../scss/menu/_bubble.scss */
+  /* line 91, ../scss/menu/_bubble.scss */
   0% {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -611,7 +615,7 @@ body {
     transform: scale(1, 1);
   }
 
-  /* line 91, ../scss/menu/_bubble.scss */
+  /* line 94, ../scss/menu/_bubble.scss */
   20% {
     -webkit-transform: scale(1.05, 0.95);
     -moz-transform: scale(1.05, 0.95);
@@ -620,7 +624,7 @@ body {
     transform: scale(1.05, 0.95);
   }
 
-  /* line 94, ../scss/menu/_bubble.scss */
+  /* line 97, ../scss/menu/_bubble.scss */
   48% {
     -webkit-transform: scale(0.9, 1.1);
     -moz-transform: scale(0.9, 1.1);
@@ -629,7 +633,7 @@ body {
     transform: scale(0.9, 1.1);
   }
 
-  /* line 97, ../scss/menu/_bubble.scss */
+  /* line 100, ../scss/menu/_bubble.scss */
   68% {
     -webkit-transform: scale(1.02, 0.98);
     -moz-transform: scale(1.02, 0.98);
@@ -638,7 +642,7 @@ body {
     transform: scale(1.02, 0.98);
   }
 
-  /* line 100, ../scss/menu/_bubble.scss */
+  /* line 103, ../scss/menu/_bubble.scss */
   80% {
     -webkit-transform: scale(0.98, 1.02);
     -moz-transform: scale(0.98, 1.02);
@@ -647,7 +651,7 @@ body {
     transform: scale(0.98, 1.02);
   }
 
-  /* line 103, ../scss/menu/_bubble.scss */
+  /* line 106, ../scss/menu/_bubble.scss */
   97%, 100% {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -658,7 +662,7 @@ body {
 }
 
 @-o-keyframes bubble-anim {
-  /* line 88, ../scss/menu/_bubble.scss */
+  /* line 91, ../scss/menu/_bubble.scss */
   0% {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -667,7 +671,7 @@ body {
     transform: scale(1, 1);
   }
 
-  /* line 91, ../scss/menu/_bubble.scss */
+  /* line 94, ../scss/menu/_bubble.scss */
   20% {
     -webkit-transform: scale(1.05, 0.95);
     -moz-transform: scale(1.05, 0.95);
@@ -676,7 +680,7 @@ body {
     transform: scale(1.05, 0.95);
   }
 
-  /* line 94, ../scss/menu/_bubble.scss */
+  /* line 97, ../scss/menu/_bubble.scss */
   48% {
     -webkit-transform: scale(0.9, 1.1);
     -moz-transform: scale(0.9, 1.1);
@@ -685,7 +689,7 @@ body {
     transform: scale(0.9, 1.1);
   }
 
-  /* line 97, ../scss/menu/_bubble.scss */
+  /* line 100, ../scss/menu/_bubble.scss */
   68% {
     -webkit-transform: scale(1.02, 0.98);
     -moz-transform: scale(1.02, 0.98);
@@ -694,7 +698,7 @@ body {
     transform: scale(1.02, 0.98);
   }
 
-  /* line 100, ../scss/menu/_bubble.scss */
+  /* line 103, ../scss/menu/_bubble.scss */
   80% {
     -webkit-transform: scale(0.98, 1.02);
     -moz-transform: scale(0.98, 1.02);
@@ -703,7 +707,7 @@ body {
     transform: scale(0.98, 1.02);
   }
 
-  /* line 103, ../scss/menu/_bubble.scss */
+  /* line 106, ../scss/menu/_bubble.scss */
   97%, 100% {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -714,7 +718,7 @@ body {
 }
 
 @keyframes bubble-anim {
-  /* line 88, ../scss/menu/_bubble.scss */
+  /* line 91, ../scss/menu/_bubble.scss */
   0% {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
@@ -723,7 +727,7 @@ body {
     transform: scale(1, 1);
   }
 
-  /* line 91, ../scss/menu/_bubble.scss */
+  /* line 94, ../scss/menu/_bubble.scss */
   20% {
     -webkit-transform: scale(1.05, 0.95);
     -moz-transform: scale(1.05, 0.95);
@@ -732,7 +736,7 @@ body {
     transform: scale(1.05, 0.95);
   }
 
-  /* line 94, ../scss/menu/_bubble.scss */
+  /* line 97, ../scss/menu/_bubble.scss */
   48% {
     -webkit-transform: scale(0.9, 1.1);
     -moz-transform: scale(0.9, 1.1);
@@ -741,7 +745,7 @@ body {
     transform: scale(0.9, 1.1);
   }
 
-  /* line 97, ../scss/menu/_bubble.scss */
+  /* line 100, ../scss/menu/_bubble.scss */
   68% {
     -webkit-transform: scale(1.02, 0.98);
     -moz-transform: scale(1.02, 0.98);
@@ -750,7 +754,7 @@ body {
     transform: scale(1.02, 0.98);
   }
 
-  /* line 100, ../scss/menu/_bubble.scss */
+  /* line 103, ../scss/menu/_bubble.scss */
   80% {
     -webkit-transform: scale(0.98, 1.02);
     -moz-transform: scale(0.98, 1.02);
@@ -759,7 +763,7 @@ body {
     transform: scale(0.98, 1.02);
   }
 
-  /* line 103, ../scss/menu/_bubble.scss */
+  /* line 106, ../scss/menu/_bubble.scss */
   97%, 100% {
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);

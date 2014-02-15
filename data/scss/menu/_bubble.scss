@@ -3,14 +3,17 @@
 @import "menu/animation";
 @import "menu/Keyframe";
 
-$bubbleOpacity:0.4;
+$bubbleOpacity:0.3;
 $bubbleWidth:150px;
 $bubbleHeight:150px;
 $bubble-name: ( DropStone , DreamSakura , RainSweet , OtomeSound );
 
-.two{
-		width:$bubbleWidth*2;
-		float:left;
+.wrapper{
+	float:right;
+}
+
+.about{
+	margin:20px;
 }
 
 .ball {
@@ -46,7 +49,7 @@ $bubble-name: ( DropStone , DreamSakura , RainSweet , OtomeSound );
 				height: 80%;
 				width: 40%;
 				background: -webkit-gradient(radial, 130% 130%, 0, 130% 130%, 100, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(46%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, $bubbleOpacity/2)), color-stop(58%, rgba(255, 255, 255, $bubbleOpacity/2)), color-stop(60%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
-				@include background-image(radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, $bubbleOpacity/2) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%));
+				@include background-image(radial-gradient(130% 130%, circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, $bubbleOpacity/2) 50%, rgba(255, 255, 255, $bubbleOpacity/2) 58%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%));
 				@include transform(translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg));
 		}
 		&:after {
