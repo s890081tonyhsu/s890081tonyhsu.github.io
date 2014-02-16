@@ -26,8 +26,10 @@ function InitPage(){
 
 function LoadPage(Detail){
 	if(Detail == "return"){
-		$("#content").fadeOut();
-		$("#content").text("");
+		$("#content").fadeOut().queue(function(){
+			$("#content").text("").dequeue();
+			$("#cover").fadeIn().dequeue();
+		});
 		$("#content").attr("detail","");
 		return;
 	}
@@ -38,7 +40,8 @@ function LoadPage(Detail){
 			$("#content").append(data);
 		});
 		$("#content").attr("detail", Detail);
-		if($("#content").css("display") == "none")$("#content").fadeIn();
+		if($("#cover").css("display") == "block")$("#cover").fadeOut().queue(function(){$("#content").fadeIn().dequeue();});
+		else if($("#content").css("display") == "none")$("#content").fadeIn();
 	}
 }
 
