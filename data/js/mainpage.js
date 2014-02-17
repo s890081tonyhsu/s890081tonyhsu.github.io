@@ -36,13 +36,11 @@ function LoadPage(Detail){
 	if($("#content").attr("detail") == Detail){
 		return;
 	}else{
+		$("#content").attr("detail", Detail);
 		$.get("views/"+Detail+".html",function(data){
-			$("#content").attr("detail", Detail);
-			if(data == ""){
-				$("#content").append("<p>There's nothing here, please wait for some days.</p>");
-			}else{
-				$("#content").append(data);
-			}
+			$("#content").append(data);
+		}).fail(function(){
+			$("#content").append("<p>There's nothing here, please wait for some days.</p>");
 		});
 		if($("#cover").css("display") == "block")$("#cover").fadeOut().queue(function(){$("#content").fadeIn().dequeue();});
 		else if($("#content").css("display") == "none")$("#content").fadeIn();
