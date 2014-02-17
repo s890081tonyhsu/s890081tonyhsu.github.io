@@ -37,6 +37,9 @@ function LoadPage(Detail){
 		return;
 	}else{
 		$("#content").attr("detail", Detail);
+		$("#content").fadeOut().queue(function(){
+			$("#content").text("").dequeue();
+		});
 		$.get("views/"+Detail+".html",function(data){
 			$("#content").append(data);
 		}).fail(function(){
