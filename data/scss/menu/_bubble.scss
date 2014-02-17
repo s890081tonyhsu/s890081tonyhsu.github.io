@@ -21,6 +21,10 @@ $bubble-name: ( DropStone , DreamSakura , RainSweet , OtomeSound );
 		display: inline-block;
 		width: $bubbleWidth;
 		height: $bubbleHeight;
+		@media screen and (max-width: 800px) and (max-height:800px){
+			width: $bubbleWidth*0.66;
+			height:$bubbleHeight*0.66;
+		}
 		margin: 0;
 		margin-left: auto;
 		margin-right:auto;
@@ -35,6 +39,9 @@ $bubble-name: ( DropStone , DreamSakura , RainSweet , OtomeSound );
 				text-align:center;
 				margin-top:$bubbleHeight/3;
 				color:black;
+			@media screen and (max-width: 800px) and (max-height:800px){
+				margin-top:$bubbleHeight*(2/9);
+			}
 		}
 		&:before {
 				/* Sheen on the bottom right */
@@ -72,6 +79,10 @@ $bubble-name: ( DropStone , DreamSakura , RainSweet , OtomeSound );
 .stage {
 		width: $bubbleWidth;
 		height: $bubbleHeight;
+		@media screen and (max-width: 800px) and (max-height:800px){
+			width: $bubbleWidth*0.66;
+			height:$bubbleHeight*0.66;
+		}
 		display: inline-block;
 		margin: 20px;
 		@include perspective(1200px);

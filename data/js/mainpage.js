@@ -5,24 +5,26 @@ function mm_includejs (jsFile){
 function checkXY(){
 	var y = $(window).height();
 	var x = $(window).width();
-	$("#background").css({"width":x-25,"height":y-25});
+	$('#background').css({'width':x-25,'height':y-25});
 	if(x*3 > y*4){
-		$("#background").removeClass("yx");
-		$("#background").addClass("xy");
+		$('#background').removeClass('yx');
+		$('#background').addClass('xy');
 	}else{
-		$("#background").removeClass("xy");
-		$("#background").addClass("yx");
+		$('#background').removeClass('xy');
+		$('#background').addClass('yx');
 	}
 }
 
 function InitPage(){
 	checkXY();
 	$(window).load(function(){
-		$("body > div").each(function(){
-			$(this).fadeToggle("slow");
+		$('body > div').each(function(){
+			$(this).fadeToggle('slow');
 		});
 	});
 }
+
+var data;
 
 function LoadPage(Detail){
 	if(Detail == "return"){
@@ -37,16 +39,24 @@ function LoadPage(Detail){
 		return;
 	}else{
 		$("#content").attr("detail", Detail);
-		$("#content").fadeOut().queue(function(){
-			$("#content").text("").dequeue();
-		});
-		$.get("views/"+Detail+".html",function(data){
-			$("#content").append(data);
+		$.get("views/"+Detail+".html",function(buffer){
+			data = buffer;
 		}).fail(function(){
-			$("#content").append("<p>There's nothing here, please wait for some days.</p>");
+			data = "<p>There's nothing here, please wait for some days.</p>";
 		});
-		if($("#cover").css("display") == "block")$("#cover").fadeOut().queue(function(){$("#content").fadeIn().dequeue();});
-		else if($("#content").css("display") == "none")$("#content").fadeIn();
+		if($("#cover").css("display") == "block"){
+			$("#cover").fadeOut().queue(function(){
+				$("#content").text("").dequeue();
+				$("#content").append(data).dequeue();
+				$("#content").fadeIn().dequeue();
+			});
+		}else{
+			$("#content").fadeOut().queue(function(){
+				$("#content").text("").dequeue();
+				$("#content").append(data).dequeue();
+				$("#content").fadeIn().dequeue();
+			});
+		}
 	}
 }
 
