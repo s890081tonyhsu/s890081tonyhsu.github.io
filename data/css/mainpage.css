@@ -793,37 +793,77 @@ body {
   }
 }
 
-/* line 5, ../scss/mainpage.scss */
+/* line 3, ../scss/_repo.scss */
+#repo {
+  float: right;
+}
+/* line 5, ../scss/_repo.scss */
+#repo div {
+  background-color: rgba(0, 0, 0, 0.45);
+  position: relative;
+  float: left;
+  width: 30%;
+  margin: 1%;
+  padding-left: 5%;
+}
+@media screen and (max-width: 800px) {
+  /* line 5, ../scss/_repo.scss */
+  #repo div {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 5, ../scss/_repo.scss */
+  #repo div {
+    width: 100%;
+  }
+}
+/* line 18, ../scss/_repo.scss */
+#repo div.forked:after {
+  background-color: rgba(255, 0, 0, 0.65);
+  content: "forked";
+  position: absolute;
+  left: -2%;
+  top: -2%;
+  font-weight: bold;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 7, ../scss/mainpage.scss */
 body {
   position: relative;
   background-color: #000;
   font-family: Gotham, Lucida Grande, Arial;
 }
-/* line 9, ../scss/mainpage.scss */
+/* line 11, ../scss/mainpage.scss */
 body a {
   text-decoration: none;
 }
 
-/* line 14, ../scss/mainpage.scss */
+/* line 16, ../scss/mainpage.scss */
 #bar > h1 {
   font: 100 25px/0.7 'Oleo Script', Helvetica, sans-serif;
   color: #2b2b2b;
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-/* line 20, ../scss/mainpage.scss */
+/* line 22, ../scss/mainpage.scss */
 #loading {
   position: absolute;
   left: 50%;
   margin-left: -45px;
   margin-top: 100px;
 }
-/* line 25, ../scss/mainpage.scss */
+/* line 27, ../scss/mainpage.scss */
 #loading p {
   color: white;
 }
 
-/* line 30, ../scss/mainpage.scss */
+/* line 32, ../scss/mainpage.scss */
 #background {
   background-image: url(./../images/wallpaper.jpg);
   background-repeat: no-repeat;
@@ -832,16 +872,16 @@ body a {
   top: 0;
   left: 0;
 }
-/* line 37, ../scss/mainpage.scss */
+/* line 39, ../scss/mainpage.scss */
 #background.xy {
   background-size: 100% auto;
 }
-/* line 40, ../scss/mainpage.scss */
+/* line 42, ../scss/mainpage.scss */
 #background.yx {
   background-size: auto 100%;
 }
 
-/* line 44, ../scss/mainpage.scss */
+/* line 46, ../scss/mainpage.scss */
 #mainpage {
   position: absolute;
   top: 20px;
@@ -850,54 +890,107 @@ body a {
   width: 95%;
   height: 95%;
 }
-/* line 51, ../scss/mainpage.scss */
+/* line 53, ../scss/mainpage.scss */
 #mainpage #bar {
   width: 100%;
 }
-/* line 53, ../scss/mainpage.scss */
+/* line 55, ../scss/mainpage.scss */
 #mainpage #bar h1 {
   width: 50%;
   display: inline;
   vertical-align: bottom;
 }
-/* line 58, ../scss/mainpage.scss */
+/* line 60, ../scss/mainpage.scss */
 #mainpage #bar #menu {
   float: right;
   display: inline;
   position: relative;
   bottom: 0px;
 }
-/* line 63, ../scss/mainpage.scss */
+/* line 65, ../scss/mainpage.scss */
 #mainpage #bar #menu a {
   color: rgba(255, 255, 255, 0.5);
   margin-left: 30px;
   cursor: pointer;
+  -webkit-transition-property: fint-weight;
+  -moz-transition-property: fint-weight;
+  -o-transition-property: fint-weight;
+  transition-property: fint-weight;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: text-shadow;
+  -moz-transition-property: text-shadow;
+  -o-transition-property: text-shadow;
+  transition-property: text-shadow;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
-/* line 67, ../scss/mainpage.scss */
+/* line 69, ../scss/mainpage.scss */
 #mainpage #bar #menu a:before {
   content: "#";
 }
-/* line 70, ../scss/mainpage.scss */
+/* line 72, ../scss/mainpage.scss */
 #mainpage #bar #menu a:after {
   content: " ";
 }
 /* line 75, ../scss/mainpage.scss */
+#mainpage #bar #menu a.active {
+  color: rgba(232, 232, 232, 0.85);
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #333, 0px 0px 5px #666;
+  -webkit-transition-property: fint-weight;
+  -moz-transition-property: fint-weight;
+  -o-transition-property: fint-weight;
+  transition-property: fint-weight;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: text-shadow;
+  -moz-transition-property: text-shadow;
+  -o-transition-property: text-shadow;
+  transition-property: text-shadow;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+/* line 94, ../scss/mainpage.scss */
 #mainpage #bar hr {
   color: rgba(255, 255, 255, 0.5);
   margin-top: 20px;
   vertical-align: bottom;
 }
-/* line 81, ../scss/mainpage.scss */
+/* line 100, ../scss/mainpage.scss */
 #mainpage #content {
   width: 80%;
   height: 80%;
-  overflow: hidden;
   margin-left: auto;
   margin-right: auto;
   color: white;
   padding: 10px;
 }
-/* line 90, ../scss/mainpage.scss */
+/* line 108, ../scss/mainpage.scss */
 #mainpage #cover {
   background-color: rgba(0, 0, 0, 0.45);
   position: absolute;

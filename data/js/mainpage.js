@@ -2,9 +2,9 @@ function mm_includejs (jsFile){
 	document .write('<script type="text/javascript" src="data/js/' +jsFile + '"></script>');
 }
 
-function checkXY(){
-	var y = $(window).height();
-	var x = $(window).width();
+function checkXY(bool){
+	var y = $(document).height();
+	var x = $(document).width();
 	$('#background').css({'width':x-25,'height':y-25});
 	if(x*3 > y*4){
 		$('#background').removeClass('yx');
@@ -16,7 +16,7 @@ function checkXY(){
 }
 
 function InitPage(){
-	checkXY();
+	checkXY(true);
 	$(window).load(function(){
 		$('body > div').each(function(){
 			$(this).fadeToggle('slow');
@@ -26,18 +26,22 @@ function InitPage(){
 
 var data;
 
-function LoadPage(Detail){
+function LoadPage(Detail, Active){
 	if(Detail == "return"){
+		$("#menu a").removeClass("active");
 		$("#content").fadeOut().queue(function(){
 			$("#content").text("").dequeue();
 			$("#cover").fadeIn().dequeue();
 		});
 		$("#content").attr("detail","");
+		checkXY(true);
 		return;
 	}
 	if($("#content").attr("detail") == Detail){
 		return;
 	}else{
+		$(Active).siblings().removeClass("active");
+		$(Active).addClass("active");
 		$("#content").attr("detail", Detail);
 		$.get("views/"+Detail+".html",function(buffer){
 			data = buffer;
@@ -57,8 +61,9 @@ function LoadPage(Detail){
 				$("#content").fadeIn().dequeue();
 			});
 		}
+		checkXY(true);
 	}
 }
 
 $(document).ready(InitPage);
-$(window).resize(checkXY);
+$(window).resize(checkXY(true));

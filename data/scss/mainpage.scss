@@ -1,7 +1,9 @@
 @import "background/win8ball";
 @import "compass/css3/images";
 @import "compass/css3/transform";
+@import "compass/css3/transition";
 @import "menu/bubble";
+@import "repo";
 body{
 	position:relative;
 	background-color:#000;
@@ -70,6 +72,23 @@ body{
 				&:after{
 					content:" ";
 				}
+				&.active{
+					color: rgba(232,232,232,0.85);
+					font-weight: bold;
+					text-shadow: 2px 2px 2px #333, 0px 0px 5px #666;
+					@include transition-property(fint-weight);
+					@include transition-duration(0.5s);
+					@include transition-property(text-shadow);
+					@include transition-duration(0.5s);
+					@include transition-property(color);
+					@include transition-duration(0.5s);
+				}
+				@include transition-property(fint-weight);
+				@include transition-duration(0.5s);
+				@include transition-property(text-shadow);
+				@include transition-duration(0.5s);
+				@include transition-property(color);
+				@include transition-duration(0.5s);
 			}
 		}
 		hr{
@@ -81,7 +100,6 @@ body{
 	#content{
 		width:80%;
 		height:80%;
-		overflow:hidden;
 		margin-left:auto;
 		margin-right:auto;
 		color:white;
