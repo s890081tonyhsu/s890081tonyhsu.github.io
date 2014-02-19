@@ -1,0 +1,36 @@
+#container{
+		width:100%;
+		background-color:rgba(0,0,0,0.45);
+		padding:5%;
+		float:left;
+		#index{
+			display:table-cell;
+			float:left;
+			padding-left:20%;
+		}
+		#wikiAbout{
+			display:table-cell;
+			float:left;
+			padding-top:20%;
+			p{
+				text-decoration:none;
+				font: 100 25px/0.7 "Oleo Script",Helvetica,sans-serif;
+				color: white;
+				text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+			}
+			img{
+				padding-left:20%;
+			}
+			@media screen and (min-width:765px) and (max-width:790px){
+				padding-right:50%;
+			}
+		}
+		.idx_dir{
+				text-decoration: none;
+				color: #2b73b7;
+		}
+		.wikilink1{
+				color: #080;
+				background-color: inherit;
+		}
+}

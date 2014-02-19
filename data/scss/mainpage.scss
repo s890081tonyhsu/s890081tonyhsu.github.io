@@ -2,8 +2,9 @@
 @import "compass/css3/images";
 @import "compass/css3/transform";
 @import "compass/css3/transition";
-@import "menu/bubble";
-@import "repo";
+@import "sub/bubble";
+@import "sub/repo";
+@import "sub/wiki";
 body{
 	position:relative;
 	background-color:#000;

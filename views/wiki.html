@@ -1,0 +1,31 @@
+<script src="./data/js/xdomainajax.js"></script>
+<script>
+	function getText(url){
+			$.get("http://nchusg.org"+url, function(data){
+            raw = $(data.responseText).find("#index__tree")[0];
+			console.log(raw);
+			fixed = raw;
+			$(fixed).find(".idx_dir").each(function(){
+				$(this).attr('onclick','getText("'+$(this).attr('href')+'");');
+				$(this).css('cursor','pointer');
+				$(this).removeAttr('href');	
+			});
+			$(fixed).find(".wikilink1").each(function(){
+				$(this).attr('href','http://nchusg.org'+$(this).attr('href'));		
+			});
+			$('#index').text("");
+			$('#index').append(fixed);
+        }, "html");
+	}
+	$(document).ready(getText('/~otomesound/dokuwiki/doku.php?id=start&do=index'));
+</script>
+<div id="container">
+	<div id="wikiAbout">
+		<a href="http://nchusg.org/~otomesound/dokuwiki">
+			<img src="http://nchusg.org/~otomesound/dokuwiki/lib/exe/fetch.php?media=wiki:logo.png" alt="">
+			<p>Blacken_Wiki Development</p>	
+		</a>
+	</div>
+	<div id="index"></div>
+</div>
+
