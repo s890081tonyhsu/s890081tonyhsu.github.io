@@ -15,15 +15,6 @@ function checkXY(bool){
 	}
 }
 
-function InitPage(){
-	checkXY(true);
-	$(window).load(function(){
-		$('body > div').each(function(){
-			$(this).fadeToggle('slow');
-		});
-	});
-}
-
 var data;
 
 function LoadPage(Detail, Active){
@@ -64,6 +55,31 @@ function LoadPage(Detail, Active){
 		checkXY(true);
 	}
 }
+
+function DetectURL(){
+	var page = location.search.replace('\?','');
+	if(page != "" && $('#menu a[page='+page+']').length >0){
+		LoadPage(page,$('#menu a[page='+page+']'));
+	}else if(page != ""){
+		data = "<p>Maybe you get the wrong page. Please click the title to reload.</p>";
+		$("#cover").fadeOut().queue(function(){
+				$("#content").text("").dequeue();
+				$("#content").append(data).dequeue();
+				$("#content").fadeIn().dequeue();
+		});
+	}
+}
+
+function InitPage(){
+	checkXY(true);
+	$(window).load(function(){
+		$('body > div').each(function(){
+			$(this).fadeToggle('slow');
+		});
+	});
+	DetectURL();
+}
+
 
 $(document).ready(InitPage);
 $(window).resize(checkXY(true));

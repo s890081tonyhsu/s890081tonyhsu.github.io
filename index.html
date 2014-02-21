@@ -42,11 +42,11 @@
 	<div id="background" style="display:none;">&nbsp;</div>
 	<div id="mainpage" style="display:none;">	
 			<div id="bar">
-				<h1 onclick="LoadPage('return');" style="cursor:pointer;color:white;">Blacken_Angel Private World</h1>
+				<h1 onclick="LoadPage('return');location.search='';" style="cursor:pointer;color:white;">Blacken_Angel Private World</h1>
 				<div id="menu">
-						<a onclick="LoadPage('about',this);">About Me</a>
-						<a onclick="LoadPage('works',this);">Works</a>
-						<a onclick="LoadPage('wiki',this);">Wiki</a>
+						<a onclick="LoadPage('about',this);location.search='about';" page="about" >About Me</a>
+						<a onclick="LoadPage('works',this);location.search='works';" page="works" >Works</a>
+						<a onclick="LoadPage('wiki',this);location.search='wiki';"  page="wiki"  >Wiki</a>
 						<a href="http://blackenangel.tumblr.com/">Tumblr</a>
 				</div>
 				<hr width="100%">
@@ -58,7 +58,7 @@
 					What is "Blacken_Angel"? <br><br>
 					Blacken_Angel is just a team for four personality.<br><br>
 					They have their own area in some ability.<br><br>
-					If you want to learn more, please check <a onclick="LoadPage('about');" style="cursor:pointer.">About Me</a>.	
+					If you want to learn more, please check <a onclick="LoadPage('about');location.search='';" style="cursor:pointer.">About Me</a>.	
 				</p>
 			</div>
 	</div>
