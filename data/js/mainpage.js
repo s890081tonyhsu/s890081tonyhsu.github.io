@@ -70,6 +70,15 @@ function DetectURL(){
 	}
 }
 
+function changeURL(target){
+	if(typeof history.replaceState == 'function'){
+		history.replaceState({page: location.search},'',"?"+target);
+		DetectURL();
+	}else{
+		location.search = target;
+	}
+}
+
 function InitPage(){
 	checkXY(true);
 	$(window).load(function(){
