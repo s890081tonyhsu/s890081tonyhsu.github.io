@@ -870,14 +870,34 @@ body {
   }
 }
 /* line 28, ../scss/sub/_wiki.scss */
-#container .idx_dir {
+#container ul {
+  position: relative;
   text-decoration: none;
+}
+/* line 31, ../scss/sub/_wiki.scss */
+#container ul li {
+  color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  background-color: inherit;
+}
+/* line 35, ../scss/sub/_wiki.scss */
+#container ul li strong {
+  color: #080;
+  cursor: pointer;
+}
+/* line 39, ../scss/sub/_wiki.scss */
+#container ul li a {
   color: #2b73b7;
 }
-/* line 32, ../scss/sub/_wiki.scss */
-#container .wikilink1 {
-  color: #080;
-  background-color: inherit;
+/* line 43, ../scss/sub/_wiki.scss */
+#container ul button {
+  position: absolute;
+  right: -100px;
+  bottom: 0;
+}
+/* line 49, ../scss/sub/_wiki.scss */
+#container #index {
+  max-height: 80%;
 }
 
 /* line 8, ../scss/mainpage.scss */
