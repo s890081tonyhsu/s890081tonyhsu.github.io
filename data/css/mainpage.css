@@ -900,37 +900,48 @@ body {
   max-height: 80%;
 }
 
-/* line 8, ../scss/mainpage.scss */
+/* line 1, ../scss/sub/_tumblr.scss */
+#tumblr {
+  padding: 5%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+/* line 5, ../scss/sub/_tumblr.scss */
+#tumblr a {
+  color: white;
+}
+
+/* line 9, ../scss/mainpage.scss */
 body {
   position: relative;
   background-color: #000;
   font-family: Gotham, Lucida Grande, Arial;
 }
-/* line 12, ../scss/mainpage.scss */
+/* line 13, ../scss/mainpage.scss */
 body a {
   text-decoration: none;
 }
 
-/* line 17, ../scss/mainpage.scss */
+/* line 18, ../scss/mainpage.scss */
 #bar > h1 {
   font: 100 25px/0.7 'Oleo Script', Helvetica, sans-serif;
   color: #2b2b2b;
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-/* line 23, ../scss/mainpage.scss */
+/* line 24, ../scss/mainpage.scss */
 #loading {
   position: absolute;
   left: 50%;
   margin-left: -45px;
   margin-top: 100px;
 }
-/* line 28, ../scss/mainpage.scss */
+/* line 29, ../scss/mainpage.scss */
 #loading p {
   color: white;
 }
 
-/* line 33, ../scss/mainpage.scss */
+/* line 34, ../scss/mainpage.scss */
 #background {
   background-image: url(./../images/wallpaper.jpg);
   background-repeat: no-repeat;
@@ -939,16 +950,16 @@ body a {
   top: 0;
   left: 0;
 }
-/* line 40, ../scss/mainpage.scss */
+/* line 41, ../scss/mainpage.scss */
 #background.xy {
   background-size: 100% auto;
 }
-/* line 43, ../scss/mainpage.scss */
+/* line 44, ../scss/mainpage.scss */
 #background.yx {
   background-size: auto 100%;
 }
 
-/* line 47, ../scss/mainpage.scss */
+/* line 48, ../scss/mainpage.scss */
 #mainpage {
   position: absolute;
   top: 20px;
@@ -957,24 +968,24 @@ body a {
   width: 95%;
   height: 95%;
 }
-/* line 54, ../scss/mainpage.scss */
+/* line 55, ../scss/mainpage.scss */
 #mainpage #bar {
   width: 100%;
 }
-/* line 56, ../scss/mainpage.scss */
+/* line 57, ../scss/mainpage.scss */
 #mainpage #bar h1 {
   width: 50%;
   display: inline;
   vertical-align: bottom;
 }
-/* line 61, ../scss/mainpage.scss */
+/* line 62, ../scss/mainpage.scss */
 #mainpage #bar #menu {
   float: right;
   display: inline;
   position: relative;
   bottom: 0px;
 }
-/* line 66, ../scss/mainpage.scss */
+/* line 67, ../scss/mainpage.scss */
 #mainpage #bar #menu a {
   color: rgba(255, 255, 255, 0.5);
   margin-left: 30px;
@@ -1004,15 +1015,15 @@ body a {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 70, ../scss/mainpage.scss */
+/* line 71, ../scss/mainpage.scss */
 #mainpage #bar #menu a:before {
   content: "#";
 }
-/* line 73, ../scss/mainpage.scss */
+/* line 74, ../scss/mainpage.scss */
 #mainpage #bar #menu a:after {
   content: " ";
 }
-/* line 76, ../scss/mainpage.scss */
+/* line 77, ../scss/mainpage.scss */
 #mainpage #bar #menu a.active {
   color: rgba(232, 232, 232, 0.85);
   font-weight: bold;
@@ -1042,13 +1053,13 @@ body a {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 95, ../scss/mainpage.scss */
+/* line 96, ../scss/mainpage.scss */
 #mainpage #bar hr {
   color: rgba(255, 255, 255, 0.5);
   margin-top: 20px;
   vertical-align: bottom;
 }
-/* line 101, ../scss/mainpage.scss */
+/* line 102, ../scss/mainpage.scss */
 #mainpage #content {
   width: 80%;
   height: 80%;
@@ -1057,7 +1068,7 @@ body a {
   color: white;
   padding: 10px;
 }
-/* line 109, ../scss/mainpage.scss */
+/* line 110, ../scss/mainpage.scss */
 #mainpage #cover {
   background-color: rgba(0, 0, 0, 0.45);
   position: absolute;
