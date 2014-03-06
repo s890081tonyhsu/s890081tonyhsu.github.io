@@ -6,7 +6,11 @@
 @import "sub/repo";
 @import "sub/wiki";
 @import "sub/tumblr";
+html{
+	height:100%;
+}
 body{
+	height:100%;
 	position:relative;
 	background-color:#000;
 	font-family:Gotham, Lucida Grande, Arial;
@@ -40,12 +44,15 @@ body{
 }
 
 #background{
+	position:fixed;
 	background-image:url(./../images/wallpaper.jpg);
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	opacity:.55;
-	top:0;
-	left:0;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
 	&.xy{
 		background-size:100% auto;
 	}

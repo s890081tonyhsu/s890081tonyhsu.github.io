@@ -912,24 +912,30 @@ body {
 }
 
 /* line 9, ../scss/mainpage.scss */
+html {
+  height: 100%;
+}
+
+/* line 12, ../scss/mainpage.scss */
 body {
+  height: 100%;
   position: relative;
   background-color: #000;
   font-family: Gotham, Lucida Grande, Arial;
 }
-/* line 13, ../scss/mainpage.scss */
+/* line 17, ../scss/mainpage.scss */
 body a {
   text-decoration: none;
 }
 
-/* line 18, ../scss/mainpage.scss */
+/* line 22, ../scss/mainpage.scss */
 #bar > h1 {
   font: 100 25px/0.7 'Oleo Script', Helvetica, sans-serif;
   color: #2b2b2b;
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-/* line 24, ../scss/mainpage.scss */
+/* line 28, ../scss/mainpage.scss */
 #loading {
   position: fixed;
   width: 100%;
@@ -938,37 +944,40 @@ body a {
   z-index: 999;
 }
 
-/* line 32, ../scss/mainpage.scss */
+/* line 36, ../scss/mainpage.scss */
 #circle {
   position: fixed;
   left: 50%;
   margin-left: -45px;
   margin-top: 100px;
 }
-/* line 37, ../scss/mainpage.scss */
+/* line 41, ../scss/mainpage.scss */
 #circle p {
   color: white;
 }
 
-/* line 42, ../scss/mainpage.scss */
+/* line 46, ../scss/mainpage.scss */
 #background {
+  position: fixed;
   background-image: url(./../images/wallpaper.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   opacity: .55;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
 }
-/* line 49, ../scss/mainpage.scss */
+/* line 56, ../scss/mainpage.scss */
 #background.xy {
   background-size: 100% auto;
 }
-/* line 52, ../scss/mainpage.scss */
+/* line 59, ../scss/mainpage.scss */
 #background.yx {
   background-size: auto 100%;
 }
 
-/* line 56, ../scss/mainpage.scss */
+/* line 63, ../scss/mainpage.scss */
 #mainpage {
   position: absolute;
   top: 20px;
@@ -977,26 +986,26 @@ body a {
   width: 95%;
   height: 95%;
 }
-/* line 63, ../scss/mainpage.scss */
+/* line 70, ../scss/mainpage.scss */
 #mainpage #bar {
   position: fixed;
   width: 95%;
 }
-/* line 66, ../scss/mainpage.scss */
+/* line 73, ../scss/mainpage.scss */
 #mainpage #bar h1 {
   width: 50%;
   display: inline;
   vertical-align: bottom;
   padding-left: 1%;
 }
-/* line 72, ../scss/mainpage.scss */
+/* line 79, ../scss/mainpage.scss */
 #mainpage #bar #menu {
   float: right;
   display: inline;
   position: relative;
   bottom: 0px;
 }
-/* line 77, ../scss/mainpage.scss */
+/* line 84, ../scss/mainpage.scss */
 #mainpage #bar #menu a {
   color: rgba(255, 255, 255, 0.5);
   margin-left: 30px;
@@ -1026,15 +1035,15 @@ body a {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 81, ../scss/mainpage.scss */
+/* line 88, ../scss/mainpage.scss */
 #mainpage #bar #menu a:before {
   content: "#";
 }
-/* line 84, ../scss/mainpage.scss */
+/* line 91, ../scss/mainpage.scss */
 #mainpage #bar #menu a:after {
   content: " ";
 }
-/* line 87, ../scss/mainpage.scss */
+/* line 94, ../scss/mainpage.scss */
 #mainpage #bar #menu a.active {
   color: rgba(232, 232, 232, 0.85);
   font-weight: bold;
@@ -1064,13 +1073,13 @@ body a {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 106, ../scss/mainpage.scss */
+/* line 113, ../scss/mainpage.scss */
 #mainpage #bar hr {
   color: rgba(255, 255, 255, 0.5);
   margin-top: 20px;
   vertical-align: bottom;
 }
-/* line 112, ../scss/mainpage.scss */
+/* line 119, ../scss/mainpage.scss */
 #mainpage #content {
   margin-top: 50px;
   width: 80%;
@@ -1080,7 +1089,7 @@ body a {
   color: white;
   padding: 10px;
 }
-/* line 121, ../scss/mainpage.scss */
+/* line 128, ../scss/mainpage.scss */
 #mainpage #cover {
   background-color: rgba(0, 0, 0, 0.45);
   position: absolute;

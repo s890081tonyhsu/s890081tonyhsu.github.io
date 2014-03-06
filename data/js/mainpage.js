@@ -5,7 +5,6 @@ function mm_includejs (jsFile){
 function checkXY(bool){
 	var y = $(document).height();
 	var x = $(document).width();
-	$('#background').css({'width':x-25,'height':y-25});
 	if(x*3 > y*4){
 		$('#background').removeClass('yx');
 		$('#background').addClass('xy');
