@@ -61,11 +61,13 @@ body{
 	width:95%;
 	height:95%;	
 	#bar{
-		width:100%;
+		position:fixed;
+		width:95%;
 		h1{
 			width:50%;
 			display:inline;
 			vertical-align:bottom;
+			padding-left:1%;
 		}
 		#menu{
 			float:right;
@@ -108,6 +110,7 @@ body{
 		}
 	}
 	#content{
+		margin-top:50px;
 		width:80%;
 		height:80%;
 		margin-left:auto;

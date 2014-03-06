@@ -37,4 +37,7 @@ function GetData(){
 			   },
 		});
 }
-var test = GetData();
+function InitWiki(){
+	var test = GetData();
+}
+$(document).ready(InitWiki);

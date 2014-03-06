@@ -979,22 +979,24 @@ body a {
 }
 /* line 63, ../scss/mainpage.scss */
 #mainpage #bar {
-  width: 100%;
+  position: fixed;
+  width: 95%;
 }
-/* line 65, ../scss/mainpage.scss */
+/* line 66, ../scss/mainpage.scss */
 #mainpage #bar h1 {
   width: 50%;
   display: inline;
   vertical-align: bottom;
+  padding-left: 1%;
 }
-/* line 70, ../scss/mainpage.scss */
+/* line 72, ../scss/mainpage.scss */
 #mainpage #bar #menu {
   float: right;
   display: inline;
   position: relative;
   bottom: 0px;
 }
-/* line 75, ../scss/mainpage.scss */
+/* line 77, ../scss/mainpage.scss */
 #mainpage #bar #menu a {
   color: rgba(255, 255, 255, 0.5);
   margin-left: 30px;
@@ -1024,15 +1026,15 @@ body a {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 79, ../scss/mainpage.scss */
+/* line 81, ../scss/mainpage.scss */
 #mainpage #bar #menu a:before {
   content: "#";
 }
-/* line 82, ../scss/mainpage.scss */
+/* line 84, ../scss/mainpage.scss */
 #mainpage #bar #menu a:after {
   content: " ";
 }
-/* line 85, ../scss/mainpage.scss */
+/* line 87, ../scss/mainpage.scss */
 #mainpage #bar #menu a.active {
   color: rgba(232, 232, 232, 0.85);
   font-weight: bold;
@@ -1062,14 +1064,15 @@ body a {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 104, ../scss/mainpage.scss */
+/* line 106, ../scss/mainpage.scss */
 #mainpage #bar hr {
   color: rgba(255, 255, 255, 0.5);
   margin-top: 20px;
   vertical-align: bottom;
 }
-/* line 110, ../scss/mainpage.scss */
+/* line 112, ../scss/mainpage.scss */
 #mainpage #content {
+  margin-top: 50px;
   width: 80%;
   height: 80%;
   margin-left: auto;
@@ -1077,7 +1080,7 @@ body a {
   color: white;
   padding: 10px;
 }
-/* line 118, ../scss/mainpage.scss */
+/* line 121, ../scss/mainpage.scss */
 #mainpage #cover {
   background-color: rgba(0, 0, 0, 0.45);
   position: absolute;
