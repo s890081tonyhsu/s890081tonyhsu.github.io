@@ -1091,10 +1091,10 @@ body a {
 }
 /* line 128, ../scss/mainpage.scss */
 #mainpage #cover {
-  background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 90%);
-  background: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 90%);
-  background: -o-linear-gradient(-45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 90%);
-  background: linear-gradient(-45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 90%);
+  background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%);
+  background: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%);
+  background: -o-linear-gradient(-45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%);
+  background: linear-gradient(-45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%);
   position: fixed;
   bottom: 0%;
   right: 0%;
@@ -1107,13 +1107,17 @@ body a {
     bottom: 25%;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   /* line 128, ../scss/mainpage.scss */
   #mainpage #cover {
+    background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 90%);
+    background: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 90%);
+    background: -o-linear-gradient(-45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 90%);
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 90%);
     width: auto;
   }
 }
-/* line 141, ../scss/mainpage.scss */
+/* line 142, ../scss/mainpage.scss */
 #mainpage #cover p {
   color: white;
   float: right;

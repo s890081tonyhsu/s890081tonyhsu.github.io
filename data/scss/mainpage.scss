@@ -126,7 +126,7 @@ body{
 		padding:10px;
 	}
 	#cover{
-		@include background(linear-gradient(-45deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 90%));
+		@include background(linear-gradient(-45deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 50%));
 		position:fixed;
 		bottom:0%;
 		right:0%;
@@ -135,7 +135,8 @@ body{
 		@media (min-width: 600px) {
 			bottom:25%;
   		}
-		@media (max-width:480px){
+		@media (max-width:500px){
+			@include background(linear-gradient(-45deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 90%));
 			width:auto;
 		}
 		p{
