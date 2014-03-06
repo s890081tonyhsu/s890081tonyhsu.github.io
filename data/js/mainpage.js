@@ -17,7 +17,8 @@ function checkXY(bool){
 var data;
 
 function LoadPage(Detail, Active){
-	if(Detail == "return"){
+	Active = Active || "";
+	if(Detail == ""){
 		$("#menu a").removeClass("active");
 		$("#content").fadeOut().queue(function(){
 			$("#content").text("").dequeue();
@@ -66,6 +67,8 @@ function DetectURL(){
 				$("#content").append(data).dequeue();
 				$("#content").fadeIn().dequeue();
 		});
+	}else{
+		LoadPage('')
 	}
 }
 

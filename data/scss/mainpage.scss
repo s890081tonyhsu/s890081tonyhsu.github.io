@@ -7,7 +7,7 @@
 @import "sub/wiki";
 @import "sub/tumblr";
 html{
-	height:100%;
+	height:auto;
 }
 body{
 	height:100%;
@@ -126,12 +126,22 @@ body{
 		padding:10px;
 	}
 	#cover{
-		background-color:rgba(0,0,0,.45);
-		position:absolute;
-		bottom:10%;
-		right:10%;
+		@include background(linear-gradient(-45deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 90%));
+		position:fixed;
+		bottom:0%;
+		right:0%;
 		padding:5%;
-		border-radius:3%;
+		width:100%;
+		@media (min-width: 600px) {
+			bottom:25%;
+  		}
+		@media (max-width:480px){
+			width:auto;
+		}
+		p{
+			color:white;
+			float:right;	
+		}
 	}
 }
 
