@@ -1,5 +1,5 @@
-function mm_includejs (jsFile){
-	document .write('<script type="text/javascript" src="data/js/' +jsFile + '"></script>');
+function mm_includejs (jsFile,className){
+	$('#content').append('<script class="sub" language="text/javascript" src="data/js/' +jsFile + '"></script>');
 }
 
 function checkXY(bool){
@@ -14,7 +14,7 @@ function checkXY(bool){
 	}
 }
 
-var data;
+var data, PageStatus;
 
 function LoadPage(Detail, Active){
 	Active = Active || "";
@@ -32,6 +32,7 @@ function LoadPage(Detail, Active){
 		return;
 	}else{
 		$(Active).siblings().removeClass("active");
+		$('script.sub').remove();
 		$(Active).addClass("active");
 		$("#content").attr("detail", Detail);
 		$.get("views/"+Detail+".html",function(buffer){
@@ -43,12 +44,14 @@ function LoadPage(Detail, Active){
 			$("#cover").fadeOut().queue(function(){
 				$("#content").text("").dequeue();
 				$("#content").append(data).dequeue();
+				mm_includejs('sub/'+Detail+'.js','sub');
 				$("#content").fadeIn().dequeue();
 			});
 		}else{
 			$("#content").fadeOut().queue(function(){
 				$("#content").text("").dequeue();
 				$("#content").append(data).dequeue();
+				mm_includejs('sub/'+Detail+'.js','sub');
 				$("#content").fadeIn().dequeue();
 			});
 		}
@@ -83,12 +86,14 @@ function changeURL(target){
 
 function InitPage(){
 	checkXY(true);
-	$(window).load(function(){
-		$('body > div').each(function(){
-			$(this).fadeToggle('slow');
-		});
-	});
 	DetectURL();
+	$(window).load(function(){
+		setTimeout(function(){
+			$('body > div').each(function(){
+				$(this).fadeToggle('slow');
+			});
+		},500);
+	});
 }
 
 

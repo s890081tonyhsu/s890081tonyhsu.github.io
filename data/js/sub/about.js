@@ -13,4 +13,3 @@ $('div.return').click(function(){
 	$('section').each(function(){$(this).fadeIn();});
 	$('div[name]:visible').fadeOut();
 });
-$(document).ready(checkXY(true));
