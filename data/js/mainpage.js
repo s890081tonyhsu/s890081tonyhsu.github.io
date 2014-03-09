@@ -5,7 +5,7 @@ function mm_includejs (jsFile,className){
 function checkXY(bool){
 	var y = $(document).height();
 	var x = $(document).width();
-	if(x*3 > y*4){
+	if(x*6 > y*11){
 		$('#background').removeClass('yx');
 		$('#background').addClass('xy');
 	}else{
@@ -96,6 +96,17 @@ function InitPage(){
 	});
 }
 
-
 $(document).ready(InitPage);
-$(window).resize(checkXY(true));
+window.onresize = function (e){checkXY(true)};
+onscroll = function() {
+  var scrollTop = window.scrollY;
+  if (scrollTop > 50) {
+    if (!$('#bar').is(':hidden')) {
+      $('#bar').slideUp();
+    }
+  } else {
+    if ($('#bar').is(':hidden')) {
+      $("#bar").slideDown();
+    }
+  }
+};
