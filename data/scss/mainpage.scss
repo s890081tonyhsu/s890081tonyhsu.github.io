@@ -53,12 +53,7 @@ body{
 	left:0px;
 	height:100%;
 	width:100%;
-	&.xy{
-		background-size:100% auto;
-	}
-	&.yx{
-		background-size:auto 100%;
-	}
+	background-size:cover;
 }
 #mainpage{
 	position:absolute;
@@ -68,8 +63,11 @@ body{
 	width:95%;
 	height:95%;	
 	#bar{
+		z-index:500;
 		position:fixed;
+		padding:10px;
 		width:95%;
+		background-color:rgba(0,0,0,0);
 		h1{
 			width:50%;
 			display:inline;
@@ -115,6 +113,8 @@ body{
 			margin-top:20px;
 			vertical-align:bottom;
 		}
+		@include transition-property(background-color);
+		@include transition-duration(0.5s);
 	}
 	#content{
 		margin-top:50px;

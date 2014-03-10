@@ -2,18 +2,6 @@ function mm_includejs (jsFile,className){
 	$('#content').append('<script class="sub" language="text/javascript" src="data/js/' +jsFile + '"></script>');
 }
 
-function checkXY(bool){
-	var y = $(document).height();
-	var x = $(document).width();
-	if(x*6 > y*11){
-		$('#background').removeClass('yx');
-		$('#background').addClass('xy');
-	}else{
-		$('#background').removeClass('xy');
-		$('#background').addClass('yx');
-	}
-}
-
 var data, PageStatus;
 
 function LoadPage(Detail, Active){
@@ -25,7 +13,6 @@ function LoadPage(Detail, Active){
 			$("#cover").fadeIn().dequeue();
 		});
 		$("#content").attr("detail","");
-		checkXY(true);
 		return;
 	}
 	if($("#content").attr("detail") == Detail){
@@ -85,7 +72,6 @@ function changeURL(target){
 }
 
 function InitPage(){
-	checkXY(true);
 	DetectURL();
 	$(window).load(function(){
 		setTimeout(function(){
@@ -97,7 +83,6 @@ function InitPage(){
 }
 
 $(document).ready(InitPage);
-window.onresize = function (e){checkXY(true)};
 onscroll = function() {
   var scrollTop = window.scrollY;
   if (scrollTop > 50) {

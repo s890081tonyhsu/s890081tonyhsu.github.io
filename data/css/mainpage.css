@@ -967,17 +967,10 @@ body a {
   left: 0px;
   height: 100%;
   width: 100%;
-}
-/* line 56, ../scss/mainpage.scss */
-#background.xy {
-  background-size: 100% auto;
-}
-/* line 59, ../scss/mainpage.scss */
-#background.yx {
-  background-size: auto 100%;
+  background-size: cover;
 }
 
-/* line 63, ../scss/mainpage.scss */
+/* line 58, ../scss/mainpage.scss */
 #mainpage {
   position: absolute;
   top: 20px;
@@ -986,26 +979,37 @@ body a {
   width: 95%;
   height: 95%;
 }
-/* line 70, ../scss/mainpage.scss */
+/* line 65, ../scss/mainpage.scss */
 #mainpage #bar {
+  z-index: 500;
   position: fixed;
+  padding: 10px;
   width: 95%;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
-/* line 73, ../scss/mainpage.scss */
+/* line 71, ../scss/mainpage.scss */
 #mainpage #bar h1 {
   width: 50%;
   display: inline;
   vertical-align: bottom;
   padding-left: 1%;
 }
-/* line 79, ../scss/mainpage.scss */
+/* line 77, ../scss/mainpage.scss */
 #mainpage #bar #menu {
   float: right;
   display: inline;
   position: relative;
   bottom: 0px;
 }
-/* line 84, ../scss/mainpage.scss */
+/* line 82, ../scss/mainpage.scss */
 #mainpage #bar #menu a {
   color: rgba(255, 255, 255, 0.5);
   margin-left: 30px;
@@ -1035,15 +1039,15 @@ body a {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 88, ../scss/mainpage.scss */
+/* line 86, ../scss/mainpage.scss */
 #mainpage #bar #menu a:before {
   content: "#";
 }
-/* line 91, ../scss/mainpage.scss */
+/* line 89, ../scss/mainpage.scss */
 #mainpage #bar #menu a:after {
   content: " ";
 }
-/* line 94, ../scss/mainpage.scss */
+/* line 92, ../scss/mainpage.scss */
 #mainpage #bar #menu a.active {
   color: rgba(232, 232, 232, 0.85);
   font-weight: bold;
@@ -1073,7 +1077,7 @@ body a {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 113, ../scss/mainpage.scss */
+/* line 111, ../scss/mainpage.scss */
 #mainpage #bar hr {
   color: rgba(255, 255, 255, 0.5);
   margin-top: 20px;
