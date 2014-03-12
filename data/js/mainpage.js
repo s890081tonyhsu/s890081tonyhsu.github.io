@@ -42,7 +42,6 @@ function LoadPage(Detail, Active){
 				$("#content").fadeIn().dequeue();
 			});
 		}
-		checkXY(true);
 	}
 }
 
