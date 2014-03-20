@@ -1,5 +1,5 @@
 function mm_includejs (jsFile,className){
-	$('#content').append('<script class="sub" language="text/javascript" src="data/js/' +jsFile + '"></script>');
+	$('#content').append('<script class="sub" language="text/javascript" src="assets/js/' +jsFile + '"></script>');
 }
 
 var data, PageStatus;
