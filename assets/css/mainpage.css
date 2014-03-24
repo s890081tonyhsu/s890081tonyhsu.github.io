@@ -904,11 +904,24 @@ body {
 #tumblr {
   padding: 5%;
   width: 100%;
+  overflow: auto;
   background-color: rgba(0, 0, 0, 0.45);
 }
-/* line 5, ../scss/sub/_tumblr.scss */
+/* line 6, ../scss/sub/_tumblr.scss */
 #tumblr a {
   color: white;
+}
+/* line 9, ../scss/sub/_tumblr.scss */
+#tumblr #front_post, #tumblr #other_posts {
+  width: 45%;
+  float: left;
+  padding: 2%;
+}
+@media screen and (max-width: 810px) {
+  /* line 9, ../scss/sub/_tumblr.scss */
+  #tumblr #front_post, #tumblr #other_posts {
+    width: 100%;
+  }
 }
 
 /* line 9, ../scss/mainpage.scss */

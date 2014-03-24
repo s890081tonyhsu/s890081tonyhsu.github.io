@@ -1,10 +1,18 @@
 function ShowList(data){
-		$('#tumblr').text("");
+		$('#tumblr #front_post').text("");
+		$('#tumblr #other_posts').text("");
+		$('#tumblr #other_posts').append('<h3>Other Posts:</h3><hr>');
 		console.log(data.total_posts);
 		var end = data.total_posts;
 		for(var i=0; i<end; i++){
-			var post = data.posts[i];
-			$('#tumblr').append('<a href='+post.post_url+'><p id='+post.id+'>'+post.title+'</p></a>');
+			if(i == 0){
+				var post = data.posts[i];
+				$('#tumblr #front_post').append('<a href='+post.post_url+'><h3>'+post.title+'</h3></a><hr>');
+				$('#tumblr #front_post').append(post.body);
+			}else{
+				var post = data.posts[i];
+				$('#tumblr #other_posts').append('<a href='+post.post_url+'><p id='+post.id+'>'+post.title+'</p></a>');
+			}
 		}
 }
 
