@@ -15,7 +15,7 @@ function Console_Dir(path,data,div){
 		for(var key in name){
 				if(!isNumber(name[key])){
 						$(div).append('<li onclick="$(\'#'+name[key]+'\').slideToggle();$(\'#foldall\').fadeIn();"><strong>'+name[key]+'</strong></li><ul id="'+name[key]+'" class="sub" style="display:none;"></ul>');
-						Console_Dir(path+key+':',data[name[key]],'#'+name[key]);
+						Console_Dir(path+name[key]+':',data[name[key]],'#'+name[key]);
 				}else{
 						output = data[name[key]].replace('.txt','');
 						$(div).append('<li><a href="'+WikiPrefix+path+output+'">'+output+'</a></li>');
