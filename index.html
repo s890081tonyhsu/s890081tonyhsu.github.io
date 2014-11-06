@@ -10,10 +10,11 @@
 <link media="screen" rel="stylesheet"	href="assets/css/mainpage.css" type="text/css" />
 <link href="http://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" type="text/css">
 <script language="javascript" src="assets/js/jquery.min.js"></script>
+<script language="javascript" src="assets/js/borderMenu.js"></script>
 <script language="javascript" src="assets/js/mainpage.js"></script>
 <link rel="Shortcut Icon"  	href="assets/images/favicon.ico"	type="image/x-icon" />
 <title>Blacken_Angel Private World</title>
-<base target="_blank">
+<!--<base target="_blank">-->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -54,19 +55,10 @@
 		</div>
 </div>
 	<div id="background" style="display:none;">&nbsp;</div>
-	<div id="mainpage" style="display:none;">	
-			<div id="bar">
-				<h1 onclick="changeURL('');" style="cursor:pointer;color:white;">Blacken_Angel Private World</h1>
-				<div id="menu">
-						<a onclick="changeURL('about');"   page="about"  >About Me</a>
-						<a onclick="changeURL('works');"   page="works"  >Works</a>
-						<a onclick="changeURL('wiki');"    page="wiki"   >Wiki</a>
-						<a onclick="changeURL('tumblr');"  page="tumblr" >Tumblr</a>
-				</div>
-				<hr width="100%">
-			</div>
-			<div id="content" detail="" style="display:none;">
-			</div>
+	<div id="mainpage" class="container" style="display:none;">
+		<header class="codrops-header">
+			<h1>Blacken_Angel Private World</h1>
+			<div id="content" detail="" style="display:none;"></div>
 			<div id="cover" >
 				<p>
 					What is "Blacken_Angel"? <br><br>
@@ -75,6 +67,17 @@
 					If you want to learn more, please check <a onclick="changeURL('about');" style="cursor:pointer.">About Me</a>.	
 				</p>
 			</div>
+		</header>
+		<nav id="bt-menu" class="bt-menu">
+			<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+			<ul>
+				<li><a onclick="changeURL('');" page="about" class="bt-icon">Home</a></li>
+				<li><a onclick="changeURL('about');" page="about" class="bt-icon">About</a></li>
+				<li><a onclick="changeURL('works');" page="works" class="bt-icon">Works</a></li>
+				<li><a onclick="changeURL('wiki');" page="wiki" class="bt-icon">Wiki</a></li>
+				<li><a onclick="changeURL('tumblr');" page="tumblr" class="bt-icon">Tumblr</a></li>
+			</ul>
+		</nav>
 	</div>
 </body>
 </html>

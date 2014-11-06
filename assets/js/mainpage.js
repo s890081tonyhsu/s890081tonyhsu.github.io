@@ -47,8 +47,8 @@ function LoadPage(Detail, Active){
 
 function DetectURL(){
 	var page = location.search.replace('\?','');
-	if(page != "" && $('#menu a[page='+page+']').length >0){
-		LoadPage(page,$('#menu a[page='+page+']'));
+	if(page != "" && $('#bt-menu a[page='+page+']').length >0){
+		LoadPage(page,$('#bt-menu a[page='+page+']'));
 	}else if(page != ""){
 		data = "<p>Maybe you get the wrong page. Please click the title to reload.</p>";
 		$("#cover").fadeOut().queue(function(){
