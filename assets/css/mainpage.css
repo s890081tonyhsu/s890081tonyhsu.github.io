@@ -318,7 +318,7 @@ body {
     transform: rotate(900deg);
   }
 }
-/* line 1, ../scss/background/_menu.scss */
+/* line 4, ../scss/background/_menu.scss */
 *,
 *:after,
 *::before {
@@ -327,12 +327,12 @@ body {
   box-sizing: border-box;
 }
 
-/* line 9, ../scss/background/_menu.scss */
+/* line 12, ../scss/background/_menu.scss */
 .container {
   padding: 80px;
 }
 
-/* line 13, ../scss/background/_menu.scss */
+/* line 16, ../scss/background/_menu.scss */
 .bt-menu {
   position: fixed;
   top: 0;
@@ -344,31 +344,36 @@ body {
   border-color: #333;
   background-color: transparent;
   -webkit-backface-visibility: hidden;
-  -webkit-transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+  -moz-transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+  -o-transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+  -webkit-transition: border-width 0.3s, background-color 0.3s, height 0s;
+  -webkit-transition-delay: 0s, 0s, 0.3s;
   transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
 }
 
-/* line 28, ../scss/background/_menu.scss */
+/* line 30, ../scss/background/_menu.scss */
 .bt-menu.bt-menu-open {
   height: 100%;
   border-width: 0px 0px 50px 150px;
   background-color: rgba(0, 0, 0, 0.3);
+  -moz-transition: border-width 0.3s, background-color 0.3s;
+  -o-transition: border-width 0.3s, background-color 0.3s;
   -webkit-transition: border-width 0.3s, background-color 0.3s;
   transition: border-width 0.3s, background-color 0.3s;
 }
 
-/* line 36, ../scss/background/_menu.scss */
+/* line 37, ../scss/background/_menu.scss */
 .bt-overlay {
   position: absolute;
   width: 100%;
 }
 
-/* line 41, ../scss/background/_menu.scss */
+/* line 42, ../scss/background/_menu.scss */
 .bt-menu-open .bt-overlay {
   height: 100%;
 }
 
-/* line 45, ../scss/background/_menu.scss */
+/* line 46, ../scss/background/_menu.scss */
 .bt-menu-trigger {
   position: fixed;
   top: 10px;
@@ -380,7 +385,7 @@ body {
   cursor: pointer;
 }
 
-/* line 56, ../scss/background/_menu.scss */
+/* line 57, ../scss/background/_menu.scss */
 .bt-menu-trigger span {
   position: absolute;
   top: 50%;
@@ -396,8 +401,10 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+  -moz-transition: border-width 0.3s;
+  -o-transition: border-width 0.3s;
+  -webkit-transition: border-width 0.3s;
+  transition: border-width 0.3s;
 }
 
 /* line 75, ../scss/background/_menu.scss */
@@ -409,35 +416,45 @@ body {
   height: 100%;
   background: #fff;
   content: '';
+  -moz-transition: -moz-transform 0.3s;
+  -o-transition: -o-transform 0.3s;
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
 }
 
-/* line 87, ../scss/background/_menu.scss */
+/* line 86, ../scss/background/_menu.scss */
 .bt-menu-trigger span:before {
+  -moz-transform: translateY(-250%);
+  -ms-transform: translateY(-250%);
   -webkit-transform: translateY(-250%);
   transform: translateY(-250%);
 }
 
-/* line 92, ../scss/background/_menu.scss */
+/* line 90, ../scss/background/_menu.scss */
 .bt-menu-trigger span:after {
+  -moz-transform: translateY(250%);
+  -ms-transform: translateY(250%);
   -webkit-transform: translateY(250%);
   transform: translateY(250%);
 }
 
-/* line 97, ../scss/background/_menu.scss */
+/* line 94, ../scss/background/_menu.scss */
 .bt-menu-open .bt-menu-trigger span:before {
+  -moz-transform: translateY(-300%);
+  -ms-transform: translateY(-300%);
   -webkit-transform: translateY(-300%);
   transform: translateY(-300%);
 }
 
-/* line 102, ../scss/background/_menu.scss */
+/* line 98, ../scss/background/_menu.scss */
 .bt-menu-open .bt-menu-trigger span:after {
+  -moz-transform: translateY(300%);
+  -ms-transform: translateY(300%);
   -webkit-transform: translateY(300%);
   transform: translateY(300%);
 }
 
-/* line 107, ../scss/background/_menu.scss */
+/* line 102, ../scss/background/_menu.scss */
 .bt-menu ul {
   position: fixed;
   margin: 0;
@@ -445,111 +462,130 @@ body {
   list-style: none;
 }
 
-/* line 114, ../scss/background/_menu.scss */
+/* line 109, ../scss/background/_menu.scss */
 .bt-menu ul:first-of-type {
   top: 75px;
   left: 0;
 }
 
-/* line 119, ../scss/background/_menu.scss */
+/* line 114, ../scss/background/_menu.scss */
 .bt-menu ul:nth-of-type(2) {
   right: 0;
   bottom: 0;
 }
 
-/* line 124, ../scss/background/_menu.scss */
+/* line 119, ../scss/background/_menu.scss */
 .bt-menu ul li,
 .bt-menu ul li a {
   display: block;
 }
 
-/* line 129, ../scss/background/_menu.scss */
+/* line 124, ../scss/background/_menu.scss */
 .bt-menu ul:nth-of-type(2) li {
   float: left;
   font-size: 0px;
 }
 
-/* line 134, ../scss/background/_menu.scss */
+/* line 129, ../scss/background/_menu.scss */
 .bt-menu ul li {
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
+  -o-transition: -o-transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s, visibility 0s;
+  -webkit-transition-delay: 0s, 0s, 0.3s;
   transition: transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
 }
 
-/* line 141, ../scss/background/_menu.scss */
+/* line 135, ../scss/background/_menu.scss */
 .bt-menu.bt-menu-open ul:first-of-type li,
 .bt-menu.bt-menu-open ul:nth-of-type(2) li {
   visibility: visible;
   opacity: 1;
-  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s 0.1s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  -o-transition: -o-transform 0.3s, opacity 0.3s;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
 }
 
 /* First menu */
-/* line 150, ../scss/background/_menu.scss */
+/* line 143, ../scss/background/_menu.scss */
 .bt-menu ul:first-of-type li {
   width: 150px;
   height: 50px;
   line-height: 50px;
+  -moz-transform: translate3d(-100%, 50%, 0);
   -webkit-transform: translate3d(-100%, 50%, 0);
   transform: translate3d(-100%, 50%, 0);
 }
 
-/* line 158, ../scss/background/_menu.scss */
+/* line 150, ../scss/background/_menu.scss */
 .bt-menu.bt-menu-open ul:first-of-type li {
+  -moz-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
 /* Second menu */
-/* line 164, ../scss/background/_menu.scss */
+/* line 155, ../scss/background/_menu.scss */
 .bt-menu ul:nth-of-type(2) li {
   width: 60px;
   height: 50px;
   line-height: 50px;
-  -webkit-transform: scale(0);
-  transform: scale(0);
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
 }
 
-/* line 172, ../scss/background/_menu.scss */
+/* line 162, ../scss/background/_menu.scss */
 .bt-menu.bt-menu-open ul:nth-of-type(2) li:first-child {
+  -moz-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
 
-/* line 177, ../scss/background/_menu.scss */
+/* line 166, ../scss/background/_menu.scss */
 .bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(2) {
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
 }
 
-/* line 182, ../scss/background/_menu.scss */
+/* line 170, ../scss/background/_menu.scss */
 .bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(3) {
+  -moz-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
 
-/* line 187, ../scss/background/_menu.scss */
+/* line 174, ../scss/background/_menu.scss */
 .bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(4) {
+  -moz-transition-delay: 0.4s;
+  -o-transition-delay: 0.4s;
   -webkit-transition-delay: 0.4s;
   transition-delay: 0.4s;
 }
 
-/* line 192, ../scss/background/_menu.scss */
+/* line 178, ../scss/background/_menu.scss */
 .bt-menu.bt-menu-open ul:nth-of-type(2) li {
-  -webkit-transform: scale(1);
-  transform: scale(1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
-/* line 197, ../scss/background/_menu.scss */
+/* line 182, ../scss/background/_menu.scss */
 .bt-menu ul li a {
   display: block;
   outline: none;
   text-decoration: none;
 }
 
-/* line 203, ../scss/background/_menu.scss */
+/* line 188, ../scss/background/_menu.scss */
 .bt-menu ul:first-of-type li a {
   padding: 0 20px;
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.2);
@@ -557,36 +593,41 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1em;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
 
-/* line 214, ../scss/background/_menu.scss */
+/* line 198, ../scss/background/_menu.scss */
 .bt-menu ul:first-of-type li:last-child a {
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.2), inset 0 -1px rgba(0, 0, 0, 0.2);
 }
 
-/* line 218, ../scss/background/_menu.scss */
+/* line 202, ../scss/background/_menu.scss */
 .bt-menu ul:nth-of-type(2) li a {
   color: transparent;
   text-align: center;
   font-size: 0px;
 }
 
-/* line 224, ../scss/background/_menu.scss */
+/* line 208, ../scss/background/_menu.scss */
 .bt-menu ul li a:before {
   color: #fff;
   font-size: 24px;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
 
-/* line 231, ../scss/background/_menu.scss */
+/* line 214, ../scss/background/_menu.scss */
 .bt-menu ul:first-of-type li a:hover,
 .bt-menu ul:first-of-type li a:focus,
 .bt-menu ul li a:hover:before,
 .bt-menu ul li a:focus:before {
-  color: #1abc9c;
+  color: lightblue;
+  cursor: pointer;
 }
 
 /*
@@ -906,43 +947,136 @@ body {
     transform: scale(1, 1);
   }
 }
-/* line 3, ../scss/sub/_repo.scss */
-#repo {
-  float: right;
-}
-/* line 5, ../scss/sub/_repo.scss */
-#repo div {
+/* line 14, ../scss/sub/_repo.scss */
+#works {
+  width: 100%;
+  float: left;
   background-color: rgba(0, 0, 0, 0.45);
+  padding: 5%;
+}
+/* line 19, ../scss/sub/_repo.scss */
+#works #repo > * {
   position: relative;
   float: left;
-  width: 30%;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
   margin: 1%;
   padding-left: 5%;
+  border: 1px solid lightgreen;
+  border-radius: 10px;
 }
-@media screen and (max-width: 800px) {
-  /* line 5, ../scss/sub/_repo.scss */
-  #repo div {
-    width: 50%;
+@media screen and (min-width: 799px) {
+  /* line 19, ../scss/sub/_repo.scss */
+  #works #repo > * {
+    width: 48%;
+    height: 200px;
   }
 }
+@media screen and (min-width: 999px) {
+  /* line 19, ../scss/sub/_repo.scss */
+  #works #repo > * {
+    height: 120px;
+  }
+}
+/* line 36, ../scss/sub/_repo.scss */
+#works #repo > *.forked {
+  display: none;
+}
+
+/* line 42, ../scss/sub/_repo.scss */
+.lang {
+  display: inline-block;
+  padding: 0;
+  right: 5%;
+  top: 0;
+}
+@media screen and (min-width: 599px) {
+  /* line 42, ../scss/sub/_repo.scss */
+  .lang {
+    position: absolute;
+  }
+}
+@media screen and (min-width: 799px) {
+  /* line 42, ../scss/sub/_repo.scss */
+  .lang {
+    position: static;
+  }
+}
+@media screen and (min-width: 999px) {
+  /* line 42, ../scss/sub/_repo.scss */
+  .lang {
+    position: absolute;
+  }
+}
+/* line 56, ../scss/sub/_repo.scss */
+.lang.ruby {
+  text-shadow: 0 0 1px #fff, 0 0 2px #701516, 0 0 3px #701516, 0 0 4px #701516, 0 0 7px #701516, 0 0 8px rgba(112, 21, 22, 0.65), 0 0 10px rgba(112, 21, 22, 0.45), 0 0 15px rgba(112, 21, 22, 0.15);
+}
+/* line 59, ../scss/sub/_repo.scss */
+.lang.php {
+  text-shadow: 0 0 1px #fff, 0 0 2px #4F5D95, 0 0 3px #4F5D95, 0 0 4px #4F5D95, 0 0 7px #4F5D95, 0 0 8px rgba(79, 93, 149, 0.65), 0 0 10px rgba(79, 93, 149, 0.45), 0 0 15px rgba(79, 93, 149, 0.15);
+}
+/* line 62, ../scss/sub/_repo.scss */
+.lang.javascript {
+  text-shadow: 0 0 1px #fff, 0 0 2px #f1e05a, 0 0 3px #f1e05a, 0 0 4px #f1e05a, 0 0 7px #f1e05a, 0 0 8px rgba(241, 224, 90, 0.65), 0 0 10px rgba(241, 224, 90, 0.45), 0 0 15px rgba(241, 224, 90, 0.15);
+}
+/* line 65, ../scss/sub/_repo.scss */
+.lang.css {
+  text-shadow: 0 0 1px #fff, 0 0 2px #563d7c, 0 0 3px #563d7c, 0 0 4px #563d7c, 0 0 7px #563d7c, 0 0 8px rgba(86, 61, 124, 0.65), 0 0 10px rgba(86, 61, 124, 0.45), 0 0 15px rgba(86, 61, 124, 0.15);
+}
+/* line 68, ../scss/sub/_repo.scss */
+.lang.viml {
+  text-shadow: 0 0 1px #fff, 0 0 2px #199c4b, 0 0 3px #199c4b, 0 0 4px #199c4b, 0 0 7px #199c4b, 0 0 8px rgba(25, 156, 75, 0.65), 0 0 10px rgba(25, 156, 75, 0.45), 0 0 15px rgba(25, 156, 75, 0.15);
+}
+
+/* line 72, ../scss/sub/_repo.scss */
+#stat p {
+  position: relative;
+  float: left;
+  width: 48%;
+  margin: 1%;
+}
 @media screen and (max-width: 599px) {
-  /* line 5, ../scss/sub/_repo.scss */
-  #repo div {
+  /* line 72, ../scss/sub/_repo.scss */
+  #stat p {
     width: 100%;
   }
 }
-/* line 18, ../scss/sub/_repo.scss */
-#repo div.forked:after {
-  background-color: rgba(255, 0, 0, 0.65);
-  content: "forked";
+/* line 80, ../scss/sub/_repo.scss */
+#stat p span {
+  display: inline-block;
+}
+/* line 82, ../scss/sub/_repo.scss */
+#stat p span.ruby {
+  text-shadow: 0 0 1px #fff, 0 0 2px #701516, 0 0 3px #701516, 0 0 4px #701516, 0 0 7px #701516, 0 0 8px rgba(112, 21, 22, 0.65), 0 0 10px rgba(112, 21, 22, 0.45), 0 0 15px rgba(112, 21, 22, 0.15);
+}
+/* line 85, ../scss/sub/_repo.scss */
+#stat p span.php {
+  text-shadow: 0 0 1px #fff, 0 0 2px #4F5D95, 0 0 3px #4F5D95, 0 0 4px #4F5D95, 0 0 7px #4F5D95, 0 0 8px rgba(79, 93, 149, 0.65), 0 0 10px rgba(79, 93, 149, 0.45), 0 0 15px rgba(79, 93, 149, 0.15);
+}
+/* line 88, ../scss/sub/_repo.scss */
+#stat p span.javascript {
+  text-shadow: 0 0 1px #fff, 0 0 2px #f1e05a, 0 0 3px #f1e05a, 0 0 4px #f1e05a, 0 0 7px #f1e05a, 0 0 8px rgba(241, 224, 90, 0.65), 0 0 10px rgba(241, 224, 90, 0.45), 0 0 15px rgba(241, 224, 90, 0.15);
+}
+/* line 91, ../scss/sub/_repo.scss */
+#stat p span.css {
+  text-shadow: 0 0 1px #fff, 0 0 2px #563d7c, 0 0 3px #563d7c, 0 0 4px #563d7c, 0 0 7px #563d7c, 0 0 8px rgba(86, 61, 124, 0.65), 0 0 10px rgba(86, 61, 124, 0.45), 0 0 15px rgba(86, 61, 124, 0.15);
+}
+/* line 94, ../scss/sub/_repo.scss */
+#stat p span.viml {
+  text-shadow: 0 0 1px #fff, 0 0 2px #199c4b, 0 0 3px #199c4b, 0 0 4px #199c4b, 0 0 7px #199c4b, 0 0 8px rgba(25, 156, 75, 0.65), 0 0 10px rgba(25, 156, 75, 0.45), 0 0 15px rgba(25, 156, 75, 0.15);
+}
+
+/* line 100, ../scss/sub/_repo.scss */
+.link {
+  width: 25px;
+  height: 25px;
+  background: url("../images/link_ext.svg");
+  background-size: 25px 25px;
   position: absolute;
-  left: -2%;
-  top: -2%;
-  font-weight: bold;
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  right: 5px;
+  bottom: 5px;
 }
 
 /* line 1, ../scss/sub/_wiki.scss */
@@ -1054,7 +1188,7 @@ body a {
 }
 
 /* line 23, ../scss/mainpage.scss */
-.codrops-header > h1 {
+h1 {
   font: 100 25px/0.7 'Oleo Script', Helvetica, sans-serif;
   color: white;
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);

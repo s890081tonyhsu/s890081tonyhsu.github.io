@@ -1,3 +1,6 @@
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+
 *,
 *:after,
 *::before {
@@ -19,18 +22,16 @@
   border-width: 0px;
   border-style: solid;
   border-color: #333;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0); 
   -webkit-backface-visibility: hidden;
-  -webkit-transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
-  transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+  @include transition(border-width 0.3s, background-color 0.3s, height 0s 0.3s)
 }
 
 .bt-menu.bt-menu-open {
   height: 100%;
   border-width: 0px 0px 50px 150px;
   background-color: rgba(0,0,0,0.3);
-  -webkit-transition: border-width 0.3s, background-color 0.3s;
-  transition: border-width 0.3s, background-color 0.3s;
+  @include transition(border-width 0.3s, background-color 0.3s);
 }
 
 .bt-overlay {
@@ -68,8 +69,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+  @include transition(border-width 0.3s);
 }
 
 .bt-menu-trigger span:before,
@@ -80,28 +80,23 @@
   height: 100%;
   background: #fff;
   content: '';
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
+  @include transition(transform 0.3s);
 }
 
 .bt-menu-trigger span:before {
-  -webkit-transform: translateY(-250%);
-  transform: translateY(-250%);
+  @include translateY(-250%);
 }
 
 .bt-menu-trigger span:after {
-  -webkit-transform: translateY(250%);
-  transform: translateY(250%);
+  @include translateY(250%);
 }
 
 .bt-menu-open .bt-menu-trigger span:before {
-  -webkit-transform: translateY(-300%);
-  transform: translateY(-300%);
+  @include translateY(-300%);
 }
 
 .bt-menu-open .bt-menu-trigger span:after {
-  -webkit-transform: translateY(300%);
-  transform: translateY(300%);
+  @include translateY(300%);
 }
 
 .bt-menu ul {
@@ -134,16 +129,14 @@
 .bt-menu ul li {
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
-  transition: transform 0.3s, opacity 0.2s, visibility 0s 0.3s;
+  @include transition( transform 0.3s, opacity 0.2s, visibility 0s 0.3s );
 }
 
 .bt-menu.bt-menu-open ul:first-of-type li,
 .bt-menu.bt-menu-open ul:nth-of-type(2) li {
   visibility: visible;
   opacity: 1;
-  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s 0.1s;
-  transition: transform 0.3s, opacity 0.3s;
+  @include transition( transform 0.3s, opacity 0.3s );
 }
 
 /* First menu */
@@ -151,13 +144,11 @@
   width: 150px;
   height: 50px;
   line-height: 50px;
-  -webkit-transform: translate3d(-100%,50%,0);
-  transform: translate3d(-100%,50%,0);
+  @include translate3d(-100%,50%,0);
 }
 
 .bt-menu.bt-menu-open ul:first-of-type li {
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  @include translate3d(0,0,0);
 }
 
 /* Second menu */
@@ -165,33 +156,27 @@
   width: 60px;
   height: 50px;
   line-height: 50px;
-  -webkit-transform: scale(0);
-  transform: scale(0);
+  @include scale(0, 0);
 }
 
-.bt-menu.bt-menu-open ul:nth-of-type(2) li:first-child { 
-  -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s;
+.bt-menu.bt-menu-open ul:nth-of-type(2) li:first-child {
+  @include transition-delay(0.1s);
 }
 
-.bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(2) { 
-  -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
+.bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(2) {
+  @include transition-delay(0.2s);
 }
 
-.bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(3) { 
-  -webkit-transition-delay: 0.3s;
-  transition-delay: 0.3s;
+.bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(3) {
+  @include transition-delay(0.3s);
 }
 
 .bt-menu.bt-menu-open ul:nth-of-type(2) li:nth-child(4) {
-  -webkit-transition-delay: 0.4s;
-  transition-delay: 0.4s;
+  @include transition-delay(0.4s);
 }
 
 .bt-menu.bt-menu-open ul:nth-of-type(2) li {
-  -webkit-transform: scale(1);
-  transform: scale(1);
+  @include scale(1, 1);
 }
 
 .bt-menu ul li a {
@@ -207,8 +192,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1em;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
+  @include transition(color 0.2s);
 }
 
 .bt-menu ul:first-of-type li:last-child a {
@@ -224,13 +208,13 @@
 .bt-menu ul li a:before {
   color: #fff;
   font-size: 24px;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
+  @include transition(color 0.2s);
 }
 
 .bt-menu ul:first-of-type li a:hover,
 .bt-menu ul:first-of-type li a:focus,
 .bt-menu ul li a:hover:before,
 .bt-menu ul li a:focus:before {
-  color: #1abc9c;
+  color: lightblue;
+  cursor: pointer;
 }

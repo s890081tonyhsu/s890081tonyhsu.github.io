@@ -1,28 +1,108 @@
 @import "compass/css3/transform";
 
-#repo{
-	float:right;
-	div{
-		background-color:rgba(0,0,0,0.45);
+@mixin neon_shadow($color){
+	text-shadow: 0 0 1px #fff,
+                 0 0 2px $color,
+                 0 0 3px $color,
+                 0 0 4px $color,
+                 0 0 7px $color,
+                 0 0 8px rgba($color, .65),
+                 0 0 10px rgba($color, .45),
+                 0 0 15px rgba($color, .15);
+}
+
+#works{
+	width: 100%;
+	float:left;
+	background-color:rgba(0,0,0,0.45);
+	padding: 5%;
+	#repo > *{
 		position:relative;
 		float:left;
-		width:30%;
+		width:100%;
+		height:auto;
+		overflow:hidden;
 		margin:1%;
 		padding-left:5%;
-		@media screen and (max-width:800px){
-			width:50%;
+		border: 1px solid lightgreen;
+		border-radius: 10px;
+		@media screen and (min-width:799px){
+			width:48%;
+			height:200px;
 		}
-		@media screen and (max-width:599px){
-			width:100%;
-		}
-		&.forked:after{
-			background-color:rgba(255,0,0,0.65);
-			content:"forked";
-			position:absolute;
-			left:-2%;
-			top:-2%;
-			font-weight:bold;
-			@include rotate(-45deg);
+		@media screen and (min-width:999px){
+			height:120px;
+		}	
+		&.forked{
+			display:none;
 		}
 	}
+}
+
+.lang{
+	display: inline-block;
+	padding: 0;
+	right: 5%;
+	top: 0;
+	@media screen and (min-width:599px){
+		position: absolute;
+	}
+	@media screen and (min-width:799px){
+		position: static;
+	}
+	@media screen and (min-width:999px){
+		position: absolute;
+	}	
+	&.ruby{
+		@include neon_shadow(#701516);
+	}
+	&.php{
+		@include neon_shadow(#4F5D95);
+	}
+	&.javascript{
+		@include neon_shadow(#f1e05a);
+	}
+	&.css{
+		@include neon_shadow(#563d7c);
+	}
+	&.viml{
+		@include neon_shadow(#199c4b);
+	}
+}
+#stat p{
+	position:relative;
+	float:left;
+	width:48%;
+	margin:1%;
+	@media screen and (max-width:599px){
+		width:100%;
+	}
+	span{
+		display: inline-block;
+		&.ruby{
+			@include neon_shadow(#701516);
+		}
+		&.php{
+			@include neon_shadow(#4F5D95);
+		}
+		&.javascript{
+			@include neon_shadow(#f1e05a);
+		}
+		&.css{
+			@include neon_shadow(#563d7c);
+		}
+		&.viml{
+			@include neon_shadow(#199c4b);
+		}
+	}
+}
+
+.link{
+	width:25px;
+	height:25px;
+	background: url('../images/link_ext.svg');
+	background-size: 25px 25px;
+	position:absolute;
+	right: 5px;
+	bottom: 5px;
 }
