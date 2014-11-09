@@ -14,11 +14,11 @@ function Console_Dir(path,data,div){
 		}
 		for(var key in name){
 				if(!isNumber(name[key])){
-						$(div).append('<li onclick="$(\'#'+name[key]+'\').slideToggle();$(\'#foldall\').fadeIn();"><strong>'+name[key]+'</strong></li><ul id="'+name[key]+'" class="sub" style="display:none;"></ul>');
+						$(div).append('<li><a href="#"><strong>'+name[key]+'</strong></a><ul id="'+name[key]+'" class="dl-submenu"></ul></li>');
 						Console_Dir(path+name[key]+':',data[name[key]],'#'+name[key]);
 				}else{
 						output = data[name[key]].replace('.txt','');
-						$(div).append('<li><a href="'+WikiPrefix+path+output+'">'+output+'</a></li>');
+						$(div).append('<li><a href="'+WikiPrefix+path+output+'" target="_blank" >'+output+'</a></li>');
 				}
 		}
 }
@@ -34,6 +34,8 @@ function GetData(){
 					   var get = msg;
 					   console.log(get);
 					   Console_Dir('',get,'#index');
+					   $( '#dl-menu' ).dlmenu();
+					   $('button').click();
 			   },
 		});
 }

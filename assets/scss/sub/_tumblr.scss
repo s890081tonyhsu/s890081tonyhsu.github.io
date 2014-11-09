@@ -3,15 +3,7 @@
 	width:100%;
 	overflow:auto;
 	background-color:rgba(0,0,0,.45);
-	a{
-		color:white;
-	}
-	#front_post, #other_posts{
-		width:45%;
-		float:left;
-		padding:2%;
-		@media screen and (max-width:810px){
-			width:100%;
-		}
+	.more{
+		text-align: right;
 	}
 }
