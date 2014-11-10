@@ -2,76 +2,47 @@ function mm_includejs (jsFile,className){
 	$('#content').append('<script class="sub" language="text/javascript" src="assets/js/' +jsFile + '"></script>');
 }
 
-var data, PageStatus;
-
-function LoadPage(Detail, Active){
-	Active = Active || "";
-	if(Detail == ""){
-		$("#menu a").removeClass("active");
-		$("#content").fadeOut().queue(function(){
-			$("#content").text("").dequeue();
-			$("#cover").fadeIn().dequeue();
-		});
-		$("#content").attr("detail","");
-		return;
+function LoadUrl(){
+	var url = {
+		"available": null,
+		"regex": /([^?&=#]+)=([^&#]*)/g,
+		"source": location.search,
+		"params": {},
+		"page": null,
+		"detail": null
+	};
+	var temp = url["source"].match(url["regex"]);
+	console.log(temp);
+	for(var key in temp) {
+		var data = temp[key].split("=");
+    	url["params"][data[0]] = data[1];
 	}
-	if($("#content").attr("detail") == Detail){
-		return;
-	}else{
-		$(Active).siblings().removeClass("active");
-		$('script.sub').remove();
-		$(Active).addClass("active");
-		$("#content").attr("detail", Detail);
-		$.get("views/"+Detail+".html",function(buffer){
-			data = buffer;
-		}).fail(function(){
-			data = "<p>There's nothing here, please wait for some days.</p>";
-		});
-		if($("#cover").css("display") == "block"){
+	url["page"] = url["params"]["page"];
+	$.getJSON("url_sub.json", function(json) {
+		url["available"] = json;
+		if(url["available"]["status"][url["page"]] == true){
+			$.get("views/"+ url["page"] +".html",function(buffer){
+				url["detail"] = buffer;
+			}).fail(function(){
+				url["detail"] = "<p>There's nothing here, please wait for some days.</p>";
+			});
+			mm_includejs('sub/'+ url["page"] +'.js','sub');
+		}else{
+			url["detail"] = "<p>Maybe you get the wrong page. Please click the title to reload.</p>";
+		}
+		if(location.search != ""){
 			$("#cover").fadeOut().queue(function(){
 				$("#content").text("").dequeue();
-				$("#content").append(data).dequeue();
-				mm_includejs('sub/'+Detail+'.js','sub');
-				$("#content").fadeIn().dequeue();
-			});
-		}else{
-			$("#content").fadeOut().queue(function(){
-				$("#content").text("").dequeue();
-				$("#content").append(data).dequeue();
-				mm_includejs('sub/'+Detail+'.js','sub');
+				$("#content").append(url["detail"]).dequeue();
 				$("#content").fadeIn().dequeue();
 			});
 		}
-	}
-}
-
-function DetectURL(){
-	var page = location.search.replace('\?','');
-	if(page != "" && $('#bt-menu a[page='+page+']').length >0){
-		LoadPage(page,$('#bt-menu a[page='+page+']'));
-	}else if(page != ""){
-		data = "<p>Maybe you get the wrong page. Please click the title to reload.</p>";
-		$("#cover").fadeOut().queue(function(){
-				$("#content").text("").dequeue();
-				$("#content").append(data).dequeue();
-				$("#content").fadeIn().dequeue();
-		});
-	}else{
-		LoadPage('')
-	}
-}
-
-function changeURL(target){
-	if(typeof history.replaceState == 'function'){
-		history.replaceState({page: location.search},'',"?"+target);
-		DetectURL();
-	}else{
-		location.search = target;
-	}
+		console.log(url);
+	});
 }
 
 function InitPage(){
-	DetectURL();
+	LoadUrl();
 	$(window).load(function(){
 		setTimeout(function(){
 			$('body > div').each(function(){
@@ -82,15 +53,3 @@ function InitPage(){
 }
 
 $(document).ready(InitPage);
-onscroll = function() {
-  var scrollTop = window.scrollY;
-  if (scrollTop > 50) {
-    if (!$('#bar').is(':hidden')) {
-      $('#bar').slideUp();
-    }
-  } else {
-    if ($('#bar').is(':hidden')) {
-      $("#bar").slideDown();
-    }
-  }
-};
