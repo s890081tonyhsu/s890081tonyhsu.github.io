@@ -33,9 +33,6 @@
 		@media screen and (min-width:999px){
 			height:120px;
 		}	
-		&.forked{
-			display:none;
-		}
 	}
 }
 
@@ -68,6 +65,12 @@
 	&.viml{
 		@include neon_shadow(#199c4b);
 	}
+	&.python{
+		@include neon_shadow(#3581ba);
+	}
+	&.shell{
+		@include neon_shadow(#89e051);
+	}
 }
 #stat p{
 	position:relative;
@@ -93,6 +96,12 @@
 		}
 		&.viml{
 			@include neon_shadow(#199c4b);
+		}
+		&.python{
+			@include neon_shadow(#3581ba);
+		}
+		&.shell{
+			@include neon_shadow(#89e051);
 		}
 	}
 }
