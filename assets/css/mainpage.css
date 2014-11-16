@@ -858,52 +858,11 @@ body {
 }
 
 /* line 75, ../scss/sub/_repo.scss */
-#stat p {
-  position: relative;
-  float: left;
-  width: 48%;
-  margin: 1%;
-}
-@media screen and (max-width: 599px) {
-  /* line 75, ../scss/sub/_repo.scss */
-  #stat p {
-    width: 100%;
-  }
-}
-/* line 83, ../scss/sub/_repo.scss */
-#stat p span {
-  display: inline-block;
-}
-/* line 85, ../scss/sub/_repo.scss */
-#stat p span.ruby {
-  text-shadow: 0 0 1px #fff, 0 0 2px #701516, 0 0 3px #701516, 0 0 4px #701516, 0 0 7px #701516, 0 0 8px rgba(112, 21, 22, 0.65), 0 0 10px rgba(112, 21, 22, 0.45), 0 0 15px rgba(112, 21, 22, 0.15);
-}
-/* line 88, ../scss/sub/_repo.scss */
-#stat p span.php {
-  text-shadow: 0 0 1px #fff, 0 0 2px #4F5D95, 0 0 3px #4F5D95, 0 0 4px #4F5D95, 0 0 7px #4F5D95, 0 0 8px rgba(79, 93, 149, 0.65), 0 0 10px rgba(79, 93, 149, 0.45), 0 0 15px rgba(79, 93, 149, 0.15);
-}
-/* line 91, ../scss/sub/_repo.scss */
-#stat p span.javascript {
-  text-shadow: 0 0 1px #fff, 0 0 2px #f1e05a, 0 0 3px #f1e05a, 0 0 4px #f1e05a, 0 0 7px #f1e05a, 0 0 8px rgba(241, 224, 90, 0.65), 0 0 10px rgba(241, 224, 90, 0.45), 0 0 15px rgba(241, 224, 90, 0.15);
-}
-/* line 94, ../scss/sub/_repo.scss */
-#stat p span.css {
-  text-shadow: 0 0 1px #fff, 0 0 2px #563d7c, 0 0 3px #563d7c, 0 0 4px #563d7c, 0 0 7px #563d7c, 0 0 8px rgba(86, 61, 124, 0.65), 0 0 10px rgba(86, 61, 124, 0.45), 0 0 15px rgba(86, 61, 124, 0.15);
-}
-/* line 97, ../scss/sub/_repo.scss */
-#stat p span.viml {
-  text-shadow: 0 0 1px #fff, 0 0 2px #199c4b, 0 0 3px #199c4b, 0 0 4px #199c4b, 0 0 7px #199c4b, 0 0 8px rgba(25, 156, 75, 0.65), 0 0 10px rgba(25, 156, 75, 0.45), 0 0 15px rgba(25, 156, 75, 0.15);
-}
-/* line 100, ../scss/sub/_repo.scss */
-#stat p span.python {
-  text-shadow: 0 0 1px #fff, 0 0 2px #3581ba, 0 0 3px #3581ba, 0 0 4px #3581ba, 0 0 7px #3581ba, 0 0 8px rgba(53, 129, 186, 0.65), 0 0 10px rgba(53, 129, 186, 0.45), 0 0 15px rgba(53, 129, 186, 0.15);
-}
-/* line 103, ../scss/sub/_repo.scss */
-#stat p span.shell {
-  text-shadow: 0 0 1px #fff, 0 0 2px #89e051, 0 0 3px #89e051, 0 0 4px #89e051, 0 0 7px #89e051, 0 0 8px rgba(137, 224, 81, 0.65), 0 0 10px rgba(137, 224, 81, 0.45), 0 0 15px rgba(137, 224, 81, 0.15);
+#stat {
+  width: 100%;
 }
 
-/* line 109, ../scss/sub/_repo.scss */
+/* line 79, ../scss/sub/_repo.scss */
 .link {
   width: 25px;
   height: 25px;

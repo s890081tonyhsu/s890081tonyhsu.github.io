@@ -72,38 +72,8 @@
 		@include neon_shadow(#89e051);
 	}
 }
-#stat p{
-	position:relative;
-	float:left;
-	width:48%;
-	margin:1%;
-	@media screen and (max-width:599px){
-		width:100%;
-	}
-	span{
-		display: inline-block;
-		&.ruby{
-			@include neon_shadow(#701516);
-		}
-		&.php{
-			@include neon_shadow(#4F5D95);
-		}
-		&.javascript{
-			@include neon_shadow(#f1e05a);
-		}
-		&.css{
-			@include neon_shadow(#563d7c);
-		}
-		&.viml{
-			@include neon_shadow(#199c4b);
-		}
-		&.python{
-			@include neon_shadow(#3581ba);
-		}
-		&.shell{
-			@include neon_shadow(#89e051);
-		}
-	}
+#stat{
+	width: 100%;
 }
 
 .link{
