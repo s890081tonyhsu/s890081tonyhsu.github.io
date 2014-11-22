@@ -328,8 +328,8 @@ body {
 }
 
 /* line 12, ../scss/background/_menu.scss */
-.container {
-  padding: 80px;
+header {
+  padding-top: 80px;
 }
 
 /* line 16, ../scss/background/_menu.scss */
@@ -655,7 +655,18 @@ body {
   cursor: pointer;
 }
 
-/* line 22, ../scss/sub/_about.scss */
+/* line 23, ../scss/sub/_about.scss */
+.text-section {
+  width: 95%;
+  padding: 2.5%;
+}
+/* line 26, ../scss/sub/_about.scss */
+.text-section p {
+  line-height: 150%;
+  letter-spacing: 1px;
+}
+
+/* line 32, ../scss/sub/_about.scss */
 .grid-4 {
   position: relative;
   width: 24%;
@@ -665,24 +676,24 @@ body {
   overflow: hidden;
 }
 @media screen and (max-width: 899px) {
-  /* line 22, ../scss/sub/_about.scss */
+  /* line 32, ../scss/sub/_about.scss */
   .grid-4 {
     width: 49%;
   }
 }
 @media screen and (max-width: 499px) {
-  /* line 22, ../scss/sub/_about.scss */
+  /* line 32, ../scss/sub/_about.scss */
   .grid-4 {
     width: 100%;
   }
 }
 
-/* line 37, ../scss/sub/_about.scss */
+/* line 47, ../scss/sub/_about.scss */
 .span-2 {
   width: 49%;
 }
 
-/* line 41, ../scss/sub/_about.scss */
+/* line 51, ../scss/sub/_about.scss */
 .icon-splash {
   position: absolute;
   right: 0;
@@ -690,62 +701,62 @@ body {
   font-size: 30px;
 }
 
-/* line 48, ../scss/sub/_about.scss */
+/* line 58, ../scss/sub/_about.scss */
 .facebook {
   background: #425F9C;
 }
 
-/* line 52, ../scss/sub/_about.scss */
+/* line 62, ../scss/sub/_about.scss */
 .google__plus {
   background: #DD4B39;
 }
 
-/* line 56, ../scss/sub/_about.scss */
+/* line 66, ../scss/sub/_about.scss */
 .plurk {
   background: #cf682f;
 }
 
-/* line 60, ../scss/sub/_about.scss */
+/* line 70, ../scss/sub/_about.scss */
 .twitter {
   background: #0084b4;
 }
 
-/* line 63, ../scss/sub/_about.scss */
+/* line 73, ../scss/sub/_about.scss */
 .yahoo {
   background: #4101AF;
 }
 
-/* line 66, ../scss/sub/_about.scss */
+/* line 76, ../scss/sub/_about.scss */
 .linkedin {
   background: #1B86BC;
 }
 
-/* line 69, ../scss/sub/_about.scss */
+/* line 79, ../scss/sub/_about.scss */
 .qq {
   background: #3d95d5;
 }
 
-/* line 72, ../scss/sub/_about.scss */
+/* line 82, ../scss/sub/_about.scss */
 .github {
   background: black;
 }
 
-/* line 75, ../scss/sub/_about.scss */
+/* line 85, ../scss/sub/_about.scss */
 .bitbucket {
   background: #205081;
 }
 
-/* line 78, ../scss/sub/_about.scss */
+/* line 88, ../scss/sub/_about.scss */
 .trello {
   background: #0078BD;
 }
 
-/* line 81, ../scss/sub/_about.scss */
+/* line 91, ../scss/sub/_about.scss */
 .tumblr {
   background: #36465D;
 }
 
-/* line 85, ../scss/sub/_about.scss */
+/* line 95, ../scss/sub/_about.scss */
 .overlay {
   display: none;
   position: fixed;
@@ -761,13 +772,55 @@ body {
   pointer-events: none;
   cursor: auto;
 }
-/* line 96, ../scss/sub/_about.scss */
+/* line 106, ../scss/sub/_about.scss */
 .overlay .close {
   position: absolute;
   right: 0;
   top: 0;
   cursor: pointer;
   z-index: 10000;
+}
+
+/* line 115, ../scss/sub/_about.scss */
+blockquote {
+  border-left: .5em solid #40AA53;
+  padding: 0 2em;
+  margin-left: 0;
+  max-width: 476px;
+}
+/* line 120, ../scss/sub/_about.scss */
+blockquote cite {
+  font-size: 14px;
+  line-height: 20px;
+  color: #bfbfbf;
+}
+/* line 124, ../scss/sub/_about.scss */
+blockquote cite:before {
+  content: '\2014 \00A0';
+}
+/* line 128, ../scss/sub/_about.scss */
+blockquote p {
+  color: #F2CA8A;
+  max-width: 460px;
+}
+
+/* line 134, ../scss/sub/_about.scss */
+.link-icon-group {
+  float: right;
+}
+/* line 136, ../scss/sub/_about.scss */
+.link-icon-group a, .link-icon-group a:hover, .link-icon-group a:active, .link-icon-group a:focus {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding-left: 20px;
+}
+@media screen and (max-width: 499px) {
+  /* line 134, ../scss/sub/_about.scss */
+  .link-icon-group {
+    width: 100%;
+  }
 }
 
 /* line 14, ../scss/sub/_repo.scss */

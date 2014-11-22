@@ -9,35 +9,35 @@ function LoadUrl(){
 		"source": location.search,
 		"params": {},
 		"page": null,
-		"detail": null
+		"detail": null,
+		"currentPage": $('meta[name=page]')
 	};
-	var temp = url["source"].match(url["regex"]);
-	console.log(temp);
+	var temp = url.source.match(url.regex);
 	for(var key in temp) {
 		var data = temp[key].split("=");
-    	url["params"][data[0]] = data[1];
+    	url.params[data[0]] = data[1];
 	}
-	url["page"] = url["params"]["page"];
+	url.page = url.params.page;
 	$.getJSON("url_sub.json", function(json) {
-		url["available"] = json;
-		if(url["available"]["status"][url["page"]] == true){
-			$.get("views/"+ url["page"] +".html",function(buffer){
-				url["detail"] = buffer;
+		url.available = json;
+		if(url.available.status[url.page] === true){
+  		url.currentPage.attr('content', url.page);
+			$.get("views/"+ url.page +".html",function(buffer){
+				url.detail = buffer;
 			}).fail(function(){
-				url["detail"] = "<p>There's nothing here, please wait for some days.</p>";
+				url.detail = "<p>There's nothing here, please wait for some days.</p>";
 			});
-			mm_includejs('sub/'+ url["page"] +'.js','sub');
+			mm_includejs('sub/'+ url.page +'.js','sub');
 		}else{
-			url["detail"] = "<p>Maybe you get the wrong page. Please click the title to reload.</p>";
+			url.detail = "<p>Maybe you get the wrong page. Please click the title to reload.</p>";
 		}
-		if(location.search != ""){
+		if(location.search !== ''){
 			$("#cover").fadeOut().queue(function(){
 				$("#content").text("").dequeue();
-				$("#content").append(url["detail"]).dequeue();
+				$("#content").append(url.detail).dequeue();
 				$("#content").fadeIn().dequeue();
 			});
 		}
-		console.log(url);
 	});
 }
 

@@ -19,6 +19,16 @@
 		cursor: pointer;
 	}
 }
+
+.text-section{
+  width:95%;
+  padding:2.5%;
+  p{
+    line-height:150%;
+    letter-spacing:1px;
+  }
+}
+
 .grid-4{
 	position: relative;
 	width:24%;
@@ -99,5 +109,38 @@
 		top:0;
 		cursor: pointer;
 		z-index: 10000;
+	}
+}
+
+blockquote {
+    border-left:.5em solid #40AA53;
+    padding: 0 2em;
+    margin-left:0;
+    max-width: 476px;
+    cite {
+	    font-size:14px;
+	    line-height:20px;
+	    color:#bfbfbf;
+	    &:before {
+		    content: '\2014 \00A0';
+		}
+	}
+	p {  
+	    color: #F2CA8A;
+	    max-width: 460px;
+	}
+}
+
+.link-icon-group{
+	float: right;
+	a, a:hover, a:active, a:focus{
+		position: relative;
+		color:white;
+		text-decoration: none;
+		text-align: center;
+		padding-left: 20px;
+	}
+	@media screen and (max-width: 499px){
+		width: 100%;
 	}
 }

@@ -3,14 +3,14 @@ function isNumber(n) {
 		return !isNaN(parseFloat(n)) && isFinite(n);
 }
 function Console_Dir(path,data,div){
-		var name = new Array();
+		var name = [];
 		for(var i in data){
 				if(isNumber(i))continue;
 				else name.push(i);
 		}
-		for(var i in data){
-				if(!isNumber(i))continue;
-				else name.push(i);
+		for(var j in data){
+				if(!isNumber(j))continue;
+				else name.push(j);
 		}
 		for(var key in name){
 				if(!isNumber(name[key])){
@@ -31,15 +31,12 @@ function GetData(){
 					   console.log(jqXHR);
 			   },
 			   success: function (msg) {
-					   var get = msg;
-					   console.log(get);
-					   Console_Dir('',get,'#index');
-					   $( '#dl-menu' ).dlmenu();
-					   $('button').click();
 			   },
 		});
 }
-function InitWiki(){
-	var test = GetData();
+function InitWiki(data){
+  Console_Dir('',data,'#index');
+  $( '#dl-menu' ).dlmenu();
+  $('button').click();
 }
-$(document).ready(InitWiki);
+$(document).ready(GetData().done(InitWiki));

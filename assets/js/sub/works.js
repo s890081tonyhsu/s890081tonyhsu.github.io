@@ -18,14 +18,14 @@ function ShowList(data){
 	data.data.forEach(function(repo){
 		$('#repo').append('<div id="'+repo.id+'"></div>');
 		$('#'+repo.id).append('<h4>'+repo.name+'</h4>');
-		if(repo.fork == true){
+		if(repo.fork === true){
 			$('#'+repo.id+' h4').prepend('<i class="fa fa-code-fork"></i>&nbsp;');
 		}else{
 			$('#'+repo.id+' h4').prepend('<i class="fa fa-book"></i>&nbsp;');
 		}
-		var lang = repo.language || "Text"
+		var lang = repo.language || "Text";
 		$('#'+repo.id).append('<p class="lang '+ lang.toLowerCase() +'">'+ lang +'</p>');
-		if(langStat[lang] == null) langStat[lang] = 1;
+		if(langStat.hasOwnProperty(lang) === false) langStat[lang] = 1;
 		else langStat[lang]++;
 		var description = repo.description || "This repo has no description to tell you something.";
 		$('#'+repo.id).append('<h6>'+description+'</h6>');
@@ -33,9 +33,9 @@ function ShowList(data){
 	});
 	var chartData = [];
 	for (var key in langStat) {
-		var percentage = Math.floor((langStat[key]/data.data.length)*100)
+		var percentage = Math.floor((langStat[key]/data.data.length)*100);
 		chartData.push([key,percentage]);
-	};
+	}
 	Highcharts.getOptions().colors = ['#701516', '#f1e05a', '#3581ba', '#4F5D95', '#563d7c', '#89e051', '#199c4b', '#FFFFFF'];
 	Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function (color) {
         return {
@@ -80,7 +80,7 @@ function ShowList(data){
         },
         series: [{
             type: 'pie',
-            name: 'Browser share',
+            name: 'Language Percentage',
             data: chartData
         }]
     });
