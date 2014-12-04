@@ -4,6 +4,35 @@
 	<div id="dl-menu" class="dl-menuwrapper">
 		<button class="dl-trigger">Open</button>
 		<ul id="index" class="dl-menu">
+			{{#root}}
+				{{>file}}
+			{{/root}}
 		</ul>
 	</div>
 </div>
+
+
+<!-- {{>folder}} -->
+	<ul class="dl-submenu">
+		{{#sub}}
+			{{>file}}
+		{{/sub}}
+	</ul>
+<!-- {{/folder}} -->
+
+<!-- {{>file}} -->
+	<li>
+		<a href="{{url}}" target="_blank" >
+			{{# type === 'folder' }}
+				<strong>{{name}}</strong>
+			{{else}}
+				{{name}}
+			{{/ type === 'folder'}}
+		</a>
+		{{# type === 'folder' }}
+			{{>folder}}
+		{{/ type === 'folder' }}
+	</li>
+<!-- {{/file}} -->
+
+

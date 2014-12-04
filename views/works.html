@@ -8,10 +8,19 @@
 	<p>The following is the repos I contributed. There are two types. </p>
 	<p><i class="fa fa-book"></i>&nbsp;: I worked on some commit. </p>
 	<p><i class="fa fa-code-fork"></i>&nbsp;: Maybe I use it to be my tools or worked something on it.</p>
-	<div id="stat">
-		<div id="StatChart"></div>
+	<div id="RepoChartContainer">
+		<div id="RepoChart"></div>
 	</div>
-	<div id="repo"></div>
+	<div id="repo">
+		{{#repo}}
+			<div id="{{id}}">
+				<h4>{{#fork}}<i class="fa fa-code-fork"></i>&nbsp;{{else}}<i class="fa fa-book"></i>&nbsp;{{/fork}}{{name}}</h4>
+				<p class="lang {{language.toLowerCase()}}">{{language}}</p>
+				<h6>{{description}}</h6>
+				<a href="{{html_url}}" target="_blank"><i class="link"></a>
+			</div>
+		{{/repo}}
+	</div>
 </div>
 <div>&nbsp;</div>
 <div id="raw" style="display:none;"></div>
