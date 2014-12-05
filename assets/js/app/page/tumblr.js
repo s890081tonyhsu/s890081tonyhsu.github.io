@@ -24,7 +24,7 @@ var SubUtils = function(){
 	}
 }
 inherit(SubUtils, SubUtilsDep);
-SubUtils.prototype.PreLoad = function(){
+SubUtils.prototype.PreLoad = function(url){
 	this.data = this.TumblrAPI('posts');
 	console.log(this.data);
 	this.data = this.CollectPosts(this.data);

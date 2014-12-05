@@ -37,7 +37,7 @@ function IndexUtils(url_sub){
 
 var SubUtilsDep = function(url){
 	this.prototype.data = {};
-	this.prototype.PreLoad = function(){
+	this.prototype.PreLoad = function(url){
 		// Load static data and return to rvc
 	}
 	this.prototype.Run = function(){

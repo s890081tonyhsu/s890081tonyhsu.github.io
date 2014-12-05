@@ -1,5 +1,4 @@
 var SubUtils = function(){
-	this.data = {};
 	this.GithubAPI = function(xpath){
 		return JSON.parse($.ajax({
 			type: 'GET',

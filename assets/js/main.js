@@ -4,7 +4,7 @@ function RequireSub(url){
 	var dependency = ['rvc!ui/' + name, 'app/page/' + name].concat(page.dependency);
 	require(dependency, function(ContentPage){
 		var sub_utils = new SubUtils(url);
-		var data = sub_utils.PreLoad();
+		var data = sub_utils.PreLoad(url);
 		console.log(sub_utils);
 		console.log(data);
 		var content = new ContentPage({
