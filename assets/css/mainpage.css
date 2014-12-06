@@ -1693,9 +1693,17 @@ All this is done for any sub-level being entered.
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.45);
 }
-/* line 6, ../scss/sub/_tumblr.scss */
-#tumblr .more {
-  text-align: right;
+/* line 7, ../scss/sub/_tumblr.scss */
+#tumblr .more a.left {
+  float: left;
+}
+/* line 10, ../scss/sub/_tumblr.scss */
+#tumblr .more a.right {
+  float: right;
+}
+/* line 13, ../scss/sub/_tumblr.scss */
+#tumblr .more a.clear {
+  clear: both;
 }
 
 /* line 10, ../scss/mainpage.scss */

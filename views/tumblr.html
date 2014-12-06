@@ -6,11 +6,28 @@
 				<h3>{{title}}</h3>
 				<h6>Posted at: {{date}}</h6>
 				{{{body}}}
-				<a href="{{post_url}}" target="_blank"><h4 class="more">Read More →</h4></a>
+				<div class="more">
+					<a href="?page=tumblr&postid={{id}}" class="right"><h4>Read More &#8594;</h4></a>
+					<a class="clear" href="">&nbsp;</a>
+				</div>
 			</div>
 			<br>
 			<hr>
 		{{/posts}}
+		{{#post}}
+			<div id="{{id}}">
+				<h3>{{title}}</h3>
+				<h6>Posted at: {{date}}</h6>
+				{{{body}}}
+				<div class="more">
+					<a href="{{post_url}}" class="right" target="_blank"><h4>Link To Post &#8594;</h4></a>
+					<a href="?page=tumblr" class="left"><h4>&#8592; Back To List</h4></a>
+					<a class="clear" href="">&nbsp;</a>
+				</div>
+			</div>
+			<br>
+			<hr>
+		{{/post}}
 	</div>
 	<h3>You can find all posts at my Tumblr.</h3>
 	<a href="http://blackenangel.tumblr.com">

@@ -16,18 +16,40 @@ var SubUtils = function(){
 				'id': post.id,
 				'title': post['regular-title'],
 				'date': post.date,
-				'body': $(post['regular-body']).filter('p')[0].outerHTML,
+				'body': post['regular-body'].match(/^(.*)$/m)[0],
 				'post_url': post.url
 			});
 		});
+		return temp;
+	}
+	this.GetPost = function(url, data){
+		var temp;
+		var postid = url.params.postid;
+		data.post.forEach(function(post){
+			if(post.id == postid)
+				temp =  { 
+					'post':{
+						'id': post.id,
+						'title': post['regular-title'],
+						'date': post.date,
+						'body': post['regular-body'],
+						'post_url': post.url
+					}
+				};
+		});
+		if(typeof temp === 'undefined') temp = this.CollectPosts(data);
 		return temp;
 	}
 }
 inherit(SubUtils, SubUtilsDep);
 SubUtils.prototype.PreLoad = function(url){
 	this.data = this.TumblrAPI('posts');
-	console.log(this.data);
-	this.data = this.CollectPosts(this.data);
+	if(typeof url.params.postid !== 'undefined'){
+		console.log(url.params.postid);
+		this.data = this.GetPost(url, this.data);
+	}else{
+		this.data = this.CollectPosts(this.data);
+	}
 	return this.data;
 }
 SubUtils.prototype.Run = function(){
