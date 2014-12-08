@@ -3,12 +3,14 @@
 @import "compass/css3/images";
 @import "compass/css3/transform";
 @import "compass/css3/transition";
+@import "sub/blank";
 @import "sub/about";
 @import "sub/repo";
 @import "sub/wiki";
 @import "sub/tumblr";
 html{
 	height:auto;
+	overflow-x: hidden;
 }
 body{
 	height:100%;

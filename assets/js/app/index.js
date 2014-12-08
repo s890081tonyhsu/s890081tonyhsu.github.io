@@ -2,7 +2,7 @@ function IndexUtils(url_sub){
 	this.url = {
 		"json": {},
 		"regex": /([^?&=#]+)=([^&#]*)/g,
-		"source": location.search,
+		"source": location.search.replace('?', ''),
 		"params": {},
 		"page": null,
 		"currentPage": $('meta[name=page]')
@@ -27,7 +27,7 @@ function IndexUtils(url_sub){
 		this.url.currentPage.attr('content', this.url.page);
 	}
 	this.ShowPage = function(){
-		if(location.search !== ''){
+		if(this.url.source !== ''){
 			$("#cover").fadeOut().queue(function(){
 				$("#content").fadeIn().dequeue();
 			});
