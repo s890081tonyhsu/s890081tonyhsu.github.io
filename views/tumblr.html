@@ -1,6 +1,12 @@
 <div id="tumblr">
 	<h1>Blogs</h1>
 	<div id="posts" class="clearness-dark">
+		{{#if loading === true}}
+			<h3>Loading the posts...</h3>
+		{{/if}}
+		{{#if error === true}}
+			<h3>Error loading the page parameter...</h3>
+		{{/if}}
 		{{#posts}}
 			<div id="{{id}}">
 				<h3>{{title}}</h3>
@@ -28,6 +34,17 @@
 			<br>
 			<hr>
 		{{/post}}
+		{{#offset}}
+			<div class="more">
+				{{#PageNext}}
+					<a href="?page=tumblr&list={{PageNext}}" class="right"><h4>Next Page&#8594;</h4></a>
+				{{/PageNext}}
+				{{#PagePrev}}
+					<a href="?page=tumblr&list={{PagePrev}}" class="left"><h4>&#8592;Last Page</h4></a>
+				{{/PagePrev}}
+				<a class="clear" href="">&nbsp;</a>
+			</div>
+		{{/offset}}
 	</div>
 	<h3>You can find all posts at my Tumblr.</h3>
 	<a href="http://blackenangel.tumblr.com">

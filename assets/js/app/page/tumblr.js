@@ -1,56 +1,78 @@
 var SubUtils = function(){
 	this.data = {};
-	this.TumblrAPI = function(xpath){
-		return $.ajax({
-			method: 'GET',
-			url: 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20tumblr.posts%20where%20username%3D\'blackenangel\'&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys',
-			async: false
-		}).responseJSON.query.results.posts;
-	}
-	this.CollectPosts = function(data){
-		var temp = {
-			'posts': []
+	this.TumblrAPI = function(url, Loaded){
+		var xpath, params;
+		if(typeof url.params.postid === 'undefined'){
+			xpath = 'posts';
+			params = 'offset='+(url.params.list*5)+'&limit=5';
+		}else{
+			xpath = 'posts';
+			params = 'id='+url.params.postid;
 		}
-		data.post.forEach(function(post){
-			temp.posts.push({
-				'id': post.id,
-				'title': post['regular-title'],
-				'date': post.date,
-				'body': post['regular-body'].match(/^(.*)$/m)[0],
-				'post_url': post.url
-			});
+		$.ajax({
+			method: 'GET',
+			url: 'http://api.tumblr.com/v2/blog/blackenangel.tumblr.com/'+xpath+'?api_key=4bKj8Pffs8OnPVRtg2jhKdjNc0gPwx0HmxhHS1FlSRTDRxemU4&'+params,
+			dataType: 'JSONP',
+			data: {},
+			error: function (jqXHR, textStatus, errorThrown) {
+				window.content.set({'error': true});
+			},
+			success: function (data){
+				var loaded = new Loaded();
+				loaded.setData(url, data);
+			}
 		});
-		return temp;
 	}
-	this.GetPost = function(url, data){
-		var temp;
-		var postid = url.params.postid;
-		data.post.forEach(function(post){
-			if(post.id == postid)
-				temp =  { 
-					'post':{
-						'id': post.id,
-						'title': post['regular-title'],
-						'date': post.date,
-						'body': post['regular-body'],
-						'post_url': post.url
-					}
-				};
-		});
-		if(typeof temp === 'undefined') temp = this.CollectPosts(data);
-		return temp;
+	this.loaded = function(){
+		this.data = {};
+		this.setData = function(url, data){
+			if(typeof url.params.postid !== 'undefined'){
+				this.data = this.GetPost(url, data);
+			}else{
+				this.data = this.CollectPosts(data);
+				this.data.offset = {};
+				if((url.params.list+1) > 0)this.data.offset.PagePrev = url.params.list;
+				if((url.params.list+1) < Math.floor(data.response.total_posts/5))this.data.offset.PageNext = url.params.list + 2;
+			}
+			this.data.loading = false;
+			window.content.set(this.data);
+		}
+		this.CollectPosts = function(data){
+			var temp = {
+				'posts': []
+			}
+			data.response.posts.forEach(function(post){
+				temp.posts.push({
+					'id': post.id,
+					'title': post.title,
+					'date': post.date,
+					'body': post.body.match(/^(.*)$/m)[0],
+					'post_url': post.url
+				});
+			});
+			return temp;
+		}
+		this.GetPost = function(url, data){
+			var temp;
+			var post = data.response.posts[0];
+			temp =  { 
+				'post':{
+					'id': post.id,
+					'title': post.title,
+					'date': post.date,
+					'body': post.body,
+					'post_url': post.url
+				}
+			};
+			return temp;
+		}
 	}
 }
 inherit(SubUtils, SubUtilsDep);
 SubUtils.prototype.PreLoad = function(url){
-	this.data = this.TumblrAPI('posts');
-	if(typeof url.params.postid !== 'undefined'){
-		console.log(url.params.postid);
-		this.data = this.GetPost(url, this.data);
-	}else{
-		this.data = this.CollectPosts(this.data);
-	}
-	return this.data;
+	url.params.list = (url.params.list - 1) || 0;
+	this.TumblrAPI(url, this.loaded);
+	return {'loading': true};
 }
 SubUtils.prototype.Run = function(){
 }

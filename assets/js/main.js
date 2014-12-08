@@ -7,11 +7,10 @@ function RequireSub(url){
 		var data = sub_utils.PreLoad(url);
 		console.log(sub_utils);
 		console.log(data);
-		var content = new ContentPage({
+		window.content = new ContentPage({
 			el: '#content',
 			data: data
 		});
-		console.log(content);
 		sub_utils.Run();
 	});
 }
