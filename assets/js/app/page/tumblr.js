@@ -47,7 +47,6 @@ var SubUtils = function(){
 					'title': post.title,
 					'date': post.date,
 					'body': post.body.match(/^(.*)$/m)[0],
-					'post_url': post.url
 				});
 			});
 			return temp;
@@ -61,7 +60,7 @@ var SubUtils = function(){
 					'title': post.title,
 					'date': post.date,
 					'body': post.body,
-					'post_url': post.url
+					'post_url': post.post_url
 				}
 			};
 			return temp;
