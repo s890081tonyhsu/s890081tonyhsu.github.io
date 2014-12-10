@@ -2,13 +2,13 @@
 	<h1>Blogs</h1>
 	<div id="posts" class="clearness-dark">
 		{{#if loading === true}}
-			<h3>Loading the posts...</h3>
+			<h3 outro="fade:200">Loading the posts...</h3>
 		{{/if}}
 		{{#if error === true}}
 			<h3>Error loading the page parameter...</h3>
 		{{/if}}
-		{{#posts}}
-			<div id="{{id}}">
+		{{#posts:i}}
+			<div id="{{id}}" intro="fade:{ delay:{{ (i+1)*400 }}, duration:{{ (i+1)*400 }} }">
 				<h3>{{title}}</h3>
 				<h6>Posted at: {{date}}</h6>
 				{{{body}}}
@@ -21,7 +21,7 @@
 			<hr>
 		{{/posts}}
 		{{#post}}
-			<div id="{{id}}">
+			<div id="{{id}}" intro="fade:{ delay:{{ i*400 }}, duration:{{ i*200 }} }">
 				<h3>{{title}}</h3>
 				<h6>Posted at: {{date}}</h6>
 				{{{body}}}

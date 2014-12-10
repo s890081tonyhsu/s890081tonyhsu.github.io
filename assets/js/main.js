@@ -1,7 +1,7 @@
 function RequireSub(url){
 	var page = url.json;
 	var name = page.template;
-	var dependency = ['rvc!ui/' + name, 'app/page/' + name].concat(page.dependency);
+	var dependency = ['rvc!ui/' + name, 'rtf', 'app/page/' + name].concat(page.dependency);
 	require(dependency, function(ContentPage){
 		var sub_utils = new SubUtils(url);
 		var data = sub_utils.PreLoad(url);
@@ -20,6 +20,7 @@ requirejs.config({
 	'paths': {
 		'app': '../app',
 		'ractive': 'ractive/ractive.min',
+		'rtf': 'ractive/ractive-transitions-fade.min',
 		'rvc': 'ractive/rvc.min',
 		'ui': '../../../views'
 	},

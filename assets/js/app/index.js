@@ -8,6 +8,7 @@ function IndexUtils(url_sub){
 		"currentPage": $('meta[name=page]')
 	};
 	this.InitPage = function(){
+		if(typeof operamini !== 'undefined')return $('noscript').replaceWith($('<div>'+ $('noscript').html() +'</div>'));
 		this.LoadUrl();
 		setTimeout(function(){
 			$('body > div').each(function(){
