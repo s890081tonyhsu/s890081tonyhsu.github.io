@@ -1,53 +1,51 @@
-<div id="tumblr">
-	<h1>Blogs</h1>
-	<div id="posts" class="clearness-dark">
-		{{#if loading === true}}
-			<h3 outro="fade:200">Loading the posts...</h3>
-		{{/if}}
-		{{#if error === true}}
-			<h3>Error loading the page parameter...</h3>
-		{{/if}}
-		{{#posts:i}}
-			<div id="{{id}}" intro="fade:{ delay:{{ (i+1)*400 }}, duration:{{ (i+1)*400 }} }">
-				<h3>{{title}}</h3>
-				<h6>Posted at: {{date}}</h6>
-				{{{body}}}
-				<div class="more">
-					<a href="?page=tumblr&postid={{id}}" class="right"><h4>Read More &#8594;</h4></a>
-					<a class="clear" href="">&nbsp;</a>
-				</div>
-			</div>
-			<br>
-			<hr>
-		{{/posts}}
-		{{#post}}
-			<div id="{{id}}" intro="fade:{ delay:{{ i*400 }}, duration:{{ i*200 }} }">
-				<h3>{{title}}</h3>
-				<h6>Posted at: {{date}}</h6>
-				{{{body}}}
-				<div class="more">
-					<a href="{{post_url}}" class="right" target="_blank"><h4>Link To Post &#8594;</h4></a>
-					<a href="?page=tumblr" class="left"><h4>&#8592; Back To List</h4></a>
-					<a class="clear" href="">&nbsp;</a>
-				</div>
-			</div>
-			<br>
-			<hr>
-		{{/post}}
-		{{#offset}}
+<h1>Blogs</h1>
+<div id="posts" class="clearness-dark">
+	{{#if loading === true}}
+		<h3 outro="fade:200">Loading the posts...</h3>
+	{{/if}}
+	{{#if error === true}}
+		<h3>Error loading the page parameter...</h3>
+	{{/if}}
+	{{#posts:i}}
+		<div id="{{id}}" intro="fade:{ delay:{{ (i+1)*400 }}, duration:{{ (i+1)*400 }} }">
+			<h3>{{title}}</h3>
+			<h6>Posted at: {{date}}</h6>
+			{{{body}}}
 			<div class="more">
-				{{#PageNext}}
-					<a href="?page=tumblr&list={{PageNext}}" class="right"><h4>Next Page&#8594;</h4></a>
-				{{/PageNext}}
-				{{#PagePrev}}
-					<a href="?page=tumblr&list={{PagePrev}}" class="left"><h4>&#8592;Last Page</h4></a>
-				{{/PagePrev}}
+				<a href="?page=tumblr&postid={{id}}" class="right"><h4>Read More &#8594;</h4></a>
 				<a class="clear" href="">&nbsp;</a>
 			</div>
-		{{/offset}}
-	</div>
-	<h3>You can find all posts at my Tumblr.</h3>
-	<a href="http://blackenangel.tumblr.com">
-		<h1>Aria Soundless Skyland</h1>
-	</a>
+		</div>
+		<br>
+		<hr>
+	{{/posts}}
+	{{#post}}
+		<div id="{{id}}" intro="fade:{ delay:{{ i*400 }}, duration:{{ i*200 }} }">
+			<h3>{{title}}</h3>
+			<h6>Posted at: {{date}}</h6>
+			{{{body}}}
+			<div class="more">
+				<a href="{{post_url}}" class="right" target="_blank"><h4>Link To Post &#8594;</h4></a>
+				<a href="?page=tumblr" class="left"><h4>&#8592; Back To List</h4></a>
+				<a class="clear" href="">&nbsp;</a>
+			</div>
+		</div>
+		<br>
+		<hr>
+	{{/post}}
+	{{#offset}}
+		<div class="more">
+			{{#PageNext}}
+				<a href="?page=tumblr&list={{PageNext}}" class="right"><h4>Next Page&#8594;</h4></a>
+			{{/PageNext}}
+			{{#PagePrev}}
+				<a href="?page=tumblr&list={{PagePrev}}" class="left"><h4>&#8592;Last Page</h4></a>
+			{{/PagePrev}}
+			<a class="clear" href="">&nbsp;</a>
+		</div>
+	{{/offset}}
 </div>
+<h3>You can find all posts at my Tumblr.</h3>
+<a href="http://blackenangel.tumblr.com">
+	<h1>Aria Soundless Skyland</h1>
+</a>

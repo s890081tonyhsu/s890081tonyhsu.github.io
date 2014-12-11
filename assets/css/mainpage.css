@@ -638,43 +638,36 @@ header {
   padding: 5%;
 }
 
-/* line 3, ../scss/sub/_about.scss */
-#about {
-  width: 100%;
-  float: left;
-  background-color: rgba(0, 0, 0, 0.45);
-  padding: 5%;
-}
-/* line 8, ../scss/sub/_about.scss */
-#about ul {
+/* line 13, ../scss/sub/_about.scss */
+#content ul {
   list-style: none;
   text-align: center;
   margin: 0 auto;
   -webkit-padding-start: 0px;
 }
 
-/* line 15, ../scss/sub/_about.scss */
+/* line 20, ../scss/sub/_about.scss */
 .section {
   width: 100%;
   float: left;
 }
-/* line 18, ../scss/sub/_about.scss */
+/* line 23, ../scss/sub/_about.scss */
 .section li {
   cursor: pointer;
 }
 
-/* line 23, ../scss/sub/_about.scss */
+/* line 28, ../scss/sub/_about.scss */
 .text-section {
   width: 95%;
   padding: 2.5%;
 }
-/* line 26, ../scss/sub/_about.scss */
+/* line 31, ../scss/sub/_about.scss */
 .text-section p {
   line-height: 150%;
   letter-spacing: 1px;
 }
 
-/* line 32, ../scss/sub/_about.scss */
+/* line 37, ../scss/sub/_about.scss */
 .grid-4 {
   position: relative;
   width: 24%;
@@ -684,24 +677,50 @@ header {
   overflow: hidden;
 }
 @media screen and (max-width: 899px) {
-  /* line 32, ../scss/sub/_about.scss */
+  /* line 37, ../scss/sub/_about.scss */
   .grid-4 {
     width: 49%;
   }
 }
 @media screen and (max-width: 499px) {
-  /* line 32, ../scss/sub/_about.scss */
+  /* line 37, ../scss/sub/_about.scss */
   .grid-4 {
     width: 100%;
   }
 }
 
-/* line 47, ../scss/sub/_about.scss */
+/* line 52, ../scss/sub/_about.scss */
+.pageBtn {
+  position: relative;
+  vertical-align: top;
+  height: 60px;
+  padding: 0;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #2c3e50;
+  border: 0;
+  cursor: pointer;
+}
+/* line 67, ../scss/sub/_about.scss */
+.pageBtn:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 73, ../scss/sub/_about.scss */
+.pageBtn h4 {
+  margin-top: 17px;
+}
+
+/* line 77, ../scss/sub/_about.scss */
 .span-2 {
   width: 49%;
 }
 
-/* line 51, ../scss/sub/_about.scss */
+/* line 81, ../scss/sub/_about.scss */
 .icon-splash {
   position: absolute;
   right: 0;
@@ -709,62 +728,62 @@ header {
   font-size: 30px;
 }
 
-/* line 58, ../scss/sub/_about.scss */
+/* line 88, ../scss/sub/_about.scss */
 .facebook {
   background: #425F9C;
 }
 
-/* line 62, ../scss/sub/_about.scss */
+/* line 92, ../scss/sub/_about.scss */
 .google__plus {
   background: #DD4B39;
 }
 
-/* line 66, ../scss/sub/_about.scss */
+/* line 96, ../scss/sub/_about.scss */
 .plurk {
   background: #cf682f;
 }
 
-/* line 70, ../scss/sub/_about.scss */
+/* line 100, ../scss/sub/_about.scss */
 .twitter {
   background: #0084b4;
 }
 
-/* line 73, ../scss/sub/_about.scss */
+/* line 103, ../scss/sub/_about.scss */
 .yahoo {
   background: #4101AF;
 }
 
-/* line 76, ../scss/sub/_about.scss */
+/* line 106, ../scss/sub/_about.scss */
 .linkedin {
   background: #1B86BC;
 }
 
-/* line 79, ../scss/sub/_about.scss */
+/* line 109, ../scss/sub/_about.scss */
 .qq {
   background: #3d95d5;
 }
 
-/* line 82, ../scss/sub/_about.scss */
+/* line 112, ../scss/sub/_about.scss */
 .github {
   background: black;
 }
 
-/* line 85, ../scss/sub/_about.scss */
+/* line 115, ../scss/sub/_about.scss */
 .bitbucket {
   background: #205081;
 }
 
-/* line 88, ../scss/sub/_about.scss */
+/* line 118, ../scss/sub/_about.scss */
 .trello {
   background: #0078BD;
 }
 
-/* line 91, ../scss/sub/_about.scss */
+/* line 121, ../scss/sub/_about.scss */
 .tumblr {
   background: #36465D;
 }
 
-/* line 95, ../scss/sub/_about.scss */
+/* line 125, ../scss/sub/_about.scss */
 .overlay {
   display: none;
   position: fixed;
@@ -780,7 +799,7 @@ header {
   pointer-events: none;
   cursor: auto;
 }
-/* line 106, ../scss/sub/_about.scss */
+/* line 136, ../scss/sub/_about.scss */
 .overlay .close {
   position: absolute;
   right: 0;
@@ -789,34 +808,34 @@ header {
   z-index: 10000;
 }
 
-/* line 115, ../scss/sub/_about.scss */
+/* line 145, ../scss/sub/_about.scss */
 blockquote {
   border-left: .5em solid #40AA53;
   padding: 0 2em;
   margin-left: 0;
   max-width: 476px;
 }
-/* line 120, ../scss/sub/_about.scss */
+/* line 150, ../scss/sub/_about.scss */
 blockquote cite {
   font-size: 14px;
   line-height: 20px;
   color: #bfbfbf;
 }
-/* line 124, ../scss/sub/_about.scss */
+/* line 154, ../scss/sub/_about.scss */
 blockquote cite:before {
   content: '\2014 \00A0';
 }
-/* line 128, ../scss/sub/_about.scss */
+/* line 158, ../scss/sub/_about.scss */
 blockquote p {
   color: #F2CA8A;
   max-width: 460px;
 }
 
-/* line 134, ../scss/sub/_about.scss */
+/* line 164, ../scss/sub/_about.scss */
 .link-icon-group {
   float: right;
 }
-/* line 136, ../scss/sub/_about.scss */
+/* line 166, ../scss/sub/_about.scss */
 .link-icon-group a, .link-icon-group a:hover, .link-icon-group a:active, .link-icon-group a:focus {
   position: relative;
   color: white;
@@ -825,21 +844,21 @@ blockquote p {
   padding-left: 20px;
 }
 @media screen and (max-width: 499px) {
-  /* line 134, ../scss/sub/_about.scss */
+  /* line 164, ../scss/sub/_about.scss */
   .link-icon-group {
     width: 100%;
   }
 }
 
 /* line 14, ../scss/sub/_repo.scss */
-#works {
+#content {
   width: 100%;
   float: left;
   background-color: rgba(0, 0, 0, 0.45);
   padding: 5%;
 }
 /* line 19, ../scss/sub/_repo.scss */
-#works #repo > * {
+#content #repo > * {
   position: relative;
   float: left;
   width: 100%;
@@ -852,14 +871,14 @@ blockquote p {
 }
 @media screen and (min-width: 799px) {
   /* line 19, ../scss/sub/_repo.scss */
-  #works #repo > * {
+  #content #repo > * {
     width: 48%;
     height: 200px;
   }
 }
 @media screen and (min-width: 999px) {
   /* line 19, ../scss/sub/_repo.scss */
-  #works #repo > * {
+  #content #repo > * {
     height: 120px;
   }
 }
@@ -1698,23 +1717,16 @@ All this is done for any sub-level being entered.
   display: none;
 }
 
-/* line 1, ../scss/sub/_tumblr.scss */
-#tumblr {
-  padding: 5%;
-  width: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.45);
-}
-/* line 7, ../scss/sub/_tumblr.scss */
-#tumblr .more a.left {
+/* line 3, ../scss/sub/_tumblr.scss */
+#content .more a.left {
   float: left;
 }
-/* line 10, ../scss/sub/_tumblr.scss */
-#tumblr .more a.right {
+/* line 6, ../scss/sub/_tumblr.scss */
+#content .more a.right {
   float: right;
 }
-/* line 13, ../scss/sub/_tumblr.scss */
-#tumblr .more a.clear {
+/* line 9, ../scss/sub/_tumblr.scss */
+#content .more a.clear {
   clear: both;
 }
 
@@ -1795,8 +1807,11 @@ h1 {
   height: 100%;
   color: white;
   padding: 10px;
+  float: left;
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 5%;
 }
-/* line 76, ../scss/mainpage.scss */
+/* line 79, ../scss/mainpage.scss */
 #mainpage #cover {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0) 100%);
@@ -1808,12 +1823,12 @@ h1 {
   width: 100%;
 }
 @media screen and (min-height: 800px) {
-  /* line 76, ../scss/mainpage.scss */
+  /* line 79, ../scss/mainpage.scss */
   #mainpage #cover {
     margin-top: 50%;
   }
 }
-/* line 85, ../scss/mainpage.scss */
+/* line 88, ../scss/mainpage.scss */
 #mainpage #cover p {
   color: white;
   text-align: center;

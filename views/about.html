@@ -1,12 +1,18 @@
-<div id="about">
-	<h1>About Me</h1>
-	<div>
-		<h2 id="profile">Profile</h2>
+<h1>About Me</h1>
+<h4>{{name}}</h4>
+<p>Just a naive human working on computer and playing on programming.</p>
+<div class="section">
+	<button class="grid-4 pageBtn" on-tap="show:1">Autobiography</button>
+	<button class="grid-4 pageBtn" on-tap="show:2">Contact</button>
+	<button class="grid-4 pageBtn" on-tap="show:3">License</button>
+	<button class="grid-4 pageBtn" on-tap="show:4">Reference</button>
+</div>
+<div>&nbsp;</div>
+{{#if visible === 1 }}
+	<div outro="fade:400" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
+		<h2 id="profile">Autobiography</h2>
 		<hr>
-		<h3>Autobiography</h3>
 		<div class="text-section">
-			<h4>{{name}}</h4>
-			<p>Just a naive human working on computer and playing on programming.</p>
 			<blockquote>
 				<p>Unknown person which knows nothing about these.</p>
 			</blockquote>
@@ -33,14 +39,15 @@
 			<p>Now I am the student at the department of Electrical Engineering in NCHU. But sometimes I participate in front end works of some projects.</p>
 		</div>
 	</div>
-	<div>&nbsp;</div>
-	<div>
+{{/if}}
+{{#if visible === 2}}
+	<div outro="fade:400" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
 		<h2 id="contact">Contact</h2>
 		<hr>
 		<div class="section">
 			<h3>Social Network</h3>
 			<ul>
-				<li class="grid-4 facebook" data-target="facebook">
+				<li class="grid-4 pageBtn facebook" data-target="facebook">
 					<h4>Facebook</h4>
 					<i class="icon-splash icon-social-facebook-squared"></i>
 					<div id="facebook" class="overlay facebook">
@@ -48,17 +55,17 @@
 						<a href="#" class="close" data-target="facebook">X</a>
 					</div>
 				</li>
-				<li class="grid-4 google__plus">
+				<li class="grid-4 pageBtn google__plus">
 					<h4>Google+</h4>
 					<i class="icon-splash icon-social-googleplus-rect"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 plurk">
+				<li class="grid-4 pageBtn plurk">
 					<h4>Plurk</h4>
 					<i class="icon-splash icon-social-plurk"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 twitter">
+				<li class="grid-4 pageBtn twitter">
 					<h4>Twitter</h4>
 					<i class="icon-splash icon-social-twitter-bird"></i>
 					<div></div>
@@ -68,17 +75,17 @@
 		<div class="section">
 			<h3>Workspace and Blog</h3>
 			<ul>
-				<li class="grid-4 tumblr">
+				<li class="grid-4 pageBtn tumblr">
 					<h4>Tumblr</h4>
 					<i class="icon-splash icon-social-tumblr-rect"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 github">
+				<li class="grid-4 pageBtn github">
 					<h4>Github</h4>
 					<i class="icon-splash icon-social-github-circled"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 bitbucket">
+				<li class="grid-4 pageBtn bitbucket">
 					<h4>Bitbucket</h4>
 					<i class="icon-splash icon-social-bitbucket"></i>
 					<div></div>
@@ -88,17 +95,17 @@
 		<div class="section">
 			<h3>Less Used Service</h3>
 			<ul>
-				<li class="grid-4 qq">
+				<li class="grid-4 pageBtn qq">
 					<h4>QQ</h4>
 					<i class="icon-splash icon-social-qq"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 linkedin">
+				<li class="grid-4 pageBtn linkedin">
 					<h4>LinkedIn</h4>
 					<i class=" icon-splash icon-social-linkedin-squared"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 trello">
+				<li class="grid-4 pageBtn trello">
 					<h4>Trello</h4>
 					<i class="icon-splash fa fa-trello fa-2x fa-fw"></i>
 					<div></div>
@@ -106,8 +113,9 @@
 			</ul>
 		</div>
 	</div>
-	<div>&nbsp;</div>
-	<div>
+{{/if}}
+{{#if visible === 3 }}
+	<div outro="fade:400" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
 		<h2 id="license">License</h2>
 		<hr>
 		<div>
@@ -190,7 +198,9 @@
 			<p>Create interactive charts easily for your web projects.</p>
 		</div>			
 	</div>
-	<div>
+{{/if}}
+{{#if visible === 4 }}
+	<div outro="fade:400" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
 		<h2 id="reference">Reference</h2>
 		<hr>
 		<p>The following will list some website (without sorted to license) which will help you to style the website.</p>
@@ -211,4 +221,4 @@
 			<p>A website to share some creative front side effect.</p>
 		</div>
 	</div>
-</div>
+{{/if}}
