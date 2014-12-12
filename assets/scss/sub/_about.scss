@@ -1,11 +1,21 @@
 @import "compass/css3/transition";
+@import "compass/css3/box-shadow";
+@import "compass/css3/images";
 
-@mixin contactButton($buttonName, $buttonColor){
-	.#{$buttonName}{
-		background: $buttonColor;
-		border-bottom: 2px solid darken($buttonColor, 5.5%);
-		-webkit-box-shadow: inset 0 -2px darken($buttonColor, 5.5%);
-		box-shadow: inset 0 -2px darken($buttonColor);
+@mixin contactButton(){
+	$buttonList: (
+		('facebook', #425F9C), ('google__plus', #DD4B39), ('plurk', #CF682F),
+		('twitter', #0084B4), ('yahoo', #4101AF), ('linkedin', #1B86BC),
+		('qq', #3D95D5), ('github', #000000), ('bitbucket', #205081),
+		('trello', #0078BD), ('tumblr', #36465D)
+	);
+	@each $button in $buttonList{
+		li.#{nth($button, 1)} {
+			background: nth($button, 2);
+			border-bottom: 2px solid darken(nth($button, 2), 5.5%);
+			-webkit-box-shadow: inset 0 -2px darken(nth($button, 2), 5.5%);
+			box-shadow: inset 0 -2px darken(nth($button, 2), 5.5%);
+		}
 	}
 }
 
@@ -49,6 +59,18 @@
 	overflow:hidden;
 }
 
+.grid-2{
+	position: relative;
+	width:49%;
+	margin:0.5%;
+	float: left;
+	height:auto;
+	@media screen and (max-width: 899px){
+		width: 100%;
+	}
+	overflow:hidden;
+}
+
 .pageBtn{
 	position: relative;
   vertical-align: top;
@@ -60,10 +82,10 @@
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   background: #2c3e50;
   border: 0;
-  //border-bottom: 2px solid #e2b607;
+  border-bottom: 2px solid #22303f;
   cursor: pointer;
-  //-webkit-box-shadow: inset 0 -2px #e2b607;
-  //box-shadow: inset 0 -2px #e2b607;
+  -webkit-box-shadow: inset 0 -2px #22303f;
+  box-shadow: inset 0 -2px #22303f;
 	&:active{
 		top: 1px;
 		outline: none;
@@ -74,9 +96,6 @@
 		margin-top: 17px;
 	}
 }
-.span-2{
-	width:49%;
-}
 
 .icon-splash{
 	position: absolute;
@@ -85,42 +104,7 @@
 	font-size:30px;
 }
 
-.facebook{
-	background: #425F9C;
-}
-
-.google__plus{
-	background: #DD4B39;
-}
-
-.plurk{
-	background: rgb(207, 104, 47);
-}
-
-.twitter{
-	background: rgb(0, 132, 180);
-}
-.yahoo{
-	background: #4101AF;
-}
-.linkedin{
-	background: #1B86BC;
-}
-.qq{
-	background: rgb(61, 149, 213);
-}
-.github{
-	background: black;
-}
-.bitbucket{
-	background: #205081;
-}
-.trello{
-	background: #0078BD;
-}
-.tumblr{
-	background: #36465D;
-}
+@include contactButton();
 
 .overlay{
 	display: none;
@@ -175,3 +159,59 @@ blockquote {
 	}
 }
 
+.progress{
+	padding: 10px 0 10px 0;
+}
+
+.progress-bar {
+  position: relative;
+  height: 16px;
+  border-radius: 4px;
+  @include transition(.4s linear);
+  @include transition-property(width, background-color);
+  @include box-shadow(0 0 1px 1px rgba(black, .25), inset 0 1px rgba(white, .1));
+	&:after{
+		background-color: rgba(0,0,0,.45);
+		text-align: center;
+	}
+}
+
+.progress.newTo > .progress-bar,  {
+  width: 5%;
+  background-color: #f63a0f;
+	&:after{
+		content: 'New To';
+	}
+}
+
+.progress.little > .progress-bar {
+  width: 25%;
+  background-color: #dd5600;
+	&:after{
+		content: 'Little';
+	}
+}
+
+.progress.moderate > .progress-bar {
+  width: 50%;
+  background-color: #033c73;
+	&:after{
+		content: 'Moderate';
+	}
+}
+
+.progress.highLevel > .progress-bar {
+  width: 75%;
+  background-color: #52D8AA;
+	&:after{
+		content: 'High Level';
+	}
+}
+
+.progress.proficient > .progress-bar {
+  width: 100%;
+  background-color: #86e01e;
+	&:after{
+		content: 'Proficient';
+	}
+}

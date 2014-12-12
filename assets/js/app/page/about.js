@@ -1,7 +1,7 @@
 var SubUtils = function(){}
 inherit(SubUtils, SubUtilsDep);
 SubUtils.prototype.PreLoad = function(){
-	return {'visible': 2};
+	return {'visible': 3};
 }
 SubUtils.prototype.Run = function(){
 	console.log('Hello, world!');

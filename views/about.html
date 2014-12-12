@@ -3,9 +3,9 @@
 <p>Just a naive human working on computer and playing on programming.</p>
 <div class="section">
 	<button class="grid-4 pageBtn" on-tap="show:1">Autobiography</button>
-	<button class="grid-4 pageBtn" on-tap="show:2">Contact</button>
-	<button class="grid-4 pageBtn" on-tap="show:3">License</button>
-	<button class="grid-4 pageBtn" on-tap="show:4">Reference</button>
+	<button class="grid-4 pageBtn" on-tap="show:2">Ability</button>
+	<button class="grid-4 pageBtn" on-tap="show:3">Contact</button>
+	<button class="grid-4 pageBtn" on-tap="show:4">License</button>
 </div>
 <div>&nbsp;</div>
 {{#if visible === 1 }}
@@ -41,6 +41,68 @@
 	</div>
 {{/if}}
 {{#if visible === 2}}
+	<div outro="fade:400" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
+		<h2 id="ability">Ability</h2>
+		<hr>
+		<div class="grid-2">
+			<h3>Front End</h3>
+			<div class="progress highLevel">
+				<span>HTML</span>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="progress highLevel">
+				<span>CSS</span>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="progress moderate">
+				<span>Javascript</span>
+				<div class="progress-bar"></div>
+			</div>
+		</div>
+		<div class="grid-2">
+			<h3>Back End</h3>
+			<div class="progress moderate">
+				<span>PHP(Apache)</span>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="progress moderate">
+				<span>Ruby on Rails</span>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="progress little">
+				<span>Python Django</span>
+				<div class="progress-bar"></div>
+			</div>
+		</div>
+		<div class="grid-2">
+			<h3>Interpreted</h3>
+			<div class="progress highLevel">
+				<span>Ruby</span>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="progress little">
+				<span>Python</span>	
+				<div class="progress-bar"></div>
+			</div>
+		</div>
+		<div class="grid-2">
+			<h3>Compiled</h3>
+			<div class="progress highLevel">
+				<span>C Language</span>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="progress moderate">
+				<span>Java</span>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="progress little">
+				<span>C++</span>
+				<div class="progress-bar"></div>
+			</div>
+		</div>
+	</div>
+{{/if}}
+{{#if visible === 3}}
 	<div outro="fade:400" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
 		<h2 id="contact">Contact</h2>
 		<hr>
@@ -114,7 +176,7 @@
 		</div>
 	</div>
 {{/if}}
-{{#if visible === 3 }}
+{{#if visible === 4 }}
 	<div outro="fade:400" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
 		<h2 id="license">License</h2>
 		<hr>
@@ -197,13 +259,6 @@
 			</div>
 			<p>Create interactive charts easily for your web projects.</p>
 		</div>			
-	</div>
-{{/if}}
-{{#if visible === 4 }}
-	<div outro="fade:400" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
-		<h2 id="reference">Reference</h2>
-		<hr>
-		<p>The following will list some website (without sorted to license) which will help you to style the website.</p>
 		<div class="text-section">
 			<h3>W3School</h3>
 			<div class="link-icon-group">
