@@ -10,7 +10,7 @@
 		('trello', #0078BD), ('tumblr', #36465D)
 	);
 	@each $button in $buttonList{
-		li.#{nth($button, 1)} {
+		.#{nth($button, 1)} {
 			background: nth($button, 2);
 			border-bottom: 2px solid darken(nth($button, 2), 5.5%);
 			-webkit-box-shadow: inset 0 -2px darken(nth($button, 2), 5.5%);
@@ -72,6 +72,7 @@
 }
 
 .pageBtn{
+	font-family: inherit;
 	position: relative;
   vertical-align: top;
   height: 60px;
@@ -107,22 +108,39 @@
 @include contactButton();
 
 .overlay{
-	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	@include transition(all 0.4s ease);
 	z-index: 9999;
-	pointer-events: none;
+	padding: 5%;
 	cursor: auto;
-	.close{
-		position: absolute;
-		right:0;
-		top:0;
-		cursor: pointer;
-		z-index: 10000;
+	padding: 5%;
+	text-align: center;
+	.avatar-wrapper{
+		padding: 10px;
+		border-radius: 7%;
+		margin-top: -100px;
+	}
+	.avatar{
+		width: 180px;
+		height: auto;
+		border-radius: 7%;
+	}
+	.platbg-wrapper{
+		height: 340px;
+		overflow: hidden;
+	}
+	.platbg{
+		width: 600px;
+	}
+	.close, .linkto{
+		color: white;
+		&:hover, &:active, &:focus, &:visited{
+			text-decoration: underline;
+			color: white;
+		}
 	}
 }
 
@@ -164,6 +182,7 @@ blockquote {
 }
 
 .progress-bar {
+	text-align: center;
   position: relative;
   height: 16px;
   border-radius: 4px;
@@ -172,7 +191,6 @@ blockquote {
   @include box-shadow(0 0 1px 1px rgba(black, .25), inset 0 1px rgba(white, .1));
 	&:after{
 		background-color: rgba(0,0,0,.45);
-		text-align: center;
 	}
 }
 

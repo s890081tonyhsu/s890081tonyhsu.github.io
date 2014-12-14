@@ -19,6 +19,9 @@ requirejs.config({
 	'baseUrl': 'assets/js/lib',
 	'paths': {
 		'app': '../app',
+		'text': 'require/text',
+		'json': 'require/json',
+		'jsonFolder': '../../json',
 		'ractive': 'ractive/ractive.min',
 		'ret': 'ractive/ractive-events-tap.min',
 		'rtf': 'ractive/ractive-transitions-fade.min',
@@ -36,7 +39,7 @@ requirejs.config({
 // Require menu
 require(['app/borderMenu']);
 // Require index
-require(['app/url_sub', 'app/index'], function(){
+require(['json!jsonFolder/url_sub.json', 'app/index'], function(url_sub){
 	var utils = new IndexUtils(url_sub);
 	utils.InitPage();
 	var _url = utils.url;

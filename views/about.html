@@ -106,18 +106,31 @@
 	<div outro="fade:400" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
 		<h2 id="contact">Contact</h2>
 		<hr>
+		{{#contact}}
+			<div class="overlay {{platform}}" outro="fade:400" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">
+				<div class="platbg-wrapper">
+					<img class="platbg" src="{{platbg}}" alt="">
+				</div>
+				<div class="avatar-wrapper">
+					<img class="avatar" src="{{avatar}}" alt="">
+				</div>
+				<div class="info-wrapper">
+					<h4>{{name}}</h4>
+					<p>{{description}}</p>
+					<a href="{{link}}" class="linkto" target="_blank"><i class="fa fa-external-link fa-2x"></i>  Go to Page</a>
+					<span class="between">&nbsp;</span>
+					<a href="#" class="close" on-tap="contactDetail"><i class="fa fa-close fa-2x"></i> Back to Contact List</a>
+				</div>
+			</div>
+		{{/contact}}
 		<div class="section">
 			<h3>Social Network</h3>
 			<ul>
-				<li class="grid-4 pageBtn facebook" data-target="facebook">
+				<li class="grid-4 pageBtn facebook" on-tap="contactDetail:facebook">
 					<h4>Facebook</h4>
 					<i class="icon-splash icon-social-facebook-squared"></i>
-					<div id="facebook" class="overlay facebook">
-						Test
-						<a href="#" class="close" data-target="facebook">X</a>
-					</div>
 				</li>
-				<li class="grid-4 pageBtn google__plus">
+				<li class="grid-4 pageBtn google__plus" on-tap="contactDetail:google__plus">
 					<h4>Google+</h4>
 					<i class="icon-splash icon-social-googleplus-rect"></i>
 					<div></div>

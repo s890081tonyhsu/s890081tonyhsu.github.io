@@ -1,0 +1,18 @@
+{
+	"facebook": {
+		"platform": "facebook",
+		"name": "林雨緣(NarakuAngel)",
+		"avatar": "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p160x160/10522740_371573079659365_6460461936921762098_n.jpg?oh=463134e69174ebe767138c134293f3c7&oe=5540416E&__gda__=1430561672_52f68e3451bb0aa159a68f11408af869",
+		"platbg": "https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10600531_371572772992729_4062094983834202597_n.jpg?oh=a67e84a6cff74950d24d5e12d6ea18a3&oe=553D57E1&__gda__=1426930749_f628867fb078735bedeb84182a79e4f5",
+		"description": "The most frequently contact platform.",
+		"link": "http://www.facebook.com/davistonyhsu"
+	},
+	"google__plus": {
+		"platform": "google__plus",
+		"name": "許孟傑(沈鬱之石 DropStone)",
+		"avatar": "https://lh4.googleusercontent.com/-Ulcy5LYFtgo/Up7Exs3qJKI/AAAAAAAAAik/MANZTIcRtAk/s500-no/815y1OeYmXL.png",
+		"platbg": "https://lh6.googleusercontent.com/-mQTNvSN-fJo/Up7FZVkhx0I/AAAAAAAAAiM/3CKnD-be2nA/w788-h591-no/278872a6cb15e6dd054027a52842c6a165f124.jpg",
+		"description": "Sometimes contact on this place. Most of it is some works.",
+		"link": "https://plus.google.com/+孟傑許沉鬱之石/"
+	}
+}
