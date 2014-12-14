@@ -9,7 +9,7 @@
 </div>
 <div>&nbsp;</div>
 {{#if visible === 1 }}
-	<div outro="fade:400" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
+	<div outro="fade:350" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
 		<h2 id="profile">Autobiography</h2>
 		<hr>
 		<div class="text-section">
@@ -41,7 +41,7 @@
 	</div>
 {{/if}}
 {{#if visible === 2}}
-	<div outro="fade:400" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
+	<div outro="fade:350" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
 		<h2 id="ability">Ability</h2>
 		<hr>
 		<div class="grid-2">
@@ -103,11 +103,11 @@
 	</div>
 {{/if}}
 {{#if visible === 3}}
-	<div outro="fade:400" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
+	<div outro="fade:350" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
 		<h2 id="contact">Contact</h2>
 		<hr>
 		{{#contact}}
-			<div class="overlay {{platform}}" outro="fade:400" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">
+			<div class="overlay {{platform}}" outro="fade:200" intro="fade:200">
 				<div class="platbg-wrapper">
 					<img class="platbg" src="{{platbg}}" alt="">
 				</div>
@@ -117,9 +117,11 @@
 				<div class="info-wrapper">
 					<h4>{{name}}</h4>
 					<p>{{description}}</p>
-					<a href="{{link}}" class="linkto" target="_blank"><i class="fa fa-external-link fa-2x"></i>  Go to Page</a>
-					<span class="between">&nbsp;</span>
-					<a href="#" class="close" on-tap="contactDetail"><i class="fa fa-close fa-2x"></i> Back to Contact List</a>
+					<div class="contactlink">
+						<a href="{{link}}" class="linkto" target="_blank"><i class="fa fa-external-link fa-2x"></i>  Go to Page</a>
+						<span class="between">&nbsp;</span>
+						<a href="#" class="close" on-tap="contactDetail"><i class="fa fa-close fa-2x"></i> Back to Contact List</a>
+					</div>
 				</div>
 			</div>
 		{{/contact}}
@@ -135,12 +137,12 @@
 					<i class="icon-splash icon-social-googleplus-rect"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 pageBtn plurk">
+				<li class="grid-4 pageBtn plurk" on-tap="contactDetail:plurk">
 					<h4>Plurk</h4>
 					<i class="icon-splash icon-social-plurk"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 pageBtn twitter">
+				<li class="grid-4 pageBtn twitter" on-tap="contactDetail:twitter">
 					<h4>Twitter</h4>
 					<i class="icon-splash icon-social-twitter-bird"></i>
 					<div></div>
@@ -150,17 +152,17 @@
 		<div class="section">
 			<h3>Workspace and Blog</h3>
 			<ul>
-				<li class="grid-4 pageBtn tumblr">
+				<li class="grid-4 pageBtn tumblr" on-tap="contactDetail:tumblr">
 					<h4>Tumblr</h4>
 					<i class="icon-splash icon-social-tumblr-rect"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 pageBtn github">
+				<li class="grid-4 pageBtn github" on-tap="contactDetail:github">
 					<h4>Github</h4>
 					<i class="icon-splash icon-social-github-circled"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 pageBtn bitbucket">
+				<li class="grid-4 pageBtn bitbucket" on-tap="contactDetail:bitbucket">
 					<h4>Bitbucket</h4>
 					<i class="icon-splash icon-social-bitbucket"></i>
 					<div></div>
@@ -170,17 +172,17 @@
 		<div class="section">
 			<h3>Less Used Service</h3>
 			<ul>
-				<li class="grid-4 pageBtn qq">
+				<li class="grid-4 pageBtn qq" on-tap="contactDetail:qq">
 					<h4>QQ</h4>
 					<i class="icon-splash icon-social-qq"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 pageBtn linkedin">
+				<li class="grid-4 pageBtn linkedin" on-tap="contactDetail:linkedin">
 					<h4>LinkedIn</h4>
 					<i class=" icon-splash icon-social-linkedin-squared"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 pageBtn trello">
+				<li class="grid-4 pageBtn trello" on-tap="contactDetail:trello">
 					<h4>Trello</h4>
 					<i class="icon-splash fa fa-trello fa-2x fa-fw"></i>
 					<div></div>
@@ -190,7 +192,7 @@
 	</div>
 {{/if}}
 {{#if visible === 4 }}
-	<div outro="fade:400" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
+	<div outro="fade:350" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
 		<h2 id="license">License</h2>
 		<hr>
 		<div>

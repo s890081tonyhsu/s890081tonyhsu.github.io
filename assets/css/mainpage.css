@@ -874,35 +874,42 @@ header {
   text-decoration: underline;
   color: white;
 }
+@media screen and (max-width: 767px) {
+  /* line 146, ../scss/sub/_about.scss */
+  .overlay .platbg-wrapper, .overlay .platbg {
+    width: 100%;
+    height: auto;
+  }
+}
 
-/* line 147, ../scss/sub/_about.scss */
+/* line 153, ../scss/sub/_about.scss */
 blockquote {
   border-left: .5em solid #40AA53;
   padding: 0 2em;
   margin-left: 0;
   max-width: 476px;
 }
-/* line 152, ../scss/sub/_about.scss */
+/* line 158, ../scss/sub/_about.scss */
 blockquote cite {
   font-size: 14px;
   line-height: 20px;
   color: #bfbfbf;
 }
-/* line 156, ../scss/sub/_about.scss */
+/* line 162, ../scss/sub/_about.scss */
 blockquote cite:before {
   content: '\2014 \00A0';
 }
-/* line 160, ../scss/sub/_about.scss */
+/* line 166, ../scss/sub/_about.scss */
 blockquote p {
   color: #F2CA8A;
   max-width: 460px;
 }
 
-/* line 166, ../scss/sub/_about.scss */
+/* line 172, ../scss/sub/_about.scss */
 .link-icon-group {
   float: right;
 }
-/* line 168, ../scss/sub/_about.scss */
+/* line 174, ../scss/sub/_about.scss */
 .link-icon-group a, .link-icon-group a:hover, .link-icon-group a:active, .link-icon-group a:focus {
   position: relative;
   color: white;
@@ -911,18 +918,18 @@ blockquote p {
   padding-left: 20px;
 }
 @media screen and (max-width: 499px) {
-  /* line 166, ../scss/sub/_about.scss */
+  /* line 172, ../scss/sub/_about.scss */
   .link-icon-group {
     width: 100%;
   }
 }
 
-/* line 180, ../scss/sub/_about.scss */
+/* line 186, ../scss/sub/_about.scss */
 .progress {
   padding: 10px 0 10px 0;
 }
 
-/* line 184, ../scss/sub/_about.scss */
+/* line 190, ../scss/sub/_about.scss */
 .progress-bar {
   text-align: center;
   position: relative;
@@ -940,57 +947,57 @@ blockquote p {
   -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
 }
-/* line 192, ../scss/sub/_about.scss */
+/* line 198, ../scss/sub/_about.scss */
 .progress-bar:after {
   background-color: rgba(0, 0, 0, 0.45);
 }
 
-/* line 197, ../scss/sub/_about.scss */
+/* line 203, ../scss/sub/_about.scss */
 .progress.newTo > .progress-bar {
   width: 5%;
   background-color: #f63a0f;
 }
-/* line 200, ../scss/sub/_about.scss */
+/* line 206, ../scss/sub/_about.scss */
 .progress.newTo > .progress-bar:after {
   content: 'New To';
 }
 
-/* line 205, ../scss/sub/_about.scss */
+/* line 211, ../scss/sub/_about.scss */
 .progress.little > .progress-bar {
   width: 25%;
   background-color: #dd5600;
 }
-/* line 208, ../scss/sub/_about.scss */
+/* line 214, ../scss/sub/_about.scss */
 .progress.little > .progress-bar:after {
   content: 'Little';
 }
 
-/* line 213, ../scss/sub/_about.scss */
+/* line 219, ../scss/sub/_about.scss */
 .progress.moderate > .progress-bar {
   width: 50%;
   background-color: #033c73;
 }
-/* line 216, ../scss/sub/_about.scss */
+/* line 222, ../scss/sub/_about.scss */
 .progress.moderate > .progress-bar:after {
   content: 'Moderate';
 }
 
-/* line 221, ../scss/sub/_about.scss */
+/* line 227, ../scss/sub/_about.scss */
 .progress.highLevel > .progress-bar {
   width: 75%;
   background-color: #52D8AA;
 }
-/* line 224, ../scss/sub/_about.scss */
+/* line 230, ../scss/sub/_about.scss */
 .progress.highLevel > .progress-bar:after {
   content: 'High Level';
 }
 
-/* line 229, ../scss/sub/_about.scss */
+/* line 235, ../scss/sub/_about.scss */
 .progress.proficient > .progress-bar {
   width: 100%;
   background-color: #86e01e;
 }
-/* line 232, ../scss/sub/_about.scss */
+/* line 238, ../scss/sub/_about.scss */
 .progress.proficient > .progress-bar:after {
   content: 'Proficient';
 }
@@ -1862,15 +1869,22 @@ All this is done for any sub-level being entered.
   display: none;
 }
 
-/* line 3, ../scss/sub/_tumblr.scss */
+@media screen and (max-width: 767px) {
+  /* line 3, ../scss/sub/_tumblr.scss */
+  #content img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* line 9, ../scss/sub/_tumblr.scss */
 #content .more a.left {
   float: left;
 }
-/* line 6, ../scss/sub/_tumblr.scss */
+/* line 12, ../scss/sub/_tumblr.scss */
 #content .more a.right {
   float: right;
 }
-/* line 9, ../scss/sub/_tumblr.scss */
+/* line 15, ../scss/sub/_tumblr.scss */
 #content .more a.clear {
   clear: both;
 }
