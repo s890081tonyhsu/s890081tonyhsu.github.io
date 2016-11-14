@@ -1088,13 +1088,25 @@ blockquote p {
 .lang.shell {
   text-shadow: 0 0 1px #fff, 0 0 2px #89e051, 0 0 3px #89e051, 0 0 4px #89e051, 0 0 7px #89e051, 0 0 8px rgba(137, 224, 81, 0.65), 0 0 10px rgba(137, 224, 81, 0.45), 0 0 15px rgba(137, 224, 81, 0.15);
 }
+/* line 74, ../scss/sub/_repo.scss */
+.lang.csharp {
+  text-shadow: 0 0 1px #fff, 0 0 2px #178600, 0 0 3px #178600, 0 0 4px #178600, 0 0 7px #178600, 0 0 8px rgba(23, 134, 0, 0.65), 0 0 10px rgba(23, 134, 0, 0.45), 0 0 15px rgba(23, 134, 0, 0.15);
+}
+/* line 77, ../scss/sub/_repo.scss */
+.lang.verilog {
+  text-shadow: 0 0 1px #fff, 0 0 2px #b2b7f8, 0 0 3px #b2b7f8, 0 0 4px #b2b7f8, 0 0 7px #b2b7f8, 0 0 8px rgba(178, 183, 248, 0.65), 0 0 10px rgba(178, 183, 248, 0.45), 0 0 15px rgba(178, 183, 248, 0.15);
+}
+/* line 80, ../scss/sub/_repo.scss */
+.lang.livescript {
+  text-shadow: 0 0 1px #fff, 0 0 2px #499886, 0 0 3px #499886, 0 0 4px #499886, 0 0 7px #499886, 0 0 8px rgba(73, 152, 134, 0.65), 0 0 10px rgba(73, 152, 134, 0.45), 0 0 15px rgba(73, 152, 134, 0.15);
+}
 
-/* line 75, ../scss/sub/_repo.scss */
+/* line 84, ../scss/sub/_repo.scss */
 #RepoChartContainer {
   width: 100%;
 }
 
-/* line 79, ../scss/sub/_repo.scss */
+/* line 88, ../scss/sub/_repo.scss */
 .link {
   width: 25px;
   height: 25px;

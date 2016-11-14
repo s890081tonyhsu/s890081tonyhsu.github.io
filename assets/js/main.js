@@ -24,13 +24,15 @@ requirejs.config({
 		'jsonFolder': '../../json',
 		'ractive': 'ractive/ractive.min',
 		'ret': 'ractive/ractive-events-tap.min',
-		'rtf': 'ractive/ractive-transitions-fade.min',
+		'rtf': 'ractive/ractive-transitions-fade.umd',
 		'rvc': 'ractive/rvc.min',
 		'ui': '../../../views'
 	},
 	'shim': {
 		'app/borderMenu': ['jquery/jquery.min', 'other/modernizr.custom'],
-		'app/index': ['jquery/jquery.min', 'ractive', 'ret', 'rtf']
+		'app/index': ['jquery/jquery.min', 'ractive', 'ret', 'rtf'],
+		'highchart/highcharts-3d': ['highchart/highcharts'],
+		'highchart/exporting': ['highchart/highcharts']
 	}
 });
 

@@ -71,6 +71,15 @@
 	&.shell{
 		@include neon_shadow(#89e051);
 	}
+	&.csharp{
+		@include neon_shadow(#178600);
+	}
+	&.verilog{
+		@include neon_shadow(#b2b7f8);
+	}
+	&.livescript{
+		@include neon_shadow(#499886);
+	}
 }
 #RepoChartContainer{
 	width: 100%;
