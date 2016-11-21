@@ -12,12 +12,16 @@
     "css-loader": "^0.21.0",
     "gulp": "^3.9.0",
     "gulp-batch": "^1.0.5",
+    "gulp-compass": "^2.1.0",
     "gulp-connect": "^2.2.0",
     "gulp-copy": "0.0.2",
+    "gulp-imagemin": "^3.1.1",
     "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.3.2",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.5",
     "html-loader": "^0.4.0",
+    "image-webpack-loader": "^3.0.0",
     "inject-loader": "^2.0.1",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
@@ -42,7 +46,8 @@
     "vue-router": "^0.7.7"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start karma.conf.js",
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
