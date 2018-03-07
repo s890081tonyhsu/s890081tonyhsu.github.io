@@ -2,7 +2,7 @@ var SubUtils = function(){
 	this.GithubAPI = function(xpath){
 		return JSON.parse($.ajax({
 			type: 'GET',
-			url: 'https://api.github.com/'+xpath+'?access_token=13b00a57b94d81e5c6471e56fce5aeea12fca10f',
+			url: 'https://api.github.com/'+xpath+'?access_token=7489adc702220d053e7685b818dcf8cd4f79e431',
 			async: false
 		}).responseText);
 	}

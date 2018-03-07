@@ -906,10 +906,18 @@ blockquote p {
 }
 
 /* line 172, ../scss/sub/_about.scss */
+a {
+  color: #2A9FD6;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+/* line 179, ../scss/sub/_about.scss */
 .link-icon-group {
   float: right;
 }
-/* line 174, ../scss/sub/_about.scss */
+/* line 181, ../scss/sub/_about.scss */
 .link-icon-group a, .link-icon-group a:hover, .link-icon-group a:active, .link-icon-group a:focus {
   position: relative;
   color: white;
@@ -918,18 +926,18 @@ blockquote p {
   padding-left: 20px;
 }
 @media screen and (max-width: 499px) {
-  /* line 172, ../scss/sub/_about.scss */
+  /* line 179, ../scss/sub/_about.scss */
   .link-icon-group {
     width: 100%;
   }
 }
 
-/* line 186, ../scss/sub/_about.scss */
+/* line 193, ../scss/sub/_about.scss */
 .progress {
   padding: 10px 0 10px 0;
 }
 
-/* line 190, ../scss/sub/_about.scss */
+/* line 197, ../scss/sub/_about.scss */
 .progress-bar {
   text-align: center;
   position: relative;
@@ -947,57 +955,57 @@ blockquote p {
   -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
 }
-/* line 198, ../scss/sub/_about.scss */
+/* line 205, ../scss/sub/_about.scss */
 .progress-bar:after {
   background-color: rgba(0, 0, 0, 0.45);
 }
 
-/* line 203, ../scss/sub/_about.scss */
+/* line 210, ../scss/sub/_about.scss */
 .progress.newTo > .progress-bar {
   width: 5%;
   background-color: #f63a0f;
 }
-/* line 206, ../scss/sub/_about.scss */
+/* line 213, ../scss/sub/_about.scss */
 .progress.newTo > .progress-bar:after {
   content: 'New To';
 }
 
-/* line 211, ../scss/sub/_about.scss */
+/* line 218, ../scss/sub/_about.scss */
 .progress.little > .progress-bar {
   width: 25%;
   background-color: #dd5600;
 }
-/* line 214, ../scss/sub/_about.scss */
+/* line 221, ../scss/sub/_about.scss */
 .progress.little > .progress-bar:after {
   content: 'Little';
 }
 
-/* line 219, ../scss/sub/_about.scss */
+/* line 226, ../scss/sub/_about.scss */
 .progress.moderate > .progress-bar {
   width: 50%;
   background-color: #033c73;
 }
-/* line 222, ../scss/sub/_about.scss */
+/* line 229, ../scss/sub/_about.scss */
 .progress.moderate > .progress-bar:after {
   content: 'Moderate';
 }
 
-/* line 227, ../scss/sub/_about.scss */
+/* line 234, ../scss/sub/_about.scss */
 .progress.highLevel > .progress-bar {
   width: 75%;
   background-color: #52D8AA;
 }
-/* line 230, ../scss/sub/_about.scss */
+/* line 237, ../scss/sub/_about.scss */
 .progress.highLevel > .progress-bar:after {
   content: 'High Level';
 }
 
-/* line 235, ../scss/sub/_about.scss */
+/* line 242, ../scss/sub/_about.scss */
 .progress.proficient > .progress-bar {
   width: 100%;
   background-color: #86e01e;
 }
-/* line 238, ../scss/sub/_about.scss */
+/* line 245, ../scss/sub/_about.scss */
 .progress.proficient > .progress-bar:after {
   content: 'Proficient';
 }
@@ -1993,10 +2001,10 @@ h1 {
   padding: 5%;
   width: 100%;
 }
-@media screen and (min-height: 800px) {
+@media screen and (max-aspect-ratio: 19 / 17) {
   /* line 79, ../scss/mainpage.scss */
   #mainpage #cover {
-    margin-top: 50%;
+    margin-top: 40%;
   }
 }
 /* line 88, ../scss/mainpage.scss */

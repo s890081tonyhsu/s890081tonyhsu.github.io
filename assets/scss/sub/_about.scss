@@ -169,6 +169,13 @@ blockquote {
 	}
 }
 
+a {
+    color: #2A9FD6;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
 .link-icon-group{
 	float: right;
 	a, a:hover, a:active, a:focus{

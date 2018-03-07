@@ -2,14 +2,14 @@
 <h4>{{name}}</h4>
 <p>Just a naive human working on computer and playing on programming.</p>
 <div class="section">
-	<button class="grid-4 pageBtn" on-tap="show:1">Autobiography</button>
-	<button class="grid-4 pageBtn" on-tap="show:2">Ability</button>
-	<button class="grid-4 pageBtn" on-tap="show:3">Contact</button>
-	<button class="grid-4 pageBtn" on-tap="show:4">License</button>
+	<button class="grid-4 pageBtn" on-tap="show(1)">Autobiography</button>
+	<button class="grid-4 pageBtn" on-tap="show(2)">Ability</button>
+	<button class="grid-4 pageBtn" on-tap="show(3)">Contact</button>
+	<button class="grid-4 pageBtn" on-tap="show(4)">License</button>
 </div>
 <div>&nbsp;</div>
 {{#if visible === 1 }}
-	<div outro="fade:350" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
+	<div fade-out="{ duration: 350 }" fade-in="{ delay: 400, duration: 400 }">	
 		<h2 id="profile">Autobiography</h2>
 		<hr>
 		<div class="text-section">
@@ -34,14 +34,18 @@
 			<p>At the second semester starts, Our team was request to make a website for the activity. It was after the time that TPA won the champion on League of Legends. So all we had to do was making BESG website to handle the activity's registration and post the activity's imformation.</p>
 			<p>I really thought that I can get more experience from this activity, but the truth is that I only learned how to generate a website screenshot for other teammates. The really learning and enhancement is at the summer vacation after my freshman.</p>
 			<blockquote>
+				<p>Things were a little changed.</p>
+			</blockquote>
+			<p>After playing the mobile game, I think that I can create some application for players to search and share some data from website or other players. I took care of the wiki of <a href="http://zh.nekowiz.wikia.com/wiki/%E5%95%8F%E7%AD%94RPG_%E9%AD%94%E6%B3%95%E4%BD%BF%E8%88%87%E9%BB%91%E8%B2%93%E7%B6%AD%E8%8C%B2_%E7%B6%AD%E5%9F%BA">nekowiz on wikia</a> because there were so many data created by players, and I can make some application to combine, analysis and present some special tools for players to use. But I failed my school when I was focus on that. Maybe the department I need is Computer Science. And I really doing well on some subjects in CS.</p>
+			<blockquote>
 				<p>So...what's now</p>
 			</blockquote>
-			<p>Now I am the student at the department of Electrical Engineering in NCHU. But sometimes I participate in front end works of some projects.</p>
+			<p>Now I am the student at the department of Computer Science in FJU. But sometimes I participate in front end works of some projects. And also work on some projects in <a href="http://nekowiztw.github.io/">NekowizTW</a>.</p>
 		</div>
 	</div>
 {{/if}}
 {{#if visible === 2}}
-	<div outro="fade:350" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
+	<div fade-out="{ duration: 350 }" fade-in="{ delay: 400, duration: 400 }">	
 		<h2 id="ability">Ability</h2>
 		<hr>
 		<div class="grid-2">
@@ -54,8 +58,31 @@
 				<span>CSS</span>
 				<div class="progress-bar"></div>
 			</div>
-			<div class="progress moderate">
+			<div class="progress highLevel">
 				<span>Javascript</span>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="progress moderate">
+				<span>ECMAScript 6(React)</span>
+				<div class="progress-bar"></div>
+			</div>
+		</div>
+		<div class="grid-2">
+			<h3>Compiled</h3>
+			<div class="progress highLevel">
+				<span>C++11</span>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="progress moderate">
+				<span>C Language</span>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="progress moderate">
+				<span>Java</span>
+				<div class="progress-bar"></div>
+			</div>
+			<div class="progress moderate">
+				<span>C#</span>
 				<div class="progress-bar"></div>
 			</div>
 		</div>
@@ -80,34 +107,23 @@
 				<span>Ruby</span>
 				<div class="progress-bar"></div>
 			</div>
-			<div class="progress little">
+			<div class="progress moderate">
 				<span>Python</span>	
 				<div class="progress-bar"></div>
 			</div>
-		</div>
-		<div class="grid-2">
-			<h3>Compiled</h3>
-			<div class="progress highLevel">
-				<span>C Language</span>
-				<div class="progress-bar"></div>
-			</div>
-			<div class="progress moderate">
-				<span>Java</span>
-				<div class="progress-bar"></div>
-			</div>
 			<div class="progress little">
-				<span>C++</span>
+				<span>OPL</span>	
 				<div class="progress-bar"></div>
 			</div>
 		</div>
 	</div>
 {{/if}}
 {{#if visible === 3}}
-	<div outro="fade:350" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
+	<div fade-out="{ duration: 350 }" fade-in="{ delay: 400, duration: 400 }">	
 		<h2 id="contact">Contact</h2>
 		<hr>
 		{{#contact}}
-			<div class="overlay {{platform}}" outro="fade:200" intro="fade:200">
+			<div class="overlay {{platform}}" fade-out="{ duration: 200 }" fade-in="{ duration: 200 }">
 				<div class="platbg-wrapper">
 					<img class="platbg" src="{{platbg}}" alt="">
 				</div>
@@ -120,7 +136,7 @@
 					<div class="contactlink">
 						<a href="{{link}}" class="linkto" target="_blank"><i class="fa fa-external-link fa-2x"></i>  Go to Page</a>
 						<span class="between">&nbsp;</span>
-						<a href="#" class="close" on-tap="contactDetail"><i class="fa fa-close fa-2x"></i> Back to Contact List</a>
+						<a href="#" class="close" on-tap="contactDetail()"><i class="fa fa-close fa-2x"></i> Back to Contact List</a>
 					</div>
 				</div>
 			</div>
@@ -128,21 +144,21 @@
 		<div class="section">
 			<h3>Social Network</h3>
 			<ul>
-				<li class="grid-4 pageBtn facebook" on-tap="contactDetail:facebook">
+				<li class="grid-4 pageBtn facebook" on-tap="contactDetail('facebook')">
 					<h4>Facebook</h4>
 					<i class="icon-splash icon-social-facebook-squared"></i>
 				</li>
-				<li class="grid-4 pageBtn google__plus" on-tap="contactDetail:google__plus">
+				<li class="grid-4 pageBtn google__plus" on-tap="contactDetail('google__plus')">
 					<h4>Google+</h4>
 					<i class="icon-splash icon-social-googleplus-rect"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 pageBtn plurk" on-tap="contactDetail:plurk">
+				<li class="grid-4 pageBtn plurk" on-tap="contactDetail('plurk')">
 					<h4>Plurk</h4>
 					<i class="icon-splash icon-social-plurk"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 pageBtn twitter" on-tap="contactDetail:twitter">
+				<li class="grid-4 pageBtn twitter" on-tap="contactDetail('twitter')">
 					<h4>Twitter</h4>
 					<i class="icon-splash icon-social-twitter-bird"></i>
 					<div></div>
@@ -152,17 +168,17 @@
 		<div class="section">
 			<h3>Workspace and Blog</h3>
 			<ul>
-				<li class="grid-4 pageBtn tumblr" on-tap="contactDetail:tumblr">
+				<li class="grid-4 pageBtn tumblr" on-tap="contactDetail('tumblr')">
 					<h4>Tumblr</h4>
 					<i class="icon-splash icon-social-tumblr-rect"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 pageBtn github" on-tap="contactDetail:github">
+				<li class="grid-4 pageBtn github" on-tap="contactDetail('github')">
 					<h4>Github</h4>
 					<i class="icon-splash icon-social-github-circled"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 pageBtn bitbucket" on-tap="contactDetail:bitbucket">
+				<li class="grid-4 pageBtn bitbucket" on-tap="contactDetail('bitbucket')">
 					<h4>Bitbucket</h4>
 					<i class="icon-splash icon-social-bitbucket"></i>
 					<div></div>
@@ -172,12 +188,12 @@
 		<div class="section">
 			<h3>Less Used Service</h3>
 			<ul>
-				<li class="grid-4 pageBtn linkedin" on-tap="contactDetail:linkedin">
+				<li class="grid-4 pageBtn linkedin" on-tap="contactDetail('linkedin')">
 					<h4>LinkedIn</h4>
 					<i class=" icon-splash icon-social-linkedin-squared"></i>
 					<div></div>
 				</li>
-				<li class="grid-4 pageBtn trello" on-tap="contactDetail:trello">
+				<li class="grid-4 pageBtn trello" on-tap="contactDetail('trello')">
 					<h4>Trello</h4>
 					<i class="icon-splash fa fa-trello fa-2x fa-fw"></i>
 					<div></div>
@@ -187,15 +203,15 @@
 	</div>
 {{/if}}
 {{#if visible === 4 }}
-	<div outro="fade:350" intro="fade:{ delay:{{ 400 }}, duration:{{ 400 }} }">	
+	<div fade-out="{ duration: 350 }" fade-in="{ delay: 400, duration: 400 }">	
 		<h2 id="license">License</h2>
 		<hr>
 		<div>
 			<p>The site's source code is available on Github.</p>
 			<p>You can click the link on top right to get the source.</p>
 			<p>And the following is the tools use on this site.</p>
-			<p><i class="fa fa-2x fa-home"></i>: means the site of this tools</p>
-			<p><i class="fa fa-2x fa-copyright"></i>: means the license of this tools</p>
+			<p><i class="fa fa-2x fa-home"></i> means the site of this tools</p>
+			<p><i class="fa fa-2x fa-copyright"></i> means the license of this tools</p>
 		</div>
 		<div class="text-section">
 			<h3>Git</h3>

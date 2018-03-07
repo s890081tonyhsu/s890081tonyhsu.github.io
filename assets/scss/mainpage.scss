@@ -82,8 +82,8 @@ h1 {
 		top:100px;
 		padding:5%;
 		width:100%;
-		@media screen and (min-height: 800px){
-			margin-top:50%;
+		@media screen and (max-aspect-ratio: 19/17){
+			margin-top:40%;
 		}
 		p{
 			color:white;

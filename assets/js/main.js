@@ -1,15 +1,29 @@
 function RequireSub(url){
 	var page = url.json;
 	var name = page.template;
-	var dependency = ['rvc!ui/' + name, 'app/page/' + name].concat(page.dependency);
-	require(dependency, function(ContentPage){
+	var dependency = ['ractive', 'ret', 'rtf', 'text!ui/' + name + '.html', 'app/page/' + name].concat(page.dependency);
+	require(dependency, function(Ractive, ret, rtf, template){
 		var sub_utils = new SubUtils(url);
 		var data = sub_utils.PreLoad(url);
+		var partials = {};
+		const partialRegex = /<!-- \{\{>(.*)\}\} -->(.*)<!-- \{\{\/\1\}\} -->/gs;
 		console.log(sub_utils);
 		console.log(data);
-		window.content = new ContentPage({
-			el: '#content',
-			data: data
+		var m;
+		while ((m = partialRegex.exec(template)) !== null) {
+			if (m.index === partialRegex.lastIndex) {
+				partialRegex.lastIndex++;
+			}
+			
+			partials[m[1]] = m[2];
+		}
+		window.content = Ractive({
+			target: '#content',
+			data: data,
+			partials: partials,
+			template: template,
+			events: { tap: ret },
+			transitions: { fade: rtf }
 		});
 		sub_utils.Run();
 	});
@@ -25,7 +39,6 @@ requirejs.config({
 		'ractive': 'ractive/ractive.min',
 		'ret': 'ractive/ractive-events-tap.min',
 		'rtf': 'ractive/ractive-transitions-fade.umd',
-		'rvc': 'ractive/rvc.min',
 		'ui': '../../../views'
 	},
 	'shim': {
