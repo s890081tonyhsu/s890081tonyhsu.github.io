@@ -14,7 +14,7 @@
 	"works": {
 		"status": true,
 		"template": "works",
-		"dependency": ["highchart/highcharts", "highchart/highcharts-3d", "highchart/exporting"],
+		"dependency": ["gh3", "highchart/highcharts", "highchart/highcharts-3d", "highchart/exporting"],
 		"params": ["repoid"]
 	},
 	"wiki": {

@@ -1,17 +1,12 @@
 var SubUtils = function(){
-	this.GithubAPI = function(xpath){
-		return JSON.parse($.ajax({
-			type: 'GET',
-			url: 'https://api.github.com/'+xpath+'?access_token=7489adc702220d053e7685b818dcf8cd4f79e431',
-			async: false
-		}).responseText);
-	}
+  this.myrepos = null;
 	this.CollectRepos = function(data){
 		var temp = {
 			'repo': [],
 			'langStat': {}
 		};
-		data.forEach(function(repo){
+		for(var i in data){
+      var repo = data[i];
 			var lang = (repo.language || 'Text');
 			var langcss = lang.replace("#", "sharp");
 			temp.repo.push({
@@ -25,11 +20,11 @@ var SubUtils = function(){
 			});
 			if(temp.langStat.hasOwnProperty(lang) === false) temp.langStat[lang] = 1;
 			else temp.langStat[lang]++;
-		});
+		}
 		return temp;
 	}
 	this.DrawCharts = function(){
-		var colorlist = {'ruby': '#701516','php': '#4F5D95','javascript': '#f1e05a','css': '#563d7c','viml': '#199c4b','python': '#3581ba','shell': '#89e051','csharp': '#178600','verilog': '#b2b7f8','livescript': '#499886'};
+		var colorlist = {'ruby': '#701516','php': '#4F5D95','javascript': '#f1e05a','css': '#563d7c','viml': '#199c4b','python': '#3581ba','shell': '#89e051','csharp': '#178600','verilog': '#b2b7f8','livescript': '#499886', 'ASP': '#6a40fd'};
 		var chartData = [];
 		for (var key in this.data.langStat) {
 			var percentage = Math.floor((this.data.langStat[key]/this.data.repo.length)*100);
@@ -82,10 +77,20 @@ var SubUtils = function(){
 }
 inherit(SubUtils, SubUtilsDep);
 SubUtils.prototype.PreLoad = function(){
-	var receive = this.GithubAPI('users/s890081tonyhsu/repos');
-	this.data = this.CollectRepos(receive);
-	return this.data;
+  this.user = new Gh3.User('s890081tonyhsu')
+  this.repos = new Gh3.Repositories(this.user);
+	return {
+		'repo': [],
+		'langStat': {}
+  };
 }
 SubUtils.prototype.Run = function(){
-	this.DrawCharts();
+	var _this = this;
+  var repos = this.repos;
+  repos.fetch({page:1, per_page:500, direction : "desc"}, "first", function(err, res){
+      _this.data = _this.CollectRepos(res.raw.data); // I modified the Gh3 api.
+      window.content.set('repo', _this.data.repo);
+      window.content.set('langStat', _this.data.langStat);
+      _this.DrawCharts();
+  });
 }
