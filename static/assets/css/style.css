@@ -17,8 +17,19 @@ body {
   border: 1px solid #ccc;
   box-shadow: 2px 2px 4px #aaa;
   padding-left: 15px;
+  position: relative;
 }
-/* line 15, ../sass/style.sass */
+/* line 16, ../sass/style.sass */
+.container section h3 {
+  display: block;
+}
+/* line 18, ../sass/style.sass */
 .container section p {
   margin-left: 10px;
+}
+
+/* line 21, ../sass/style.sass */
+div.image img {
+  width: 95%;
+  height: auto;
 }
