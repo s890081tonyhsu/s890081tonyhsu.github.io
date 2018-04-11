@@ -1908,6 +1908,13 @@ All this is done for any sub-level being entered.
 #content .more a.clear {
   clear: both;
 }
+/* line 19, ../scss/sub/_tumblr.scss */
+#content ul {
+  list-style: none;
+  text-align: left;
+  margin: 0 auto;
+  -webkit-padding-start: 40px;
+}
 
 /* line 11, ../scss/mainpage.scss */
 html {

@@ -11,7 +11,7 @@ var SubUtils = function(){
 		}
 		$.ajax({
 			method: 'GET',
-			url: 'http://api.tumblr.com/v2/blog/blackenangel.tumblr.com/'+xpath+'?api_key=4bKj8Pffs8OnPVRtg2jhKdjNc0gPwx0HmxhHS1FlSRTDRxemU4&'+params,
+			url: 'https://api.tumblr.com/v2/blog/blackenangel.tumblr.com/'+xpath+'?api_key=4bKj8Pffs8OnPVRtg2jhKdjNc0gPwx0HmxhHS1FlSRTDRxemU4&'+params,
 			dataType: 'JSONP',
 			data: {},
 			error: function (jqXHR, textStatus, errorThrown) {
