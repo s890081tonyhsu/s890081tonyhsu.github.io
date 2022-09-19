@@ -1,49 +1,145 @@
 <template>
-  <router-view/>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/works">Works</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="menu-btn" @click="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+  <div class="container">
+    <router-view/>
+  </div>
+  <div id="nav" v-bind:class="isShow ? 'show' : 'hide'"  @click="toggleMenu()">
+    <h2>
+      <router-link to="/">About me</router-link>
+      <span>|</span>
+      <router-link to="/resume">Resume</router-link>
+      <span>|</span>
+      <router-link to="/portfolio">Portfolio</router-link>
+    </h2>
   </div>
 </template>
 
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+const App = defineComponent({
+  data () {
+    return {
+      isShow: false
+    }
+  },
+  methods: {
+    toggleMenu () {
+      this.isShow = !this.isShow
+    }
+  }
+})
+
+export default App
+</script>
+
 <style lang="scss">
-body {
-  background-color: black;
-  background-image: url('./assets/background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center top;
+* {
+  box-sizing: border-box;
 }
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+body {
+  background-color: black;
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
+}
+
+.menu-btn {
+  display: none;
+  position: fixed;
+  top: .5em;
+  left: .5em;
+  background-color: black;
+  padding: .25em;
+  cursor: pointer;
 }
 
 #nav {
-  overflow: hidden;
-  width: 100vw;
-  padding: 2em;
-  background: rgba(0, 0, 0, 0.65);
-  box-shadow: 0 1px 1rem rgba(10, 10, 25, 0.3);
-
-  a {
-    font-weight: bold;
-    color: white;
-
-    &.router-link-exact-active {
-      color: lighten(#42b983, 40%);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black 50%);
+  z-index: 99;
+  h2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    span {
+      font-size: 0.8em;
+      margin: 0 20px 0;
     }
   }
+  a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0%;
+      height: 3px;
+      background-color: white;
+      transition: all .25s ease-in-out;
+    }
+    &.router-link-exact-active:after {
+      left: 0%;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 959px) {
+  .menu-btn {
+    display: block;
+    text-align: left;
+    font-size: 2em;
+  }
+
+  #nav {
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    overflow-y: hidden;
+    background: rgba(0, 0, 0, 0.65);
+    flex-direction: column;
+    transition: opacity .5s ease-in-out;
+    &.show {
+      height: 100%;
+      opacity: 1;
+    }
+    h2 {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      a {
+        margin: .5em 0 .5em;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+h1 span {
+  font-size: 0.75em;
+  color: #AAA;
 }
 </style>
