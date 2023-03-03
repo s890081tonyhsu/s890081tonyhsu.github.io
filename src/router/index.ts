@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-import About from '../views/About.vue'
+import About from '../views/AboutPage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -13,7 +13,7 @@ const routes: Array<RouteRecordRaw> = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Portfolio.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/PortfolioPage.vue')
   },
   {
     path: '/resume',
@@ -21,13 +21,17 @@ const routes: Array<RouteRecordRaw> = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Resume.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/ResumePage.vue')
   }
 ]
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes
+})
+
+router.beforeEach(() => {
+  window.scrollTo(0, 0)
 })
 
 export default router

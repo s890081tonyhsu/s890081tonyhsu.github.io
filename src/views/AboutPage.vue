@@ -29,7 +29,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-const About = defineComponent({
+const AboutPage = defineComponent({
   data () {
     return {
       skills: [
@@ -39,7 +39,7 @@ const About = defineComponent({
         { name: 'Programming', items: ['C/C++', 'C#', 'Ruby', 'Python 3', 'Verilog'] }
       ],
       socials: [
-        { icon: 'fa-solid fa-at', url: 'mailto:s890081tonyhsu@gmail.com' },
+        { icon: 'fa-solid fa-at', url: 'mailto:otomesound.retry@gmail.com' },
         { icon: 'fa-brands fa-facebook', url: 'https://fb.me/davistonyhsu' },
         { icon: 'fa-brands fa-linkedin', url: 'https://www.linkedin.com/in/otomesound' },
         { icon: 'fa-brands fa-github', url: 'https://github.com/s890081tonyhsu' }
@@ -48,7 +48,7 @@ const About = defineComponent({
   }
 })
 
-export default About
+export default AboutPage
 </script>
 
 <style lang="scss">
