@@ -15,7 +15,8 @@ export interface DetailItem extends BasicItem {
 }
 
 export interface GroupItem<T> {
-  name: string
+  name: string,
+  joinable?: boolean,
   items?: T[]
 }
 
@@ -124,39 +125,40 @@ const skills: GroupItem<GroupItem<string>>[] = [
   {
     name: 'Front End',
     items: [
-      { name: 'JavaScript', items: ['React', 'Vue', 'jQuery'] },
-      { name: 'CSS', items: ['Sass', 'Purecss', 'Bootstrap', 'Semantic UI'] },
+      { name: 'JavaScript', items: ['Framework(React, Vue)', 'Library(jQuery, Lodash)'] },
+      { name: 'CSS', items: ['Preprocessor(Sass)', 'Framework(Purecss, Bootstrap, Semantic UI)'] },
       { name: 'HTML' }
     ]
   },
   {
     name: 'Back End',
     items: [
-      { name: 'NodeJS', items: ['Express', 'Koa'] },
-      { name: 'PHP', items: ['Laravel'] },
-      { name: 'Ruby', items: ['Rails'] },
-      { name: 'DBMS', items: ['MySQL', 'MongoDB'] },
-      { name: '.Net', items: ['ASP.NET'] }
+      { name: 'NodeJS', joinable: true, items: ['Express', 'Koa'] },
+      { name: 'PHP', joinable: true, items: ['Laravel'] },
+      { name: 'Ruby', joinable: true, items: ['Rails'] },
+      { name: 'DBMS', joinable: true, items: ['MySQL', 'MongoDB'] },
+      { name: '.Net', joinable: true, items: ['ASP.NET'] }
     ]
   },
   {
     name: 'DevOps',
     items: [
-      { name: 'Virtual Machine', items: ['Docker', 'Vagrant', 'VirtualBox', 'VMWare'] },
-      { name: 'Version Control', items: ['Git'] },
-      { name: 'Server', items: ['Nginx', 'Apache'] },
-      { name: 'DBMS', items: ['MySQL', 'MongoDB'] },
-      { name: 'Shell Scripts' },
-      { name: 'Opening System', items: ['Windows & Windows Server', 'Ubuntu & Debian', 'CentOS & Fedora', 'Archlinux'] }
+      { name: 'Virtual Machine', items: ['Docker', 'Vagrant', 'VMWare', 'VirtualBox'] },
+      { name: 'Version Control', joinable: true, items: ['Git'] },
+      { name: 'Server Configuration', joinable: true, items: ['Nginx', 'Apache'] },
+      { name: 'DBMS', joinable: true, items: ['MySQL', 'MongoDB'] },
+      { name: 'Shell Scripts', items: ['Linux(bash, zsh)', 'Windows(cmd, powershell)'] },
+      { name: 'Operating System', items: ['Windows Based(Windows, Windows Server)', 'Debian Based(Ubuntu, Debian)', 'Red Hat Based(CentOS, Fedora)', 'Archlinux'] }
     ]
   },
   {
     name: 'Programming',
     items: [
-      { name: 'Console', items: ['C/C++', 'Python 3', 'Ruby', 'C#'] },
-      { name: 'Graphical UI', items: ['WPF(C#)', 'Unity(C#)', 'Qt(C++)', 'Shoes(Ruby)'] },
-      { name: 'Hardware', items: ['Andes(C)', 'Arduino(C)', 'Xilinx(C & Verilog)'] },
-      { name: 'Math', items: ['Matlab', 'Lingo'] }
+      { name: 'Console', joinable: true, items: ['C/C++', 'Python 3', 'Ruby', 'C#'] },
+      { name: 'Graphical UI', items: ['C#(WPF, Unity)', 'C++(Qt)', 'JavaScript(Electron)'] },
+      { name: 'Automated Test', joinable: true, items: ['Selenium'] },
+      { name: 'Hardware', items: ['C(Andes, Arduino, Xilinx)', 'Verilog(Xilinx)'] },
+      { name: 'Math', joinable: true, items: ['Matlab', 'Lingo'] }
     ]
   }
 ]

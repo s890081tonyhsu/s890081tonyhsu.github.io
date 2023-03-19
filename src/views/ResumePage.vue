@@ -4,7 +4,7 @@
       <img :src="headImg" alt="">
       <h1>
         Hsu, Meng-Chieh<br>
-        <span>Frontend Developer, Backend Developer</span>
+        <span>Frontend Developer</span>
       </h1>
     </div>
     <div class="resume-content">
@@ -112,6 +112,9 @@ export default ResumePage
       transition: all .25s cubic-bezier(1, 0.5, 0.8, 1);
       animation: .5s 1 normal resume_slideIn_directionLeft;
       animation-fill-mode: backwards;
+      span {
+        font-size: 0.65em;
+      }
     }
   }
   .row {

@@ -4,9 +4,15 @@
     <li v-for="(subGroup, idx) in (itemData as GroupItem<GroupItem<string>>).items"
         :key="`skill-${(itemData as GroupItem<GroupItem<string>>).name}-${idx}`">
           {{ (subGroup as GroupItem<string>).name }}
-          <span v-if="(subGroup as GroupItem<string>).items">
+          <span v-if="(subGroup as GroupItem<string>).items && (subGroup as GroupItem<string>).joinable">
             : {{ joinItems(subGroup as GroupItem<string>) }}
           </span>
+          <ul v-else-if="(subGroup as GroupItem<string>).items">
+            <li v-for="(subSubGroup, sidx) in ((subGroup as GroupItem<string>).items)"
+                :key="`skill-${(itemData as GroupItem<GroupItem<string>>).name}-${idx}-${sidx}`">
+                  {{ subSubGroup }}
+            </li>
+          </ul>
     </li>
   </ul>
 </template>
@@ -22,7 +28,7 @@ const GroupColumnItem = defineComponent({
   methods: {
     joinItems: (obj: GroupItem<string>) => {
       if (!obj.items) return ''
-      return obj.items.join('')
+      return obj.items.join(', ')
     }
   }
 })
@@ -31,5 +37,11 @@ export default GroupColumnItem
 </script>
 
 <style>
-
+  li > span {
+    color: #AAA;
+  }
+  li > ul {
+    color: #AAA;
+    font-size: 0.95em;
+  }
 </style>
