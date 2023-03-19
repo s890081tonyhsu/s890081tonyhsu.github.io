@@ -1,16 +1,21 @@
 <template>
   <div class="content-item wide">
     <h3>
-      {{ itemData.name }} <span class="suffix" v-if="itemData.suffix">as {{ itemData.suffix }}</span>
+      {{ (itemData as FullColumnItemData).name }}
+      <span class="suffix" v-if="(itemData as FullColumnItemData).suffix">
+        as {{ (itemData as FullColumnItemData).suffix }}
+      </span>
       <br>
       <span class="time">
         <i class="fa-solid fa-calendar"></i>
-        {{ itemData.time.from }} - {{ itemData.time.to }}
+        {{ (itemData as FullColumnItemData).time.from }}
+        - {{ (itemData as FullColumnItemData).time.to }}
       </span>
     </h3>
     <p class="indent">
-      <i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;&nbsp;
-      {{ itemData.text }}
+      <i class="fa-solid fa-chevron-right"></i>
+      &nbsp;&nbsp;&nbsp;
+      {{ (itemData as FullColumnItemData).text }}
     </p>
   </div>
 </template>

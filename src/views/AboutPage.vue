@@ -6,7 +6,7 @@
         Hsu, Meng-Chieh
         <span>@otomesound</span>
       </h1>
-      <p>A newbie Frontend Developer with additional Backend skills.</p>
+      <p>Build a website based on user experience, which makes users satisfied.</p>
     </div>
     <div class="bio">
       <h3>Skilled</h3>
@@ -104,7 +104,7 @@ export default AboutPage
   @media (max-width: 959px) {
     .home-container {
       flex-direction: column;
-      margin-top: -200px;
+      margin-top: 100px;
       &:after {
         width: 0;
         height: 0;

@@ -9,7 +9,7 @@
       <span>|</span>
       <router-link to="/resume">Resume</router-link>
       <span>|</span>
-      <router-link to="/portfolio">Portfolio</router-link>
+      <router-link to="/collection">Collection</router-link>
     </h2>
   </div>
 </template>
@@ -42,6 +42,7 @@ body {
   background-color: black;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
 }
 
 .container {
@@ -60,6 +61,7 @@ body {
   background-color: black;
   padding: .25em;
   cursor: pointer;
+  z-index: 99;
 }
 
 #nav {
@@ -72,10 +74,12 @@ body {
   height: 100px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black 50%);
   z-index: 99;
+  pointer-events: none;
   h2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    pointer-events: auto;
     span {
       font-size: 0.8em;
       margin: 0 20px 0;
@@ -120,6 +124,7 @@ body {
     background: rgba(0, 0, 0, 0.65);
     flex-direction: column;
     transition: opacity .5s ease-in-out;
+    pointer-events: auto;
     &.show {
       height: 100%;
       opacity: 1;
@@ -141,5 +146,9 @@ body {
 h1 span {
   font-size: 0.75em;
   color: #AAA;
+}
+
+.blank {
+  height: 100px;
 }
 </style>
