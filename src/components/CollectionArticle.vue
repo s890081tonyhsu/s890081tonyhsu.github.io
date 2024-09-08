@@ -1,59 +1,50 @@
-<template>
-    <div class="collection-display">
-      <img :src="(collectionArticleData as CollectionData).image" alt=""  />
-      <vue-markdown :source="article" />
-      <ul>
-        <li v-if="(collectionArticleData as CollectionData).projectLink"
-            class="collection-links">
-          Source Code:
-          <a v-bind:href="(collectionArticleData as CollectionData).projectLink"
-             target="_blank">
-              {{ (collectionArticleData as CollectionData).projectLink }}
-          </a>
-        </li>
-        <li v-if="(collectionArticleData as CollectionData).demoLink"
-            class="collection-links">
-              Demo:
-              <a v-bind:href="(collectionArticleData as CollectionData).demoLink"
-                 target="_blank">
-                  {{ (collectionArticleData as CollectionData).demoLink }}
-              </a>
-        </li>
-      </ul>
-      <h4>
-        <RouterLink :to="`/collection`">Back</RouterLink>
-      </h4>
-    </div>
-</template>
+<script setup lang="ts">
+import { MDXProvider } from '@mdx-js/vue';
+import type { CollectionData } from '../types/collection';
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import VueMarkdown from 'vue-markdown-render'
-import type { CollectionData } from '@/data/collections.data'
+type CollectionArticleProps = {
+  data: CollectionData;
+};
 
-const CollectionArticle = defineComponent({
-  props: {
-    collectionArticleData: Object as () => CollectionData
-  },
-  components: {
-    VueMarkdown
-  },
-  data: () => {
-    return {
-      article: ''
-    }
-  },
-  mounted: async function () {
-    const url = (this.collectionArticleData as CollectionData).article || ''
-    if (url.length === 0) return
-    await fetch(url).then(response => response.text()).then(text => {
-      this.article = text
-    })
-  }
-})
-
-export default CollectionArticle
+const { data } = defineProps<CollectionArticleProps>();
 </script>
+
+<template>
+  <div class="collection-display">
+    <UnLazyImage
+      v-if="data.image"
+      :blurhash="data.image.blurhash"
+      :src="data.image.default"
+      :alt="data.title"
+      width="250px"
+      height="250px"
+    />
+    <div v-else class="no-preview">
+      <Image />
+      <p>No Preview</p>
+    </div>
+    <MDXProvider>
+      <component :is="data.article?.default" />
+    </MDXProvider>
+    <ul>
+      <li v-if="data.projectLink" class="collection-links">
+        Source Code:
+        <a :href="data.projectLink" target="_blank">
+          {{ data.projectLink }}
+        </a>
+      </li>
+      <li v-if="data.demoLink" class="collection-links">
+        Demo:
+        <a :href="data.demoLink" target="_blank">
+          {{ data.demoLink }}
+        </a>
+      </li>
+    </ul>
+    <h4>
+      <RouterLink :to="`/collection`">Back</RouterLink>
+    </h4>
+  </div>
+</template>
 
 <style lang="scss">
 .collection-display {
@@ -68,20 +59,23 @@ export default CollectionArticle
   top: 0;
   z-index: 999;*/
   background: rgba(0, 0, 0, 0.65);
-  transition: all .25s cubic-bezier(1, 0.5, 0.8, 1);
-  animation: .5s 1 normal collection_slideIn_directionTop;
+  transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+  animation: 0.5s 1 normal collection_slideIn_directionTop;
   animation-fill-mode: backwards;
+
   img {
     width: 95%;
     height: auto;
     object-fit: contain;
   }
+
   h1 {
     font-size: 3rem;
     line-height: 3.5rem;
   }
+
   a {
-    color: #AAA;
+    color: #aaa;
   }
 }
 </style>

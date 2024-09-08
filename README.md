@@ -1,24 +1,29 @@
-# s890081tonyhsu.github.io
+# Rsbuild Project
 
-## Project setup
-```
-npm install
-```
+## Setup
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+Install the dependencies:
+
+```bash
+pnpm install
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+## Get Started
+
+Start the dev server:
+
+```bash
+pnpm dev
 ```
 
-### Lints and fixes files
-```
-npm run lint
+Build the app for production:
+
+```bash
+pnpm build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Preview the production build locally:
+
+```bash
+pnpm preview
+```

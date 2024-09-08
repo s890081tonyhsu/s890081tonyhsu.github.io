@@ -1,56 +1,60 @@
+<script setup lang="ts">
+import { Image } from 'lucide-vue-next';
+import type { CollectionData } from '../types/collection';
+
+type CollectionRow = {
+  uid: string;
+  data: CollectionData;
+};
+
+const { uid, data } = defineProps<CollectionRow>();
+</script>
+
 <template>
-    <div class="collection-row">
-      <div class="collection-preview">
-        <img v-if="(collectionRowData as CollectionData).image"
-             v-bind:src="(collectionRowData as CollectionData).image" alt="" />
-        <div class="no-preview" v-else>
-          <i class="fa-solid fa-image"></i>
-          <p>No Preview</p>
-        </div>
-      </div>
-      <div class="collection-content">
-        <h2>
-          <RouterLink :to="`/collection/${uid}`">
-            {{ (collectionRowData as CollectionData).title }}
-          </RouterLink>
-          <br>
-          <span>{{ (collectionRowData as CollectionData).subtitle }}</span>
-        </h2>
-        <div class="collection-tags">
-          <span v-for="(tag, i) in (collectionRowData as CollectionData).tags"
-                :key="`collection-${i}`"
-                class="collection-tag">
-                {{ tag }}
-          </span>
-        </div>
+  <div class="collection-row">
+    <div class="collection-preview">
+      <UnLazyImage
+        v-if="data.image"
+        :blurhash="data.image.blurhash"
+        :src="data.image.default"
+        :alt="data.title"
+        width="250px"
+        height="250px"
+      />
+      <div v-else class="no-preview">
+        <Image />
+        <p>No Preview</p>
       </div>
     </div>
+    <div class="collection-content">
+      <h2>
+        <RouterLink :to="`/collection/${uid}`">{{ data.title }}</RouterLink>
+        <br />
+        <span>{{ data.subtitle }}</span>
+      </h2>
+      <div class="collection-tags">
+        <span
+          v-for="(tag, i) in data.tags"
+          :key="`collection-${i}`"
+          class="collection-tag"
+        >
+          {{ tag }}
+        </span>
+      </div>
+    </div>
+  </div>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-import type { CollectionData } from '@/data/collections.data'
-
-const CollectionRow = defineComponent({
-  props: {
-    uid: String,
-    collectionRowData: Object as () => CollectionData
-  }
-})
-
-export default CollectionRow
-</script>
 
 <style lang="scss">
 .collection-row {
-  border: 1px solid #AAA;
+  border: 1px solid #aaa;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 0 10px;
   &:before {
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     position: absolute;
@@ -61,10 +65,10 @@ export default CollectionRow
     border: 1px solid black;
     border-radius: 0 20% 0 20%;
     z-index: 0;
-    transition: .5s .25s cubic-bezier(1, 0.5, 0.8, 1);
-    animation: .5s 1 normal collection_draw_border;
+    transition: 0.5s 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+    animation: 0.5s 1 normal collection_draw_border;
     animation-fill-mode: backwards;
-    animation-delay: .5s;
+    animation-delay: 0.5s;
   }
   .collection-preview {
     width: 300px;
@@ -75,13 +79,11 @@ export default CollectionRow
     align-items: center;
     text-align: center;
     z-index: 2;
-    transition: .5s .25s cubic-bezier(1, 0.5, 0.8, 1);
+    transition: 0.5s 0.25s cubic-bezier(1, 0.5, 0.8, 1);
     animation: 1s 1 normal collection_img_scale;
     animation-fill-mode: backwards;
     animation-delay: 1s;
     img {
-      width: 250px;
-      height: 250px;
       object-fit: cover;
       border-radius: 20px;
       border: 1px solid #888;
@@ -99,25 +101,25 @@ export default CollectionRow
       font-weight: 700;
       margin-bottom: 9px;
       margin-left: 20px;
-      background: #FFF;
+      background: #fff;
       color: #000;
       border-bottom-right-radius: 4px;
       border-top-right-radius: 4px;
       padding: 0 10px 0;
       &:before {
-        content: "";
+        content: '';
         float: left;
         position: absolute;
         top: 0;
         left: -12px;
         width: 0;
         height: 0;
-        border-color: transparent #FFF transparent transparent;
+        border-color: transparent #fff transparent transparent;
         border-style: solid;
         border-width: 12px 12px 12px 0;
       }
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         top: 10px;
         left: 0;
@@ -135,7 +137,7 @@ export default CollectionRow
     width: calc(100% - 300px);
     padding: 50px;
     z-index: 2;
-    transition: .5s .25s cubic-bezier(1, 0.5, 0.8, 1);
+    transition: 0.5s 0.25s cubic-bezier(1, 0.5, 0.8, 1);
     animation: 1s 1 normal collection_slideIn_directionTop;
     animation-fill-mode: backwards;
     animation-delay: 1s;
@@ -144,7 +146,7 @@ export default CollectionRow
     }
     h2 > span {
       font-size: 0.75em;
-      color: #AAA
+      color: #aaa;
     }
   }
   .collection-links {
@@ -152,14 +154,14 @@ export default CollectionRow
     top: -1em;
     right: 1em;
     background-color: black;
-    transition: .5s .25s cubic-bezier(1, 0.5, 0.8, 1);
+    transition: 0.5s 0.25s cubic-bezier(1, 0.5, 0.8, 1);
     animation: 1s 1 normal collection_slideIn_directionTop;
     animation-fill-mode: backwards;
     animation-delay: 1s;
     a {
       color: white;
       font-size: 2em;
-      padding: 0 .25em 0;
+      padding: 0 0.25em 0;
       border-radius: 100%;
     }
   }

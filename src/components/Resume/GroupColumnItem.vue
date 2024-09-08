@@ -1,47 +1,50 @@
-<template>
-  <h3>{{ (itemData as GroupItem<GroupItem<string>>).name }}</h3>
-  <ul>
-    <li v-for="(subGroup, idx) in (itemData as GroupItem<GroupItem<string>>).items"
-        :key="`skill-${(itemData as GroupItem<GroupItem<string>>).name}-${idx}`">
-          {{ (subGroup as GroupItem<string>).name }}
-          <span v-if="(subGroup as GroupItem<string>).items && (subGroup as GroupItem<string>).joinable">
-            : {{ joinItems(subGroup as GroupItem<string>) }}
-          </span>
-          <ul v-else-if="(subGroup as GroupItem<string>).items">
-            <li v-for="(subSubGroup, sidx) in ((subGroup as GroupItem<string>).items)"
-                :key="`skill-${(itemData as GroupItem<GroupItem<string>>).name}-${idx}-${sidx}`">
-                  {{ subSubGroup }}
-            </li>
-          </ul>
-    </li>
-  </ul>
-</template>
+<script setup lang="ts">
+import type { GroupItem } from '../../types/item';
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import type { GroupItem } from '@/data/resume.data'
+type GroupColumnItemProps = {
+  item: GroupItem<GroupItem<string>>;
+};
 
-const GroupColumnItem = defineComponent({
-  props: {
-    itemData: Object as () => GroupItem<GroupItem<string>>
-  },
-  methods: {
-    joinItems: (obj: GroupItem<string>) => {
-      if (!obj.items) return ''
-      return obj.items.join(', ')
-    }
-  }
-})
+const { item } = defineProps<GroupColumnItemProps>();
 
-export default GroupColumnItem
+const joinItems = (obj: GroupItem<string>) => {
+  if (!obj.items) return '';
+  return obj.items.join(', ');
+};
 </script>
 
+<template>
+  <div>
+    <h3>{{ item.name }}</h3>
+    <ul>
+      <li
+        v-for="(subGroup, idx) in item.items"
+        :key="`skill-${item.name}-${idx}`"
+      >
+        {{ subGroup.name }}
+        <span v-if="subGroup.items && subGroup.joinable">
+          : {{ joinItems(subGroup) }}
+        </span>
+        <ul v-else-if="subGroup.items">
+          <li
+            v-for="(subSubGroup, sidx) in subGroup.items"
+            :key="`skill-${item.name}-${idx}-${sidx}`"
+          >
+            {{ subSubGroup }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</template>
+
 <style>
-  li > span {
-    color: #AAA;
-  }
-  li > ul {
-    color: #AAA;
-    font-size: 0.95em;
-  }
+li > span {
+  color: #aaa;
+}
+
+li > ul {
+  color: #aaa;
+  font-size: 0.95em;
+}
 </style>

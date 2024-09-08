@@ -1,9 +1,20 @@
+<script setup>
+import { ref } from 'vue';
+import { Menu } from 'lucide-vue-next';
+
+const isMenuVisible = ref(false);
+
+const toggleMenu = () => (isMenuVisible.value = !isMenuVisible.value);
+</script>
+
 <template>
-  <div class="menu-btn" @click="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
-  <div class="container">
-    <router-view/>
+  <div class="menu-btn" @click="toggleMenu()">
+    <Menu />
   </div>
-  <div id="nav" v-bind:class="isShow ? 'show' : 'hide'"  @click="toggleMenu()">
+  <div class="container">
+    <router-view />
+  </div>
+  <div id="nav" :class="isMenuVisible ? 'show' : 'hide'" @click="toggleMenu()">
     <h2>
       <router-link to="/">About me</router-link>
       <span>|</span>
@@ -14,26 +25,9 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-const App = defineComponent({
-  data () {
-    return {
-      isShow: false
-    }
-  },
-  methods: {
-    toggleMenu () {
-      this.isShow = !this.isShow
-    }
-  }
-})
-
-export default App
-</script>
-
 <style lang="scss">
+@import './assets/scss/animations.scss';
+
 * {
   box-sizing: border-box;
 }
@@ -56,10 +50,10 @@ body {
 .menu-btn {
   display: none;
   position: fixed;
-  top: .5em;
-  left: .5em;
+  top: 0.5em;
+  left: 0.5em;
   background-color: black;
-  padding: .25em;
+  padding: 0.25em;
   cursor: pointer;
   z-index: 99;
 }
@@ -75,31 +69,36 @@ body {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black 50%);
   z-index: 99;
   pointer-events: none;
+
   h2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
     pointer-events: auto;
+
     span {
       font-size: 0.8em;
       margin: 0 20px 0;
     }
   }
+
   a {
     color: white;
     text-decoration: none;
     display: flex;
     position: relative;
+
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0;
       left: 50%;
       width: 0%;
       height: 3px;
       background-color: white;
-      transition: all .25s ease-in-out;
+      transition: all 0.25s ease-in-out;
     }
+
     &.router-link-exact-active:after {
       left: 0%;
       width: 100%;
@@ -123,19 +122,23 @@ body {
     overflow-y: hidden;
     background: rgba(0, 0, 0, 0.65);
     flex-direction: column;
-    transition: opacity .5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     pointer-events: auto;
+
     &.show {
       height: 100%;
       opacity: 1;
     }
+
     h2 {
       width: 100%;
       height: auto;
       flex-direction: column;
+
       a {
-        margin: .5em 0 .5em;
+        margin: 0.5em 0 0.5em;
       }
+
       span {
         display: none;
       }
@@ -145,7 +148,7 @@ body {
 
 h1 span {
   font-size: 0.75em;
-  color: #AAA;
+  color: #aaa;
 }
 
 .blank {

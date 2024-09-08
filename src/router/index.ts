@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
-import About from '../views/AboutPage.vue'
+import About from '../pages/About.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -11,13 +11,13 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/collection/:uid?',
     name: 'CollectionArticle',
-    component: () => import('../views/CollectionPage.vue'),
+    component: () => import('../pages/Collection.vue'),
     props: true
   },
   {
     path: '/resume',
     name: 'Resume',
-    component: () => import('../views/ResumePage.vue')
+    component: () => import('../pages/Resume.vue')
   }
 ]
 
