@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunks890081tonyhsu_github_io=self.webpackChunks890081tonyhsu_github_io||[]).push([["564"],{501:function(e,s,t){e.exports=t.p+"static/image/nekowiztw-fairymaker.e2eff1e7.png"}}]);

@@ -1,0 +1,18 @@
+/**
+ * @license lucide-vue-next v0.439.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * Encodes an RGBA image to a PNG data URI. RGB should not be premultiplied by A.
+ *
+ * @remarks
+ * This is optimized for speed and simplicity and does not optimize for size
+ * at all. This doesn't do any compression (all values are stored uncompressed).
+ *
+ * @see https://github.com/evanw/thumbhash
+ * @author Evan Wallace
+ * @license MIT
+ */
