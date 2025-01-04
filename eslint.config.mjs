@@ -1,13 +1,13 @@
-import js from '@eslint/js';
-import globals from 'globals';
-import ts from 'typescript-eslint';
+import eslintPluginAstro from 'eslint-plugin-astro';
 
 export default [
-  { languageOptions: { globals: globals.browser } },
-  js.configs.recommended,
-  ...ts.configs.recommended,
+  // add more generic rule sets here, such as:
+  // js.configs.recommended,
+  ...eslintPluginAstro.configs.recommended,
   {
-    "react/jsx-first-prop-new-line": "always",
-  },
-  { ignores: ['dist/'] },
+    rules: {
+      // override/add rules settings here, such as:
+      // "astro/no-set-html-directive": "error"
+    }
+  }
 ];

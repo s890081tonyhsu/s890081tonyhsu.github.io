@@ -1,0 +1,42 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '@layouts/Layout.astro';
+import Social from '@components/Social.vue';
+import about from '@data/about.json';
+import { SITE_DESCRIPTION, SITE_HEAD } from 'src/constants';
+
+import '@assets/scss/about.scss';
+
+const headImg = `${SITE_HEAD}?s=200`;
+const selfIntroduction = SITE_DESCRIPTION;
+const { skills, socials } = about;
+---
+
+<Layout>
+  <div class="home-container">
+    <div class="head">
+      <Image src={headImg} alt="header" width="200" height="200" />
+      <h1>
+        Hsu, Meng-Chieh
+        <span>@otomesound</span>
+      </h1>
+      <p>{selfIntroduction}</p>
+    </div>
+    <div class="bio">
+      <h3>Skilled</h3>
+      <ul class="skills">
+        {
+          skills.map(({ name, items }) => (
+            <li>
+              <b>{name}</b> ({items.join(', ')})
+            </li>
+          ))
+        }
+      </ul>
+      <h3>Social</h3>
+      <div class="socials">
+        <Social socials={socials} />
+      </div>
+    </div>
+  </div>
+</Layout>

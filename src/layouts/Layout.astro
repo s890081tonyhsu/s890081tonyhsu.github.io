@@ -1,0 +1,21 @@
+---
+import BaseHead from '@components/BaseHead.astro';
+import Menu from './Menu.vue';
+
+import '@assets/scss/layout.scss';
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead />
+  </head>
+  <body>
+    <Menu path={currentPath} />
+    <div class="container">
+      <slot />
+    </div>
+  </body>
+</html>
