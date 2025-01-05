@@ -1,0 +1,106 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '@layouts/Layout.astro';
+import FullColumnItem from '@components/Resume/FullColumnItem.vue';
+import GroupColumnItem from '@components/Resume/GroupColumnItem.vue';
+import HalfColumnItem from '@components/Resume/HalfColumnItem.vue';
+import resume from '@data/resume.json';
+import { SITE_DESCRIPTION, SITE_HEAD } from 'src/constants';
+import type { DateRangeItem } from 'src/types/item';
+
+import '@assets/scss/resume.scss';
+
+const headImg = `${SITE_HEAD}?s=200`;
+const selfIntroduction = SITE_DESCRIPTION;
+---
+
+<Layout>
+  <div class="resume-container">
+    <div class="resume-header">
+      <Image src={headImg} alt="header" width={150} height={150} />
+      <h1>
+        Hsu, Meng-Chieh<br />
+        <span>Frontend Developer</span>
+      </h1>
+    </div>
+    <div class="resume-content">
+      <div class="row" style="--i: 1s">
+        <h2 class="title">About</h2>
+        <p class="content-text">{selfIntroduction}</p>
+      </div>
+      <div class="row" style="--i: 2s">
+        <h2 class="title">Contact</h2>
+        <div class="content-items">
+          {resume.contacts.map((contact) => <HalfColumnItem item={contact} />)}
+        </div>
+      </div>
+      <div class="row" style="--i: 3s">
+        <h2 class="title">Profile</h2>
+        <div class="content-items">
+          {resume.profiles.map((profile) => <HalfColumnItem item={profile} />)}
+        </div>
+      </div>
+      <div class="row" style="--i: 4s">
+        <h2 class="title">Works</h2>
+        <div class="content-items">
+          {
+            resume.works.map((work) => (
+              <FullColumnItem item={work as DateRangeItem} />
+            ))
+          }
+        </div>
+      </div>
+      <div class="row" style="--i: 5s">
+        <h2 class="title">Skills</h2>
+        <div class="content-items">
+          {
+            resume.skills.map((skill) => (
+              <GroupColumnItem item={skill} className="content-item wide" />
+            ))
+          }
+        </div>
+      </div>
+      <div class="row" style="--i: 6s">
+        <h2 class="title">Volunteers</h2>
+        <div class="content-items">
+          {
+            resume.volunteers.map((volunteer) => (
+              <FullColumnItem item={volunteer as DateRangeItem} />
+            ))
+          }
+        </div>
+      </div>
+      <div class="row" style="--i: 7s">
+        <h2 class="title">Education</h2>
+        <div class="content-items">
+          {
+            resume.educations.map((education) => (
+              <FullColumnItem item={education as DateRangeItem} />
+            ))
+          }
+        </div>
+      </div>
+      <div class="row" style="--i: 8s">
+        <h2 class="title">Past Skills</h2>
+        <div class="content-items">
+          {
+            resume.pastSkills.map((skill) => (
+              <GroupColumnItem item={skill} className="content-item wide" />
+            ))
+          }
+        </div>
+      </div>
+      <div class="row" style="--i: 9s">
+        <h2 class="title">Languages</h2>
+        <div class="content-items">
+          {
+            resume.languages.map((language) => (
+              <HalfColumnItem item={language} />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+    <div class="blank"></div>
+  </div>
+</Layout>
