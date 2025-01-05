@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import { Menu as MenuIcon } from 'lucide-vue-next';
 
 type Props = {
-  path: String;
+  path: string;
 };
 
 const { path } = defineProps<Props>();
