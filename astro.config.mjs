@@ -10,6 +10,7 @@ export default defineConfig({
     // NOTE: github doesn't build folders with `_` prefix.
     // Ref: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#configuring-jekyll-in-your-github-pages-site
     assets: 'assets',
+    format: 'file',
   },
   site: 'https://s890081tonyhsu.github.io',
   integrations: [vue(), mdx()],
