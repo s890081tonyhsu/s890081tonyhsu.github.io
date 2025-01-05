@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunks890081tonyhsu_github_io=self.webpackChunks890081tonyhsu_github_io||[]).push([["529"],{327:function(i,t,e){i.exports=e.p+"static/image/interactive-webpage-of-i-ching-divination.13bf63c4.png"}}]);
