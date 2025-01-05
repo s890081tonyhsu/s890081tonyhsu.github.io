@@ -3,9 +3,10 @@ import type { GroupItem } from '../../types/item';
 
 type GroupColumnItemProps = {
   item: GroupItem<GroupItem<string>>;
+  className: string;
 };
 
-const { item } = defineProps<GroupColumnItemProps>();
+const { item, className } = defineProps<GroupColumnItemProps>();
 
 const joinItems = (obj: GroupItem<string>) => {
   if (!obj.items) return '';
@@ -14,22 +15,16 @@ const joinItems = (obj: GroupItem<string>) => {
 </script>
 
 <template>
-  <div>
+  <div :class="className">
     <h3>{{ item.name }}</h3>
     <ul>
-      <li
-        v-for="(subGroup, idx) in item.items"
-        :key="`skill-${item.name}-${idx}`"
-      >
+      <li v-for="(subGroup, idx) in item.items" :key="`skill-${item.name}-${idx}`">
         {{ subGroup.name }}
         <span v-if="subGroup.items && subGroup.joinable">
           : {{ joinItems(subGroup) }}
         </span>
         <ul v-else-if="subGroup.items">
-          <li
-            v-for="(subSubGroup, sidx) in subGroup.items"
-            :key="`skill-${item.name}-${idx}-${sidx}`"
-          >
+          <li v-for="(subSubGroup, sidx) in subGroup.items" :key="`skill-${item.name}-${idx}-${sidx}`">
             {{ subSubGroup }}
           </li>
         </ul>
@@ -39,11 +34,11 @@ const joinItems = (obj: GroupItem<string>) => {
 </template>
 
 <style>
-li > span {
+li>span {
   color: #aaa;
 }
 
-li > ul {
+li>ul {
   color: #aaa;
   font-size: 0.95em;
 }

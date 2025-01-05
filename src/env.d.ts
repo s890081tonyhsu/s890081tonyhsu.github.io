@@ -1,19 +1,5 @@
-/// <reference types="@rsbuild/core/types" />
+// Custom types declarations
+declare var myString: string;
 
-declare module '*.vue' {
-  import type { DefineComponent } from 'vue';
-
-  // biome-ignore lint/complexity/noBannedTypes: reason
-  const component: DefineComponent<{}, {}, any>;
-  export default component;
-}
-
-declare module '*.md' {
-  let MDXComponent: () => JSX.Element;
-  export default MDXComponent;
-}
-
-declare module '*.mdx' {
-  let MDXComponent: () => JSX.Element;
-  export default MDXComponent;
-}
+// Astro types, not necessary if you already have a tsconfig.json
+/// <reference path="../.astro/types.d.ts" />
