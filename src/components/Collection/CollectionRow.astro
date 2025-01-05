@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import NoPreview from './NoPreview.vue';
+
+import '../../assets/scss/collection-row.scss';
+
+type Props = CollectionEntry<'collection'>['data'] & {
+  slug: string;
+};
+
+const { slug, title, subtitle, image, tags } = Astro.props;
+---
+
+<div class="collection-row">
+  <div class="collection-preview">
+    {
+      image ? (
+        <Image src={image} alt={title} width="250" height="250" />
+      ) : (
+        <NoPreview />
+      )
+    }
+  </div>
+  <div class="collection-content">
+    <h2>
+      <a href={`/collections/${slug}`}>{title}</a>
+      <br />
+      <span>{subtitle}</span>
+    </h2>
+    <div class="collection-tags">
+      {tags.map((tag) => <span class="collection-tag">{tag}</span>)}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+---
+import CollectionRow from '@components/Collection/CollectionRow.astro';
+import Layout from '@layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+import '@assets/scss/collections.scss';
+
+const collections = (await getCollection('collection')).toSorted(
+  (a, b) => a.data.order - b.data.order
+);
+---
+
+<Layout>
+  <div class="collection-container" v-if="uid.toString().length === 0">
+    <div class="collection-header">
+      <h1>Collection</h1>
+      <p>
+        The following are the projects I have participated. Each project has
+        attached technology tags and a screenshot.<br />Some projects can be
+        linked to the source code or Demo page.
+      </p>
+    </div>
+    {
+      collections.map((collection) => (
+        <CollectionRow slug={collection.id} {...collection.data} />
+      ))
+    }
+    <div class="blank"></div>
+  </div>
+</Layout>

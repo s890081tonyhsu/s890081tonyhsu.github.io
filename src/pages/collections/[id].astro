@@ -1,0 +1,52 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import NoPreview from '@components/Collection/NoPreview.vue';
+import Layout from '@layouts/Layout.astro';
+
+import '@assets/scss/collection-article.scss';
+
+export async function getStaticPaths() {
+  const collections = await getCollection('collection');
+  return collections.map((collection) => ({
+    params: { id: collection.id },
+    props: collection,
+  }));
+}
+
+const collection = Astro.props;
+const { Content } = await render(collection);
+const { data } = collection;
+---
+
+<Layout>
+  <div class="collection-display">
+    {data.image ? <Image src={data.image} alt={data.title} /> : <NoPreview />}
+    <Content />
+    <ul>
+      {
+        data.projectLink && (
+          <li class="collection-links">
+            Source Code:
+            <a href={data.projectLink} target="_blank">
+              {data.projectLink}
+            </a>
+          </li>
+        )
+      }
+      {
+        data.demoLink && (
+          <li class="collection-links">
+            Demo:
+            <a href={data.demoLink} target="_blank">
+              {data.demoLink}
+            </a>
+          </li>
+        )
+      }
+    </ul>
+    <h4>
+      <a href="/collections">Back</a>
+    </h4>
+  </div>
+</Layout>

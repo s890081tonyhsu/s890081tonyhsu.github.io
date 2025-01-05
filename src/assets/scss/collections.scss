@@ -1,0 +1,44 @@
+.collection-container {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+
+  .collection-header {
+    margin-bottom: 50px;
+    transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+    animation: 0.5s 1 normal collection_slideIn_directionTop;
+    animation-fill-mode: backwards;
+
+    p {
+      line-height: 1.5;
+    }
+  }
+}
+
+@media (max-width: 959px) {
+  .collection-container {
+    padding-top: 100px;
+
+    .collection-header {
+      width: 95%;
+    }
+
+    .collection-row {
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0 20px;
+
+      &:before {
+        border-radius: 0 300px 0 300px;
+      }
+
+      .collection-content {
+        width: 100%;
+        padding-top: 0;
+        z-index: 2;
+      }
+    }
+  }
+}
