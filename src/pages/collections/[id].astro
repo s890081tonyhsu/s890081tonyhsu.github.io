@@ -1,7 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
 import { Image, getImage } from 'astro:assets';
-import NoPreview from '@components/Collection/NoPreview.vue';
 import Layout from '@layouts/Layout.astro';
 
 import '@assets/scss/collection-article.scss';
@@ -22,7 +21,7 @@ const ogImage = await getImage({ src: data.image, width: 1200, format: 'jpeg' })
 
 <Layout title={data.title} description={data.subtitle} image={ogImage.src}>
   <div class="collection-display">
-    {data.image ? <Image src={data.image} alt={data.title} /> : <NoPreview />}
+    <Image src={data.image} alt={data.title} />
     <Content />
     <ul>
       {

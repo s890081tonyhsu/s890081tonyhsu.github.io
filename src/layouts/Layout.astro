@@ -1,14 +1,12 @@
 ---
 import BaseHead from '@components/BaseHead.astro';
-import Menu from './Menu.vue';
+import Menu from './Menu.astro';
 
 import type { Props as BaseHeadProps } from '@components/BaseHead.astro';
 
 import '@assets/scss/layout.scss';
 
 type Props = BaseHeadProps;
-
-const currentPath = Astro.url.pathname.replace('.html', '');
 ---
 
 <!doctype html>
@@ -18,7 +16,7 @@ const currentPath = Astro.url.pathname.replace('.html', '');
     <slot name="head" />
   </head>
   <body>
-    <Menu path={currentPath} client:load />
+    <Menu />
     <div class="container">
       <slot />
     </div>

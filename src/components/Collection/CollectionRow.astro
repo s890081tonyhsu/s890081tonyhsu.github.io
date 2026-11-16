@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
-import NoPreview from './NoPreview.vue';
 
 import '../../assets/scss/collection-row.scss';
 
@@ -14,13 +13,7 @@ const { slug, title, subtitle, image, tags } = Astro.props;
 
 <div class="collection-row">
   <div class="collection-preview">
-    {
-      image ? (
-        <Image src={image} alt={title} width="250" height="250" />
-      ) : (
-        <NoPreview />
-      )
-    }
+    <Image src={image} alt={title} width="250" height="250" />
   </div>
   <div class="collection-content">
     <h2>

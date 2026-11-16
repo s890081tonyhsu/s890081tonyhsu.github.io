@@ -1,9 +1,9 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from '@layouts/Layout.astro';
-import FullColumnItem from '@components/Resume/FullColumnItem.vue';
-import GroupColumnItem from '@components/Resume/GroupColumnItem.vue';
-import HalfColumnItem from '@components/Resume/HalfColumnItem.vue';
+import FullColumnItem from '@components/Resume/FullColumnItem.astro';
+import GroupColumnItem from '@components/Resume/GroupColumnItem.astro';
+import HalfColumnItem from '@components/Resume/HalfColumnItem.astro';
 import resume from '@data/resume.json';
 import { SITE_DESCRIPTION, SITE_HEAD } from 'src/constants';
 import type { DateRangeItem } from '../types/item';
@@ -55,7 +55,7 @@ const selfIntroduction = SITE_DESCRIPTION;
         <div class="content-items">
           {
             resume.skills.map((skill) => (
-              <GroupColumnItem item={skill} className="content-item wide" />
+              <GroupColumnItem item={skill} />
             ))
           }
         </div>
@@ -85,7 +85,7 @@ const selfIntroduction = SITE_DESCRIPTION;
         <div class="content-items">
           {
             resume.pastSkills.map((skill) => (
-              <GroupColumnItem item={skill} className="content-item wide" />
+              <GroupColumnItem item={skill} />
             ))
           }
         </div>
