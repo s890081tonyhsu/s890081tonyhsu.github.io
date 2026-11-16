@@ -5,7 +5,6 @@ import Layout from '@layouts/Layout.astro';
 import FullColumnItem from '@components/Resume/FullColumnItem.astro';
 import GroupColumnItem from '@components/Resume/GroupColumnItem.astro';
 import HalfColumnItem from '@components/Resume/HalfColumnItem.astro';
-import resume from '@data/resume.json';
 import { SITE_DESCRIPTION, SITE_HEAD } from 'src/constants';
 
 import '@assets/scss/resume.scss';
@@ -22,6 +21,7 @@ const educations = experiences.filter((experience) => experience.kind === 'educa
 const skills = (await getCollection('skills')).map(({ data }) => data);
 const currentSkills = skills.filter((skill) => skill.era === 'current');
 const pastSkills = skills.filter((skill) => skill.era === 'past');
+const languages = (await getCollection('languages')).map(({ data }) => data);
 ---
 
 <Layout title="Resume">
@@ -104,7 +104,7 @@ const pastSkills = skills.filter((skill) => skill.era === 'past');
         <h2 class="title">Languages</h2>
         <div class="content-items">
           {
-            resume.languages.map((language) => (
+            languages.map((language) => (
               <HalfColumnItem {...language} />
             ))
           }

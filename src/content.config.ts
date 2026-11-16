@@ -60,4 +60,13 @@ const skills = defineCollection({
   }),
 });
 
-export const collections = { collection, links, experiences, skills };
+const languages = defineCollection({
+  loader: file('src/data/languages.json'),
+  schema: z.object({
+    id: z.string(),
+    name: z.string(),
+    text: z.string(),
+  }),
+});
+
+export const collections = { collection, links, experiences, skills, languages };
