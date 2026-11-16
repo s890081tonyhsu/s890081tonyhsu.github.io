@@ -3,7 +3,7 @@ order: 1
 title: 'NekowizTW cardFinder'
 subtitle: 'Accepted by Players in Quiz RPG: The World of Mystic Wiz'
 image: './images/nekowiztw-cardfinder.png'
-projectLink: 'https://github.com/s890081tonyhsu/unity-rhythm-game'
+projectLink: 'https://github.com/NekowizTW/cardFinder'
 demoLink: 'https://nekowiztw.github.io/cardFinder/#/'
 tags: ['React', 'Redux', 'Sass', 'Vite', 'MUI']
 ---

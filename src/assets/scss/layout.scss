@@ -13,7 +13,7 @@ body {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: safe center;
   align-items: center;
 }
 
@@ -77,6 +77,10 @@ body {
 }
 
 @media (max-width: 959px) {
+  .container {
+    padding-inline: 16px;
+  }
+
   .menu-btn {
     display: block;
     text-align: left;
