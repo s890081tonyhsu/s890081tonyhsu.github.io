@@ -7,7 +7,7 @@
   .collection-header {
     margin-bottom: 50px;
     transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
-    animation: 0.5s 1 normal collection_slideIn_directionTop;
+    animation: 0.5s 1 normal slide-in-from-below;
     animation-fill-mode: backwards;
 
     p {

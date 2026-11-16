@@ -12,7 +12,7 @@
     height: 50%;
     background-color: white;
     transition: all 0.25s ease-in-out;
-    animation: 0.5s 1 normal about_breakAnim;
+    animation: 0.5s 1 normal home-divider-grow;
     animation-fill-mode: backwards;
   }
 
@@ -29,7 +29,7 @@
 .head {
   text-align: right;
   transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
-  animation: 1s 1 normal about_slideIn_directionLeft;
+  animation: 1s 1 normal slide-in-from-right;
   animation-delay: 0.5s;
   animation-fill-mode: backwards;
 }
@@ -40,7 +40,7 @@
 
 .bio {
   transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
-  animation: 1s 1 normal about_slideIn_directionRight;
+  animation: 1s 1 normal slide-in-from-left;
   animation-delay: 0.5s;
   animation-fill-mode: backwards;
 }
@@ -77,5 +77,17 @@
 
   .socials a {
     font-size: 2em;
+  }
+}
+
+@keyframes home-divider-grow {
+  from {
+    height: 0;
+    top: 50%;
+  }
+
+  to {
+    height: 50%;
+    top: 25%;
   }
 }

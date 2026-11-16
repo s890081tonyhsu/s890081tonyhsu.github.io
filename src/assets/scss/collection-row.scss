@@ -18,7 +18,7 @@
     border-radius: 0 20% 0 20%;
     z-index: 0;
     transition: 0.5s 0.25s cubic-bezier(1, 0.5, 0.8, 1);
-    animation: 0.5s 1 normal collection_draw_border;
+    animation: 0.5s 1 normal collection-row-draw-border;
     animation-fill-mode: backwards;
     animation-delay: 0.5s;
   }
@@ -32,7 +32,7 @@
     text-align: center;
     z-index: 2;
     transition: 0.5s 0.25s cubic-bezier(1, 0.5, 0.8, 1);
-    animation: 1s 1 normal collection_img_scale;
+    animation: 1s 1 normal scale-in;
     animation-fill-mode: backwards;
     animation-delay: 1s;
     img {
@@ -90,7 +90,7 @@
     padding: 50px;
     z-index: 2;
     transition: 0.5s 0.25s cubic-bezier(1, 0.5, 0.8, 1);
-    animation: 1s 1 normal collection_slideIn_directionTop;
+    animation: 1s 1 normal slide-in-from-below;
     animation-fill-mode: backwards;
     animation-delay: 1s;
     h2 > a {
@@ -107,7 +107,7 @@
     right: 1em;
     background-color: black;
     transition: 0.5s 0.25s cubic-bezier(1, 0.5, 0.8, 1);
-    animation: 1s 1 normal collection_slideIn_directionTop;
+    animation: 1s 1 normal slide-in-from-below;
     animation-fill-mode: backwards;
     animation-delay: 1s;
     a {
@@ -119,11 +119,11 @@
   }
 }
 
-@keyframes collection_img_scale {
+@keyframes collection-row-draw-border {
   from {
-    transform: scale(0);
+    border-radius: 0;
   }
   to {
-    transform: scale(1);
+    border-radius: 0 20% 0 20%;
   }
 }
