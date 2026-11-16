@@ -1,0 +1,21 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { DateRangeItem } from '../../types/item';
+
+type Props = {
+  item: DateRangeItem;
+};
+
+const { item } = Astro.props;
+---
+
+<div class="content-item wide">
+  <h3>
+    {item.name}
+    {item.suffix && <span class="suffix">as {item.suffix}</span>}
+  </h3>
+  <p class="description">{item.text}</p>
+  <h4 class="time">
+    <Icon name="lucide:calendar" size={32} />{item.time.from} - {item.time.to}
+  </h4>
+</div>

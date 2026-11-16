@@ -1,3 +1,58 @@
+.content-item {
+  width: 250px;
+  float: left;
+
+  &.wide {
+    width: 100%;
+  }
+
+  h3 {
+    line-height: 1.8em;
+    color: #ddd;
+    text-transform: capitalize;
+
+    span {
+      color: #aaa;
+      font-size: 0.8em;
+    }
+  }
+
+  .stick {
+    margin-top: -0.75em;
+  }
+
+  p,
+  a,
+  ul {
+    color: #888;
+  }
+
+  .description {
+    margin: 0;
+  }
+
+  .time {
+    color: #aaa;
+    font-size: 1em;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+      padding-right: 0.5em;
+    }
+  }
+}
+
+li > span {
+  color: #aaa;
+}
+
+li > ul {
+  color: #aaa;
+  font-size: 0.95em;
+}
+
 .resume-header {
   display: flex;
   justify-content: center;
