@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
+import ResumeItem from './ResumeItem.astro';
 import type { CollectionEntry } from 'astro:content';
 
 type Props = {
@@ -9,7 +10,7 @@ type Props = {
 const { item } = Astro.props;
 ---
 
-<div class="content-item wide">
+<ResumeItem wide>
   <h3>
     {item.name}
     {item.suffix && <span class="suffix">as {item.suffix}</span>}
@@ -18,4 +19,4 @@ const { item } = Astro.props;
   <h4 class="time">
     <Icon name="lucide:calendar" size={32} />{item.time.from} - {item.time.to}
   </h4>
-</div>
+</ResumeItem>
