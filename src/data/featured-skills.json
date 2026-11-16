@@ -13,8 +13,8 @@
     "order": 20,
     "name": "Packing",
     "items": [
-      "Webpack",
-      "Vite"
+      "Vite",
+      "Webpack"
     ]
   },
   {
@@ -22,7 +22,8 @@
     "order": 30,
     "name": "DevOps",
     "items": [
-      "Docker"
+      "Docker",
+      "Gitlab CI"
     ]
   },
   {
@@ -30,8 +31,8 @@
     "order": 40,
     "name": "Programming",
     "items": [
-      "C/C++",
-      "Rust"
+      "Rust",
+      "C/C++"
     ]
   }
 ]
