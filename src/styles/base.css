@@ -3,13 +3,13 @@
 }
 
 body {
-  background-color: black;
-  color: white;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
 }
 
 /* Spacer at the end of scrolling pages so the fixed bottom nav doesn't cover the last line. */
 .blank {
-  height: 100px;
+  height: var(--nav-height);
 }

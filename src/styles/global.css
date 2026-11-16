@@ -2,5 +2,6 @@
  * Site-wide styles that no single component owns. Imported once, by Layout.astro.
  * Everything else lives in the <style> block of the component or page that renders the markup.
  */
+@import './tokens.css';
 @import './base.css';
 @import './motion.css';
