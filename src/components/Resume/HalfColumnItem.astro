@@ -1,16 +1,16 @@
 ---
-import type { SimpleItem } from '../../types/item';
-
 type Props = {
-  item: SimpleItem;
+  name: string;
+  text: string;
+  href?: string;
 };
 
-const { item } = Astro.props;
+const { name, text, href } = Astro.props;
 ---
 
 <div class="content-item">
-  <h3>{item.name}</h3>
+  <h3>{name}</h3>
   <p class="stick">
-    {item.link ? <a href={item.link}>{item.text}</a> : item.text}
+    {href ? <a href={href}>{text}</a> : text}
   </p>
 </div>

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "traditional-chinese",
+    "name": "Traditional Chinese",
+    "text": "native"
+  },
+  {
+    "id": "english",
+    "name": "English",
+    "text": "middle"
+  },
+  {
+    "id": "japanese",
+    "name": "Japanese",
+    "text": "still learning"
+  },
+  {
+    "id": "korean",
+    "name": "Korean",
+    "text": "still learning"
+  }
+]

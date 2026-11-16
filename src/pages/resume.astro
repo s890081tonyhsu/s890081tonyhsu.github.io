@@ -1,17 +1,27 @@
 ---
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import Layout from '@layouts/Layout.astro';
 import FullColumnItem from '@components/Resume/FullColumnItem.astro';
 import GroupColumnItem from '@components/Resume/GroupColumnItem.astro';
 import HalfColumnItem from '@components/Resume/HalfColumnItem.astro';
-import resume from '@data/resume.json';
 import { SITE_DESCRIPTION, SITE_HEAD } from 'src/constants';
-import type { DateRangeItem } from '../types/item';
 
 import '@assets/scss/resume.scss';
 
 const headImg = `${SITE_HEAD}?s=200`;
 const selfIntroduction = SITE_DESCRIPTION;
+const links = (await getCollection('links')).map(({ data }) => data);
+const contacts = links.filter((link) => link.sections.includes('contact'));
+const profiles = links.filter((link) => link.sections.includes('profile'));
+const experiences = (await getCollection('experiences')).map(({ data }) => data);
+const works = experiences.filter((experience) => experience.kind === 'work');
+const volunteers = experiences.filter((experience) => experience.kind === 'volunteer');
+const educations = experiences.filter((experience) => experience.kind === 'education');
+const skills = (await getCollection('skills')).map(({ data }) => data);
+const currentSkills = skills.filter((skill) => skill.era === 'current');
+const pastSkills = skills.filter((skill) => skill.era === 'past');
+const languages = (await getCollection('languages')).map(({ data }) => data);
 ---
 
 <Layout title="Resume">
@@ -31,21 +41,21 @@ const selfIntroduction = SITE_DESCRIPTION;
       <div class="row" style="--i: 2s">
         <h2 class="title">Contact</h2>
         <div class="content-items">
-          {resume.contacts.map((contact) => <HalfColumnItem item={contact} />)}
+          {contacts.map((contact) => <HalfColumnItem {...contact} />)}
         </div>
       </div>
       <div class="row" style="--i: 3s">
         <h2 class="title">Profile</h2>
         <div class="content-items">
-          {resume.profiles.map((profile) => <HalfColumnItem item={profile} />)}
+          {profiles.map((profile) => <HalfColumnItem {...profile} />)}
         </div>
       </div>
       <div class="row" style="--i: 4s">
         <h2 class="title">Works</h2>
         <div class="content-items">
           {
-            resume.works.map((work) => (
-              <FullColumnItem item={work as DateRangeItem} />
+            works.map((work) => (
+              <FullColumnItem item={work} />
             ))
           }
         </div>
@@ -54,7 +64,7 @@ const selfIntroduction = SITE_DESCRIPTION;
         <h2 class="title">Skills</h2>
         <div class="content-items">
           {
-            resume.skills.map((skill) => (
+            currentSkills.map((skill) => (
               <GroupColumnItem item={skill} />
             ))
           }
@@ -64,8 +74,8 @@ const selfIntroduction = SITE_DESCRIPTION;
         <h2 class="title">Volunteers</h2>
         <div class="content-items">
           {
-            resume.volunteers.map((volunteer) => (
-              <FullColumnItem item={volunteer as DateRangeItem} />
+            volunteers.map((volunteer) => (
+              <FullColumnItem item={volunteer} />
             ))
           }
         </div>
@@ -74,8 +84,8 @@ const selfIntroduction = SITE_DESCRIPTION;
         <h2 class="title">Education</h2>
         <div class="content-items">
           {
-            resume.educations.map((education) => (
-              <FullColumnItem item={education as DateRangeItem} />
+            educations.map((education) => (
+              <FullColumnItem item={education} />
             ))
           }
         </div>
@@ -84,7 +94,7 @@ const selfIntroduction = SITE_DESCRIPTION;
         <h2 class="title">Past Skills</h2>
         <div class="content-items">
           {
-            resume.pastSkills.map((skill) => (
+            pastSkills.map((skill) => (
               <GroupColumnItem item={skill} />
             ))
           }
@@ -94,8 +104,8 @@ const selfIntroduction = SITE_DESCRIPTION;
         <h2 class="title">Languages</h2>
         <div class="content-items">
           {
-            resume.languages.map((language) => (
-              <HalfColumnItem item={language} />
+            languages.map((language) => (
+              <HalfColumnItem {...language} />
             ))
           }
         </div>

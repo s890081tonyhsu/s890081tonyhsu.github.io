@@ -1,28 +1,24 @@
 ---
+import { getCollection } from 'astro:content';
 import { Icon } from 'astro-icon/components';
 
-type Props = {
-  socials: {
-    email: string;
-    facebook: string;
-    linkedin: string;
-    github: string;
-  };
+const icons: Record<string, { icon: string; title?: string }> = {
+  email: { icon: 'lucide:at-sign' },
+  facebook: { icon: 'simple-icons:facebook', title: 'Facebook' },
+  linkedin: { icon: 'simple-icons:linkedin', title: 'LinkedIn' },
+  github: { icon: 'simple-icons:github', title: 'GitHub' },
 };
 
-const { socials } = Astro.props;
-const links = [
-  { href: socials.email, label: 'email', icon: 'lucide:at-sign' },
-  { href: socials.facebook, label: 'facebook', icon: 'simple-icons:facebook', title: 'Facebook' },
-  { href: socials.linkedin, label: 'linkedin', icon: 'simple-icons:linkedin', title: 'LinkedIn' },
-  { href: socials.github, label: 'github', icon: 'simple-icons:github', title: 'GitHub' },
-];
+const socials = (await getCollection('links')).filter((link) => link.data.sections.includes('social'));
+for (const { id } of socials) {
+  if (!icons[id]) throw new Error(`links.json: "${id}" is marked "social" but has no icon in Social.astro`);
+}
 ---
 
 {
-  links.map(({ href, label, icon, title }) => (
-    <a href={href} aria-label={label}>
-      <Icon name={icon} size={48} title={title} role={title ? 'img' : undefined} />
+  socials.map(({ id, data }) => (
+    <a href={data.href} aria-label={id}>
+      <Icon name={icons[id].icon} size={48} title={icons[id].title} role={icons[id].title ? 'img' : undefined} />
     </a>
   ))
 }

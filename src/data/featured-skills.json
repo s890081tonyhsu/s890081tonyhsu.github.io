@@ -1,0 +1,33 @@
+[
+  {
+    "id": "frontend",
+    "name": "FrontEnd",
+    "items": [
+      "React",
+      "Sass"
+    ]
+  },
+  {
+    "id": "packing",
+    "name": "Packing",
+    "items": [
+      "Webpack",
+      "Vite"
+    ]
+  },
+  {
+    "id": "devops",
+    "name": "DevOps",
+    "items": [
+      "Docker"
+    ]
+  },
+  {
+    "id": "programming",
+    "name": "Programming",
+    "items": [
+      "C/C++",
+      "Rust"
+    ]
+  }
+]

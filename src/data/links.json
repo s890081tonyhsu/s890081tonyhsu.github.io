@@ -1,0 +1,76 @@
+[
+  {
+    "id": "email",
+    "name": "email",
+    "text": "otomesound.retry\n@gmail.com",
+    "href": "mailto:otomesound.retry@gmail.com",
+    "sections": [
+      "contact",
+      "social"
+    ]
+  },
+  {
+    "id": "facebook",
+    "name": "facebook",
+    "text": "davistonyhsu",
+    "href": "https://fb.me/davistonyhsu",
+    "sections": [
+      "contact",
+      "social"
+    ]
+  },
+  {
+    "id": "line",
+    "name": "LINE",
+    "text": "davistonyhsu",
+    "sections": [
+      "contact"
+    ]
+  },
+  {
+    "id": "telegram",
+    "name": "telegram",
+    "text": "otomesound",
+    "sections": [
+      "contact"
+    ]
+  },
+  {
+    "id": "website",
+    "name": "website",
+    "text": "s890081tonyhsu.github.io",
+    "href": "https://s890081tonyhsu.github.io",
+    "sections": [
+      "profile"
+    ]
+  },
+  {
+    "id": "linkedin",
+    "name": "linkedin",
+    "text": "Hsu, Meng Chien",
+    "href": "https://www.linkedin.com/in/otomesound",
+    "sections": [
+      "profile",
+      "social"
+    ]
+  },
+  {
+    "id": "github",
+    "name": "github",
+    "text": "s890081tonyhsu",
+    "href": "https://github.com/s890081tonyhsu",
+    "sections": [
+      "profile",
+      "social"
+    ]
+  },
+  {
+    "id": "wiki",
+    "name": "wiki",
+    "text": "NanaIro no Sora",
+    "href": "http://nairosora.lionfree.net",
+    "sections": [
+      "profile"
+    ]
+  }
+]

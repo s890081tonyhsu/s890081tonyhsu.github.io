@@ -6,5 +6,37 @@
   "eslint.validate": [
     "astro",
     "typescript"
+  ],
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "**/src/data/links.json"
+      ],
+      "url": "./.vscode/schemas/links.json"
+    },
+    {
+      "fileMatch": [
+        "**/src/data/experiences.json"
+      ],
+      "url": "./.vscode/schemas/experiences.json"
+    },
+    {
+      "fileMatch": [
+        "**/src/data/skills.json"
+      ],
+      "url": "./.vscode/schemas/skills.json"
+    },
+    {
+      "fileMatch": [
+        "**/src/data/languages.json"
+      ],
+      "url": "./.vscode/schemas/languages.json"
+    },
+    {
+      "fileMatch": [
+        "**/src/data/featured-skills.json"
+      ],
+      "url": "./.vscode/schemas/featured-skills.json"
+    }
   ]
 }
