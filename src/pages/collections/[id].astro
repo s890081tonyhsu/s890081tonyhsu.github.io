@@ -51,7 +51,7 @@ const ogImage = await getImage({ src: data.image, width: 1200, format: 'jpeg' })
 </Layout>
 
 <style>
-  /* Nested selectors are not scoped, so they also reach the HTML rendered from Markdown by <Content />. */
+  /* HTML rendered from Markdown by <Content /> carries no scope, so it is reached with :global(). */
   .collection-display {
     max-width: 960px;
     line-height: 2.25rem;
@@ -60,18 +60,18 @@ const ogImage = await getImage({ src: data.image, width: 1200, format: 'jpeg' })
     animation: 0.5s 1 normal slide-in-from-below;
     animation-fill-mode: backwards;
 
-    img {
+    :global(img) {
       width: 95%;
       height: auto;
       object-fit: contain;
     }
 
-    h1 {
+    :global(h1) {
       font-size: 3rem;
       line-height: 3.5rem;
     }
 
-    a {
+    :global(a) {
       color: #aaa;
       overflow-wrap: anywhere;
     }
