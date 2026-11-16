@@ -1,0 +1,72 @@
+---
+type Props = {
+  /** Take the full row width instead of a 250px column. */
+  wide?: boolean;
+};
+
+const { wide = false } = Astro.props;
+---
+
+<div class:list={['content-item', { wide }]}>
+  <slot />
+</div>
+
+<style>
+  .content-item {
+    width: 250px;
+    float: left;
+
+    &.wide {
+      width: 100%;
+    }
+
+    /*
+     * Everything below is markup written by FullColumnItem, GroupColumnItem and HalfColumnItem
+     * and passed in through <slot />. It carries their scope, not this one, hence :global().
+     */
+    :global(h3) {
+      line-height: 1.8em;
+      color: #ddd;
+      text-transform: capitalize;
+    }
+
+    :global(h3 span) {
+      color: #aaa;
+      font-size: 0.8em;
+    }
+
+    :global(.stick) {
+      margin-top: -0.75em;
+    }
+
+    :global(p),
+    :global(a),
+    :global(ul) {
+      color: #888;
+    }
+
+    :global(.description) {
+      margin: 0;
+    }
+
+    :global(.time) {
+      color: #aaa;
+      font-size: 1em;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    :global(.time svg) {
+      padding-right: 0.5em;
+    }
+
+    :global(li > span) {
+      color: #aaa;
+    }
+
+    :global(li > ul) {
+      font-size: 0.95em;
+    }
+  }
+</style>

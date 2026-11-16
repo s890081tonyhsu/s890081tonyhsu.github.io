@@ -4,8 +4,6 @@ import Layout from '@layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import { byOrder } from 'src/sort';
 
-import '@assets/scss/collections.scss';
-
 const collections = (await getCollection('collection')).toSorted(byOrder);
 ---
 
@@ -30,3 +28,31 @@ const collections = (await getCollection('collection')).toSorted(byOrder);
     <div class="blank"></div>
   </div>
 </Layout>
+
+<style>
+  .collection-container {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+
+    .collection-header {
+      margin-bottom: 50px;
+      transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+      animation: 0.5s 1 normal slide-in-from-below;
+      animation-fill-mode: backwards;
+
+      p {
+        line-height: 1.5;
+      }
+    }
+
+    @media (max-width: 959px) {
+      padding-top: 100px;
+
+      .collection-header {
+        width: 100%;
+      }
+    }
+  }
+</style>

@@ -4,7 +4,7 @@ import Menu from './Menu.astro';
 
 import type { Props as BaseHeadProps } from '@components/BaseHead.astro';
 
-import '@assets/scss/layout.scss';
+import '@styles/global.css';
 
 type Props = BaseHeadProps;
 ---
@@ -22,3 +22,17 @@ type Props = BaseHeadProps;
     </div>
   </body>
 </html>
+
+<style>
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: safe center;
+    align-items: center;
+
+    @media (max-width: 959px) {
+      padding-inline: 16px;
+    }
+  }
+</style>

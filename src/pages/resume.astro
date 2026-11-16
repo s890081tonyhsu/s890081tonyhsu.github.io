@@ -8,8 +8,6 @@ import HalfColumnItem from '@components/Resume/HalfColumnItem.astro';
 import { SITE_DESCRIPTION, SITE_HEAD } from 'src/constants';
 import { byOrder, byStartDesc } from 'src/sort';
 
-import '@assets/scss/resume.scss';
-
 const headImg = `${SITE_HEAD}?s=200`;
 const selfIntroduction = SITE_DESCRIPTION;
 const links = (await getCollection('links')).toSorted(byOrder).map(({ data }) => data);
@@ -115,3 +113,103 @@ const languages = (await getCollection('languages')).toSorted(byOrder).map(({ da
     <div class="blank"></div>
   </div>
 </Layout>
+
+<style>
+  .resume-container {
+    .resume-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 150px;
+        margin: 75px;
+        border-radius: 100%;
+        transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+        animation: 0.5s 1 normal scale-in;
+        animation-delay: 0.5s;
+        animation-fill-mode: backwards;
+      }
+
+      h1 {
+        width: 500px;
+        transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+        animation: 0.5s 1 normal slide-in-from-right;
+        animation-fill-mode: backwards;
+
+        span {
+          font-size: 0.65em;
+          color: #aaa;
+        }
+      }
+    }
+
+    /* Each row slides in after the previous one; --i is set inline per row. */
+    .row {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin-bottom: 30px;
+      transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+      animation: 1s 1 normal slide-in-from-below;
+      animation-delay: calc(var(--i) * 0.125 + 0.25s);
+      animation-fill-mode: backwards;
+
+      .title {
+        width: 300px;
+        text-align: right;
+        padding-right: 30px;
+      }
+
+      .content-text,
+      .content-items {
+        width: 600px;
+        padding: 0 30px 0;
+        line-height: 1.5em;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 959px) {
+      padding-top: 100px;
+      width: 100%;
+
+      .resume-header {
+        flex-direction: column;
+
+        img {
+          margin: 0;
+        }
+
+        h1 {
+          text-align: center;
+          width: 100%;
+        }
+      }
+
+      .resume-content {
+        width: 100%;
+      }
+
+      .row {
+        flex-direction: column;
+        width: 100%;
+        border-bottom: 1px solid #aaa;
+
+        .title {
+          width: 100%;
+          text-align: left;
+          padding-right: 0;
+        }
+
+        .content-text,
+        .content-items {
+          width: 100%;
+          padding: 0;
+          line-height: 1.5em;
+        }
+      }
+    }
+  }
+</style>

@@ -3,8 +3,6 @@ import { getCollection, render } from 'astro:content';
 import { Image, getImage } from 'astro:assets';
 import Layout from '@layouts/Layout.astro';
 
-import '@assets/scss/collection-article.scss';
-
 export async function getStaticPaths() {
   const collections = await getCollection('collection');
   return collections.map((collection) => ({
@@ -51,3 +49,31 @@ const ogImage = await getImage({ src: data.image, width: 1200, format: 'jpeg' })
     <div class="blank"></div>
   </div>
 </Layout>
+
+<style>
+  /* HTML rendered from Markdown by <Content /> carries no scope, so it is reached with :global(). */
+  .collection-display {
+    max-width: 960px;
+    line-height: 2.25rem;
+    background: rgba(0, 0, 0, 0.65);
+    transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+    animation: 0.5s 1 normal slide-in-from-below;
+    animation-fill-mode: backwards;
+
+    :global(img) {
+      width: 95%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    :global(h1) {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+
+    :global(a) {
+      color: #aaa;
+      overflow-wrap: anywhere;
+    }
+  }
+</style>

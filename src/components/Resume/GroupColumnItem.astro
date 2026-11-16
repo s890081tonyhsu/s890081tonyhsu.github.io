@@ -1,4 +1,5 @@
 ---
+import ResumeItem from './ResumeItem.astro';
 import type { CollectionEntry } from 'astro:content';
 
 type Props = {
@@ -8,7 +9,7 @@ type Props = {
 const { item } = Astro.props;
 ---
 
-<div class="content-item wide">
+<ResumeItem wide>
   <h3>{item.name}</h3>
   <ul>
     {
@@ -30,4 +31,4 @@ const { item } = Astro.props;
       ))
     }
   </ul>
-</div>
+</ResumeItem>

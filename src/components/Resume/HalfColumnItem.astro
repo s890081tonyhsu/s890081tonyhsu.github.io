@@ -1,4 +1,6 @@
 ---
+import ResumeItem from './ResumeItem.astro';
+
 type Props = {
   name: string;
   text: string;
@@ -8,9 +10,9 @@ type Props = {
 const { name, text, href } = Astro.props;
 ---
 
-<div class="content-item">
+<ResumeItem>
   <h3>{name}</h3>
   <p class="stick">
     {href ? <a href={href}>{text}</a> : text}
   </p>
-</div>
+</ResumeItem>
