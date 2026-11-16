@@ -4,16 +4,18 @@ import { getCollection } from 'astro:content';
 import Layout from '@layouts/Layout.astro';
 import Social from '@components/Social.astro';
 import { SITE_DESCRIPTION, SITE_HEAD } from 'src/constants';
+import { byOrder } from 'src/sort';
 
 import '@assets/scss/about.scss';
 
 const headImg = `${SITE_HEAD}?s=200`;
 const selfIntroduction = SITE_DESCRIPTION;
-const skills = (await getCollection('featuredSkills')).map(({ data }) => data);
+const skills = (await getCollection('featuredSkills')).toSorted(byOrder).map(({ data }) => data);
 const currentWork = (await getCollection('experiences')).find(
   ({ data }) => data.kind === 'work' && data.time.to === 'now',
 )?.data;
 const profileUrls = (await getCollection('links'))
+  .toSorted(byOrder)
   .filter(({ data }) => data.sections.includes('social') && data.href?.startsWith('http'))
   .map(({ data }) => data.href);
 

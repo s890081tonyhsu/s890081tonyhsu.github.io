@@ -1,6 +1,7 @@
 [
   {
     "id": "current-front-end",
+    "order": 10,
     "era": "current",
     "name": "Front End",
     "items": [
@@ -32,6 +33,7 @@
   },
   {
     "id": "current-devops",
+    "order": 20,
     "era": "current",
     "name": "DevOps",
     "items": [
@@ -59,6 +61,7 @@
   },
   {
     "id": "current-programming",
+    "order": 30,
     "era": "current",
     "name": "Programming",
     "items": [
@@ -74,6 +77,7 @@
   },
   {
     "id": "past-front-end",
+    "order": 40,
     "era": "past",
     "name": "Front End",
     "items": [
@@ -97,6 +101,7 @@
   },
   {
     "id": "past-back-end",
+    "order": 50,
     "era": "past",
     "name": "Back End",
     "items": [
@@ -141,6 +146,7 @@
   },
   {
     "id": "past-devops",
+    "order": 60,
     "era": "past",
     "name": "DevOps",
     "items": [
@@ -181,6 +187,7 @@
   },
   {
     "id": "past-programming",
+    "order": 70,
     "era": "past",
     "name": "Programming",
     "items": [

@@ -1,21 +1,25 @@
 [
   {
     "id": "traditional-chinese",
+    "order": 10,
     "name": "Traditional Chinese",
     "text": "native"
   },
   {
     "id": "english",
+    "order": 20,
     "name": "English",
     "text": "middle"
   },
   {
     "id": "japanese",
+    "order": 30,
     "name": "Japanese",
     "text": "still learning"
   },
   {
     "id": "korean",
+    "order": 40,
     "name": "Korean",
     "text": "still learning"
   }

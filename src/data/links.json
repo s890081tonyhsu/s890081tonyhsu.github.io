@@ -1,6 +1,7 @@
 [
   {
     "id": "email",
+    "order": 10,
     "name": "email",
     "text": "otomesound.retry\n@gmail.com",
     "href": "mailto:otomesound.retry@gmail.com",
@@ -11,6 +12,7 @@
   },
   {
     "id": "facebook",
+    "order": 20,
     "name": "facebook",
     "text": "davistonyhsu",
     "href": "https://fb.me/davistonyhsu",
@@ -21,6 +23,7 @@
   },
   {
     "id": "line",
+    "order": 30,
     "name": "LINE",
     "text": "davistonyhsu",
     "sections": [
@@ -29,6 +32,7 @@
   },
   {
     "id": "telegram",
+    "order": 40,
     "name": "telegram",
     "text": "otomesound",
     "sections": [
@@ -37,6 +41,7 @@
   },
   {
     "id": "website",
+    "order": 50,
     "name": "website",
     "text": "s890081tonyhsu.github.io",
     "href": "https://s890081tonyhsu.github.io",
@@ -46,6 +51,7 @@
   },
   {
     "id": "linkedin",
+    "order": 60,
     "name": "linkedin",
     "text": "Hsu, Meng Chien",
     "href": "https://www.linkedin.com/in/otomesound",
@@ -56,6 +62,7 @@
   },
   {
     "id": "github",
+    "order": 70,
     "name": "github",
     "text": "s890081tonyhsu",
     "href": "https://github.com/s890081tonyhsu",
@@ -66,6 +73,7 @@
   },
   {
     "id": "wiki",
+    "order": 80,
     "name": "wiki",
     "text": "NanaIro no Sora",
     "href": "http://nairosora.lionfree.net",

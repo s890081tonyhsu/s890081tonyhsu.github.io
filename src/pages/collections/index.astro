@@ -2,12 +2,11 @@
 import CollectionRow from '@components/Collection/CollectionRow.astro';
 import Layout from '@layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import { byOrder } from 'src/sort';
 
 import '@assets/scss/collections.scss';
 
-const collections = (await getCollection('collection')).toSorted(
-  (a, b) => a.data.order - b.data.order
-);
+const collections = (await getCollection('collection')).toSorted(byOrder);
 ---
 
 <Layout
