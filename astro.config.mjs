@@ -4,6 +4,8 @@ import vue from '@astrojs/vue';
 
 import mdx from '@astrojs/mdx';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   build: {
@@ -13,7 +15,7 @@ export default defineConfig({
     format: 'file',
   },
   site: 'https://s890081tonyhsu.github.io',
-  integrations: [vue(), mdx()],
+  integrations: [vue(), mdx(), sitemap()],
   vite: {
     css: {
       transformer: "sass",

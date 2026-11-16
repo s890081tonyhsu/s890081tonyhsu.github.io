@@ -12,6 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "@astrojs/mdx": "^4.0.3",
+    "@astrojs/sitemap": "3.7.0",
     "@astrojs/vue": "^5.0.4",
     "astro": "^5.1.2",
     "lucide-vue-next": "^0.469.0",
