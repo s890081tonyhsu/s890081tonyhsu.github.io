@@ -19,6 +19,9 @@ const experiences = (await getCollection('experiences')).map(({ data }) => data)
 const works = experiences.filter((experience) => experience.kind === 'work');
 const volunteers = experiences.filter((experience) => experience.kind === 'volunteer');
 const educations = experiences.filter((experience) => experience.kind === 'education');
+const skills = (await getCollection('skills')).map(({ data }) => data);
+const currentSkills = skills.filter((skill) => skill.era === 'current');
+const pastSkills = skills.filter((skill) => skill.era === 'past');
 ---
 
 <Layout title="Resume">
@@ -61,7 +64,7 @@ const educations = experiences.filter((experience) => experience.kind === 'educa
         <h2 class="title">Skills</h2>
         <div class="content-items">
           {
-            resume.skills.map((skill) => (
+            currentSkills.map((skill) => (
               <GroupColumnItem item={skill} />
             ))
           }
@@ -91,7 +94,7 @@ const educations = experiences.filter((experience) => experience.kind === 'educa
         <h2 class="title">Past Skills</h2>
         <div class="content-items">
           {
-            resume.pastSkills.map((skill) => (
+            pastSkills.map((skill) => (
               <GroupColumnItem item={skill} />
             ))
           }

@@ -1,0 +1,228 @@
+[
+  {
+    "id": "current-front-end",
+    "era": "current",
+    "name": "Front End",
+    "items": [
+      {
+        "name": "JavaScript/TypeScript",
+        "items": [
+          "Framework(React)"
+        ]
+      },
+      {
+        "name": "CSS",
+        "items": [
+          "Preprocessor(Sass)",
+          "Framework(MUI)",
+          "TailwindCSS"
+        ]
+      },
+      {
+        "name": "Packing Tool",
+        "items": [
+          "Webpack",
+          "Vite"
+        ]
+      },
+      {
+        "name": "HTML"
+      }
+    ]
+  },
+  {
+    "id": "current-devops",
+    "era": "current",
+    "name": "DevOps",
+    "items": [
+      {
+        "name": "Virtual Machine",
+        "items": [
+          "Docker"
+        ]
+      },
+      {
+        "name": "Version Control",
+        "joinable": true,
+        "items": [
+          "Git"
+        ]
+      },
+      {
+        "name": "Shell Scripts",
+        "items": [
+          "Linux(bash, zsh)",
+          "Windows(cmd, powershell)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "current-programming",
+    "era": "current",
+    "name": "Programming",
+    "items": [
+      {
+        "name": "Console",
+        "joinable": true,
+        "items": [
+          "C/C++",
+          "Rust"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "past-front-end",
+    "era": "past",
+    "name": "Front End",
+    "items": [
+      {
+        "name": "JavaScript",
+        "items": [
+          "Framework(React, Vue)",
+          "Library(jQuery, Lodash)"
+        ]
+      },
+      {
+        "name": "CSS",
+        "items": [
+          "Framework(Purecss, Bootstrap, Semantic UI, Carbon, Fluent)"
+        ]
+      },
+      {
+        "name": "HTML"
+      }
+    ]
+  },
+  {
+    "id": "past-back-end",
+    "era": "past",
+    "name": "Back End",
+    "items": [
+      {
+        "name": "NodeJS",
+        "joinable": true,
+        "items": [
+          "Express",
+          "Koa"
+        ]
+      },
+      {
+        "name": "PHP",
+        "joinable": true,
+        "items": [
+          "Laravel"
+        ]
+      },
+      {
+        "name": "Ruby",
+        "joinable": true,
+        "items": [
+          "Rails"
+        ]
+      },
+      {
+        "name": "DBMS",
+        "joinable": true,
+        "items": [
+          "MySQL",
+          "MongoDB"
+        ]
+      },
+      {
+        "name": ".Net",
+        "joinable": true,
+        "items": [
+          "ASP.NET"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "past-devops",
+    "era": "past",
+    "name": "DevOps",
+    "items": [
+      {
+        "name": "Virtual Machine",
+        "items": [
+          "Vagrant",
+          "VMWare",
+          "VirtualBox"
+        ]
+      },
+      {
+        "name": "Server Configuration",
+        "joinable": true,
+        "items": [
+          "Nginx",
+          "Apache"
+        ]
+      },
+      {
+        "name": "DBMS",
+        "joinable": true,
+        "items": [
+          "MySQL",
+          "MongoDB"
+        ]
+      },
+      {
+        "name": "Operating System",
+        "items": [
+          "Windows Based(Windows, Windows Server)",
+          "Debian Based(Ubuntu, Debian)",
+          "Red Hat Based(CentOS, Fedora)",
+          "Archlinux"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "past-programming",
+    "era": "past",
+    "name": "Programming",
+    "items": [
+      {
+        "name": "Console",
+        "joinable": true,
+        "items": [
+          "Python 3",
+          "Ruby",
+          "C#"
+        ]
+      },
+      {
+        "name": "Graphical UI",
+        "items": [
+          "C#(WPF, Unity)",
+          "C++(Qt)",
+          "JavaScript(Electron)"
+        ]
+      },
+      {
+        "name": "Automated Test",
+        "joinable": true,
+        "items": [
+          "Selenium"
+        ]
+      },
+      {
+        "name": "Hardware",
+        "items": [
+          "C(Andes, Arduino, Xilinx)",
+          "Verilog(Xilinx)"
+        ]
+      },
+      {
+        "name": "Math",
+        "joinable": true,
+        "items": [
+          "Matlab",
+          "Lingo"
+        ]
+      }
+    ]
+  }
+]

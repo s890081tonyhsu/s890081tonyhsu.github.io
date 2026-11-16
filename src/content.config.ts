@@ -43,4 +43,21 @@ const experiences = defineCollection({
   }),
 });
 
-export const collections = { collection, links, experiences };
+const skills = defineCollection({
+  loader: file('src/data/skills.json'),
+  schema: z.object({
+    id: z.string(),
+    era: z.enum(['current', 'past']),
+    name: z.string(),
+    items: z.array(
+      z.object({
+        name: z.string(),
+        /** Render `items` inline as "name: a, b" instead of a nested list. */
+        joinable: z.boolean().optional(),
+        items: z.array(z.string()).optional(),
+      }),
+    ),
+  }),
+});
+
+export const collections = { collection, links, experiences, skills };

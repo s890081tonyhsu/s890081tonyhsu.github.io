@@ -1,8 +1,8 @@
 ---
-import type { GroupItem } from '../../types/item';
+import type { CollectionEntry } from 'astro:content';
 
 type Props = {
-  item: GroupItem<GroupItem<string>>;
+  item: CollectionEntry<'skills'>['data'];
 };
 
 const { item } = Astro.props;
@@ -12,7 +12,7 @@ const { item } = Astro.props;
   <h3>{item.name}</h3>
   <ul>
     {
-      item.items?.map((subGroup) => (
+      item.items.map((subGroup) => (
         <li>
           {subGroup.name}
           {subGroup.items && subGroup.joinable ? (
