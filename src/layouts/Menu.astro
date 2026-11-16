@@ -1,0 +1,56 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const currentPath = Astro.url.pathname.replace('.html', '');
+const links = [
+  { href: '/', label: 'About me' },
+  { href: '/resume', label: 'Resume' },
+  { href: '/collections', label: 'Collections' },
+];
+---
+
+<button
+  type="button"
+  class="menu-btn"
+  aria-label="Toggle navigation"
+  aria-controls="nav"
+  aria-expanded="false"
+>
+  <Icon name="lucide:menu" size={28} aria-hidden="true" />
+</button>
+<nav id="nav" class="hide">
+  <h2>
+    {
+      links.map(({ href, label }, index) => (
+        <Fragment>
+          {index > 0 && <span>|</span>}
+          <a
+            class={href === currentPath ? 'active' : undefined}
+            aria-current={href === currentPath ? 'page' : undefined}
+            href={href}
+          >
+            {label}
+          </a>
+        </Fragment>
+      ))
+    }
+  </h2>
+</nav>
+
+<script>
+  // ClientRouter swaps <body> on navigation, so re-bind after every page load.
+  document.addEventListener('astro:page-load', () => {
+    const button = document.querySelector<HTMLButtonElement>('.menu-btn');
+    const nav = document.getElementById('nav');
+    if (!button || !nav) return;
+
+    const toggle = () => {
+      const isOpen = nav.classList.toggle('show');
+      nav.classList.toggle('hide', !isOpen);
+      button.setAttribute('aria-expanded', String(isOpen));
+    };
+
+    button.addEventListener('click', toggle);
+    nav.addEventListener('click', toggle);
+  });
+</script>
