@@ -1,7 +1,8 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { routePath } from 'src/route-path';
 
-const currentPath = Astro.url.pathname.replace('.html', '');
+const currentPath = routePath(Astro.url.pathname);
 const links = [
   { href: '/', label: 'About me' },
   { href: '/resume', label: 'Resume' },

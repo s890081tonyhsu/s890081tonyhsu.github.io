@@ -2,6 +2,7 @@
 import '@assets/scss/animations.scss';
 import { ClientRouter } from 'astro:transitions';
 import { SITE_DESCRIPTION, SITE_HEAD, SITE_TITLE } from 'src/constants';
+import { routePath } from 'src/route-path';
 
 export type Props = {
   title?: string;
@@ -12,9 +13,7 @@ export type Props = {
 
 const { title: pageTitle, description = SITE_DESCRIPTION, image } = Astro.props;
 
-// `build.format: 'file'` emits `/resume.html`; GitHub Pages also serves it at `/resume`,
-// which is the form the nav links and the sitemap use.
-const canonicalURL = new URL(Astro.url.pathname.replace(/\.html$/, ''), Astro.site);
+const canonicalURL = new URL(routePath(Astro.url.pathname), Astro.site);
 const title = pageTitle ? `${pageTitle} | ${SITE_TITLE}` : SITE_TITLE;
 const imageURL = new URL(image ?? SITE_HEAD, Astro.site).href;
 const twitterCard = image ? 'summary_large_image' : 'summary';

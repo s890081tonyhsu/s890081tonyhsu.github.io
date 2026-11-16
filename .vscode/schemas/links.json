@@ -1,8 +1,0 @@
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "src/data/links.json: entries of the `links` collection. Each item is validated against the schema Astro generates from src/content.config.ts.",
-  "type": "array",
-  "items": {
-    "$ref": "../../.astro/collections/links.schema.json"
-  }
-}

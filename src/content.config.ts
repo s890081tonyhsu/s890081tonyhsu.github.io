@@ -1,5 +1,6 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
 import { file, glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 const collection = defineCollection({
   loader: glob({ pattern: '**/[^_]*.md', base: './src/content/collections' }),
@@ -28,7 +29,7 @@ const links = defineCollection({
     order,
     name: z.string(),
     text: z.string(),
-    href: z.string().url().optional(),
+    href: z.url().optional(),
     sections: z.array(z.enum(['contact', 'profile', 'social'])).nonempty(),
   }),
 });

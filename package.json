@@ -18,7 +18,7 @@
     "@astrojs/sitemap": "^3.7.5",
     "@iconify-json/lucide": "^1.2.155",
     "@iconify-json/simple-icons": "^1.2.102",
-    "astro": "^5.1.2",
+    "astro": "^6.4.8",
     "astro-icon": "^1.2.0",
     "sass": "^1.83.1",
     "sharp": "^0.33.5"
