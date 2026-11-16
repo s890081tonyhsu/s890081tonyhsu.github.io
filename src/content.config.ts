@@ -26,7 +26,12 @@ const links = defineCollection({
   }),
 });
 
-const yearMonth = z.string().regex(/^\d{4}-(0[1-9]|1[0-2])$/, 'Use YYYY-MM');
+// No custom regex message: Astro emits it as an `errorMessage` object that VS Code shows as
+// "[object Object]". The description is shown on hover instead.
+const yearMonth = z
+  .string()
+  .regex(/^\d{4}-(0[1-9]|1[0-2])$/)
+  .describe('Year and month as `YYYY-MM`, e.g. `2023-05`.');
 
 const experiences = defineCollection({
   loader: file('src/data/experiences.json'),
@@ -52,8 +57,10 @@ const skills = defineCollection({
     items: z.array(
       z.object({
         name: z.string(),
-        /** Render `items` inline as "name: a, b" instead of a nested list. */
-        joinable: z.boolean().optional(),
+        joinable: z
+          .boolean()
+          .optional()
+          .describe('Render `items` inline as "name: a, b" instead of a nested list.'),
         items: z.array(z.string()).optional(),
       }),
     ),
