@@ -69,4 +69,13 @@ const languages = defineCollection({
   }),
 });
 
-export const collections = { collection, links, experiences, skills, languages };
+const featuredSkills = defineCollection({
+  loader: file('src/data/featured-skills.json'),
+  schema: z.object({
+    id: z.string(),
+    name: z.string(),
+    items: z.array(z.string()).nonempty(),
+  }),
+});
+
+export const collections = { collection, links, experiences, skills, languages, featuredSkills };

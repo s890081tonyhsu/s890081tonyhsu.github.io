@@ -3,14 +3,13 @@ import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import Layout from '@layouts/Layout.astro';
 import Social from '@components/Social.astro';
-import about from '@data/about.json';
 import { SITE_DESCRIPTION, SITE_HEAD } from 'src/constants';
 
 import '@assets/scss/about.scss';
 
 const headImg = `${SITE_HEAD}?s=200`;
 const selfIntroduction = SITE_DESCRIPTION;
-const { skills } = about;
+const skills = (await getCollection('featuredSkills')).map(({ data }) => data);
 const currentWork = (await getCollection('experiences')).find(
   ({ data }) => data.kind === 'work' && data.time.to === 'now',
 )?.data;
