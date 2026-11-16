@@ -6,8 +6,6 @@ import Social from '@components/Social.astro';
 import { SITE_DESCRIPTION, SITE_HEAD } from 'src/constants';
 import { byOrder } from 'src/sort';
 
-import '@assets/scss/about.scss';
-
 const headImg = `${SITE_HEAD}?s=200`;
 const selfIntroduction = SITE_DESCRIPTION;
 const skills = (await getCollection('featuredSkills')).toSorted(byOrder).map(({ data }) => data);
@@ -66,3 +64,93 @@ const personSchema = {
     </div>
   </div>
 </Layout>
+
+<style>
+  .home-container {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+
+    /* Vertical divider between the two columns. */
+    &:after {
+      content: '';
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      width: 1px;
+      height: 50%;
+      background-color: white;
+      transition: all 0.25s ease-in-out;
+      animation: 0.5s 1 normal home-divider-grow;
+      animation-fill-mode: backwards;
+    }
+
+    > div {
+      width: 50%;
+      padding: 0 50px 0;
+    }
+
+    h1 span {
+      font-size: 0.75em;
+      color: #aaa;
+    }
+
+    .head {
+      text-align: right;
+      transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+      animation: 1s 1 normal slide-in-from-right;
+      animation-delay: 0.5s;
+      animation-fill-mode: backwards;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    .bio {
+      transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+      animation: 1s 1 normal slide-in-from-left;
+      animation-delay: 0.5s;
+      animation-fill-mode: backwards;
+    }
+
+    .skills li {
+      line-height: 1.5em;
+    }
+
+    .socials {
+      padding-left: 25px;
+    }
+
+    @media (max-width: 959px) {
+      flex-direction: column;
+      margin-top: 100px;
+
+      &:after {
+        width: 0;
+        height: 0;
+        transition: none;
+      }
+
+      > div {
+        width: auto;
+      }
+
+      .head {
+        text-align: left;
+      }
+    }
+  }
+
+  @keyframes home-divider-grow {
+    from {
+      height: 0;
+      top: 50%;
+    }
+
+    to {
+      height: 50%;
+      top: 25%;
+    }
+  }
+</style>
