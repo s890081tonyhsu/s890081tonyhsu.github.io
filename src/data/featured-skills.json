@@ -1,6 +1,7 @@
 [
   {
     "id": "frontend",
+    "order": 10,
     "name": "FrontEnd",
     "items": [
       "React",
@@ -9,6 +10,7 @@
   },
   {
     "id": "packing",
+    "order": 20,
     "name": "Packing",
     "items": [
       "Webpack",
@@ -17,6 +19,7 @@
   },
   {
     "id": "devops",
+    "order": 30,
     "name": "DevOps",
     "items": [
       "Docker"
@@ -24,6 +27,7 @@
   },
   {
     "id": "programming",
+    "order": 40,
     "name": "Programming",
     "items": [
       "C/C++",

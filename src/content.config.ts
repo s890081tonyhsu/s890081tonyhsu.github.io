@@ -1,5 +1,6 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
 import { file, glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 const collection = defineCollection({
   loader: glob({ pattern: '**/[^_]*.md', base: './src/content/collections' }),
@@ -15,13 +16,20 @@ const collection = defineCollection({
     }),
 });
 
+// Data files list entries in any order; pages sort by this field. Astro 6+ stores entries sorted by id.
+const order = z
+  .number()
+  .int()
+  .describe('Display order, ascending. Leave gaps (10, 20, 30) so entries can be inserted later.');
+
 const links = defineCollection({
   loader: file('src/data/links.json'),
   schema: z.object({
     id: z.string(),
+    order,
     name: z.string(),
     text: z.string(),
-    href: z.string().url().optional(),
+    href: z.url().optional(),
     sections: z.array(z.enum(['contact', 'profile', 'social'])).nonempty(),
   }),
 });
@@ -52,6 +60,7 @@ const skills = defineCollection({
   loader: file('src/data/skills.json'),
   schema: z.object({
     id: z.string(),
+    order,
     era: z.enum(['current', 'past']),
     name: z.string(),
     items: z.array(
@@ -71,6 +80,7 @@ const languages = defineCollection({
   loader: file('src/data/languages.json'),
   schema: z.object({
     id: z.string(),
+    order,
     name: z.string(),
     text: z.string(),
   }),
@@ -80,6 +90,7 @@ const featuredSkills = defineCollection({
   loader: file('src/data/featured-skills.json'),
   schema: z.object({
     id: z.string(),
+    order,
     name: z.string(),
     items: z.array(z.string()).nonempty(),
   }),

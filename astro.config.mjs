@@ -13,5 +13,8 @@ export default defineConfig({
     format: 'file',
   },
   site: 'https://s890081tonyhsu.github.io',
+  // Astro 7 defaults to 'jsx', which drops whitespace between text and inline elements on
+  // separate lines (e.g. "Source Code:" + <a>). Keep the lossless HTML behavior instead.
+  compressHTML: true,
   integrations: [icon(), sitemap()],
 });

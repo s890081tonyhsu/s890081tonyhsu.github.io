@@ -12,31 +12,31 @@
       "fileMatch": [
         "**/src/data/links.json"
       ],
-      "url": "./.vscode/schemas/links.json"
+      "url": "./.astro/collections/links.schema.json"
     },
     {
       "fileMatch": [
         "**/src/data/experiences.json"
       ],
-      "url": "./.vscode/schemas/experiences.json"
+      "url": "./.astro/collections/experiences.schema.json"
     },
     {
       "fileMatch": [
         "**/src/data/skills.json"
       ],
-      "url": "./.vscode/schemas/skills.json"
+      "url": "./.astro/collections/skills.schema.json"
     },
     {
       "fileMatch": [
         "**/src/data/languages.json"
       ],
-      "url": "./.vscode/schemas/languages.json"
+      "url": "./.astro/collections/languages.schema.json"
     },
     {
       "fileMatch": [
         "**/src/data/featured-skills.json"
       ],
-      "url": "./.vscode/schemas/featured-skills.json"
+      "url": "./.astro/collections/featuredSkills.schema.json"
     }
   ]
 }

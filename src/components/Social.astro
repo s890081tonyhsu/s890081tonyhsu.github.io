@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import { Icon } from 'astro-icon/components';
+import { byOrder } from 'src/sort';
 
 const icons: Record<string, { icon: string; title?: string }> = {
   email: { icon: 'lucide:at-sign' },
@@ -9,7 +10,7 @@ const icons: Record<string, { icon: string; title?: string }> = {
   github: { icon: 'simple-icons:github', title: 'GitHub' },
 };
 
-const socials = (await getCollection('links')).filter((link) => link.data.sections.includes('social'));
+const socials = (await getCollection('links')).toSorted(byOrder).filter((link) => link.data.sections.includes('social'));
 for (const { id } of socials) {
   if (!icons[id]) throw new Error(`links.json: "${id}" is marked "social" but has no icon in Social.astro`);
 }
