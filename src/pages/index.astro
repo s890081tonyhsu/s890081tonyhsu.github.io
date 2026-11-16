@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Layout from '@layouts/Layout.astro';
 import Social from '@components/Social.vue';
 import about from '@data/about.json';
+import resume from '@data/resume.json';
 import { SITE_DESCRIPTION, SITE_HEAD } from 'src/constants';
 
 import '@assets/scss/about.scss';
@@ -10,9 +11,28 @@ import '@assets/scss/about.scss';
 const headImg = `${SITE_HEAD}?s=200`;
 const selfIntroduction = SITE_DESCRIPTION;
 const { skills, socials } = about;
+const currentWork = resume.works.find((work) => work.time.to === 'now');
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Meng-Chieh Hsu',
+  alternateName: 'otomesound',
+  url: Astro.site?.href,
+  image: SITE_HEAD,
+  description: SITE_DESCRIPTION,
+  jobTitle: currentWork?.suffix,
+  worksFor: currentWork && { '@type': 'Organization', name: currentWork.name },
+  sameAs: [socials.github, socials.linkedin, socials.facebook],
+};
 ---
 
 <Layout>
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(personSchema)}
+  />
   <div class="home-container">
     <div class="head">
       <Image src={headImg} alt="header" width="200" height="200" />

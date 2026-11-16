@@ -15,6 +15,7 @@ const currentPath = Astro.url.pathname.replace('.html', '');
 <html lang="en">
   <head>
     <BaseHead {...Astro.props} />
+    <slot name="head" />
   </head>
   <body>
     <Menu path={currentPath} client:load />
