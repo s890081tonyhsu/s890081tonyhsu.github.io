@@ -1,9 +1,9 @@
 ---
 import { Icon } from 'astro-icon/components';
-import type { DateRangeItem } from '../../types/item';
+import type { CollectionEntry } from 'astro:content';
 
 type Props = {
-  item: DateRangeItem;
+  item: CollectionEntry<'experiences'>['data'];
 };
 
 const { item } = Astro.props;

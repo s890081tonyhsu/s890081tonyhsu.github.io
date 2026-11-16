@@ -26,4 +26,21 @@ const links = defineCollection({
   }),
 });
 
-export const collections = { collection, links };
+const yearMonth = z.string().regex(/^\d{4}-(0[1-9]|1[0-2])$/, 'Use YYYY-MM');
+
+const experiences = defineCollection({
+  loader: file('src/data/experiences.json'),
+  schema: z.object({
+    id: z.string(),
+    kind: z.enum(['work', 'volunteer', 'education']),
+    name: z.string(),
+    suffix: z.string().optional(),
+    text: z.string(),
+    time: z.object({
+      from: yearMonth,
+      to: z.union([yearMonth, z.literal('now')]),
+    }),
+  }),
+});
+
+export const collections = { collection, links, experiences };

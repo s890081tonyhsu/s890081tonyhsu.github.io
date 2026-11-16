@@ -7,7 +7,6 @@ import GroupColumnItem from '@components/Resume/GroupColumnItem.astro';
 import HalfColumnItem from '@components/Resume/HalfColumnItem.astro';
 import resume from '@data/resume.json';
 import { SITE_DESCRIPTION, SITE_HEAD } from 'src/constants';
-import type { DateRangeItem } from '../types/item';
 
 import '@assets/scss/resume.scss';
 
@@ -16,6 +15,10 @@ const selfIntroduction = SITE_DESCRIPTION;
 const links = (await getCollection('links')).map(({ data }) => data);
 const contacts = links.filter((link) => link.sections.includes('contact'));
 const profiles = links.filter((link) => link.sections.includes('profile'));
+const experiences = (await getCollection('experiences')).map(({ data }) => data);
+const works = experiences.filter((experience) => experience.kind === 'work');
+const volunteers = experiences.filter((experience) => experience.kind === 'volunteer');
+const educations = experiences.filter((experience) => experience.kind === 'education');
 ---
 
 <Layout title="Resume">
@@ -48,8 +51,8 @@ const profiles = links.filter((link) => link.sections.includes('profile'));
         <h2 class="title">Works</h2>
         <div class="content-items">
           {
-            resume.works.map((work) => (
-              <FullColumnItem item={work as DateRangeItem} />
+            works.map((work) => (
+              <FullColumnItem item={work} />
             ))
           }
         </div>
@@ -68,8 +71,8 @@ const profiles = links.filter((link) => link.sections.includes('profile'));
         <h2 class="title">Volunteers</h2>
         <div class="content-items">
           {
-            resume.volunteers.map((volunteer) => (
-              <FullColumnItem item={volunteer as DateRangeItem} />
+            volunteers.map((volunteer) => (
+              <FullColumnItem item={volunteer} />
             ))
           }
         </div>
@@ -78,8 +81,8 @@ const profiles = links.filter((link) => link.sections.includes('profile'));
         <h2 class="title">Education</h2>
         <div class="content-items">
           {
-            resume.educations.map((education) => (
-              <FullColumnItem item={education as DateRangeItem} />
+            educations.map((education) => (
+              <FullColumnItem item={education} />
             ))
           }
         </div>
