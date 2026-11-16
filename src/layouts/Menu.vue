@@ -14,10 +14,17 @@ const toggleMenu = () => (isMenuVisible.value = !isMenuVisible.value);
 </script>
 
 <template>
-  <div class="menu-btn" @click="toggleMenu()">
-    <MenuIcon />
-  </div>
-  <div id="nav" :class="isMenuVisible ? 'show' : 'hide'" @click="toggleMenu()">
+  <button
+    type="button"
+    class="menu-btn"
+    aria-label="Toggle navigation"
+    aria-controls="nav"
+    :aria-expanded="isMenuVisible"
+    @click="toggleMenu()"
+  >
+    <MenuIcon :size="28" aria-hidden="true" />
+  </button>
+  <nav id="nav" :class="isMenuVisible ? 'show' : 'hide'" @click="toggleMenu()">
     <h2>
       <a :class="path === '/' ? 'active' : ''" href="/">About me</a>
       <span>|</span>
@@ -25,5 +32,5 @@ const toggleMenu = () => (isMenuVisible.value = !isMenuVisible.value);
       <span>|</span>
       <a :class="path === '/collections' ? 'active' : ''" href="/collections">Collections</a>
     </h2>
-  </div>
+  </nav>
 </template>
