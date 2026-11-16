@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import Layout from '@layouts/Layout.astro';
 import FullColumnItem from '@components/Resume/FullColumnItem.astro';
 import GroupColumnItem from '@components/Resume/GroupColumnItem.astro';
@@ -12,6 +13,9 @@ import '@assets/scss/resume.scss';
 
 const headImg = `${SITE_HEAD}?s=200`;
 const selfIntroduction = SITE_DESCRIPTION;
+const links = (await getCollection('links')).map(({ data }) => data);
+const contacts = links.filter((link) => link.sections.includes('contact'));
+const profiles = links.filter((link) => link.sections.includes('profile'));
 ---
 
 <Layout title="Resume">
@@ -31,13 +35,13 @@ const selfIntroduction = SITE_DESCRIPTION;
       <div class="row" style="--i: 2s">
         <h2 class="title">Contact</h2>
         <div class="content-items">
-          {resume.contacts.map((contact) => <HalfColumnItem item={contact} />)}
+          {contacts.map((contact) => <HalfColumnItem {...contact} />)}
         </div>
       </div>
       <div class="row" style="--i: 3s">
         <h2 class="title">Profile</h2>
         <div class="content-items">
-          {resume.profiles.map((profile) => <HalfColumnItem item={profile} />)}
+          {profiles.map((profile) => <HalfColumnItem {...profile} />)}
         </div>
       </div>
       <div class="row" style="--i: 4s">
@@ -95,7 +99,7 @@ const selfIntroduction = SITE_DESCRIPTION;
         <div class="content-items">
           {
             resume.languages.map((language) => (
-              <HalfColumnItem item={language} />
+              <HalfColumnItem {...language} />
             ))
           }
         </div>

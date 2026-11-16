@@ -1,46 +1,4 @@
 {
-  "contacts": [
-    {
-      "name": "email",
-      "text": "otomesound.retry\n@gmail.com",
-      "link": "mailto:otomesound.retry@gmail.com"
-    },
-    {
-      "name": "facebook",
-      "text": "davistonyhsu",
-      "link": "https://fb.me/davistonyhsu"
-    },
-    {
-      "name": "LINE",
-      "text": "davistonyhsu"
-    },
-    {
-      "name": "telegram",
-      "text": "otomesound"
-    }
-  ],
-  "profiles": [
-    {
-      "name": "website",
-      "text": "s890081tonyhsu.github.io",
-      "link": "https://s890081tonyhsu.github.io"
-    },
-    {
-      "name": "linkedin",
-      "text": "Hsu, Meng Chien",
-      "link": "https://www.linkedin.com/in/otomesound"
-    },
-    {
-      "name": "github",
-      "text": "s890081tonyhsu",
-      "link": "https://github.com/s890081tonyhsu"
-    },
-    {
-      "name": "wiki",
-      "text": "NanaIro no Sora",
-      "link": "http://nairosora.lionfree.net"
-    }
-  ],
   "works": [
     {
       "name": "Rayark Inc.",

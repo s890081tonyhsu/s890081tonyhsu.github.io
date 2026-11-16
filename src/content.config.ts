@@ -1,5 +1,5 @@
 import { defineCollection, z } from 'astro:content';
-import { glob } from 'astro/loaders';
+import { file, glob } from 'astro/loaders';
 
 const collection = defineCollection({
   loader: glob({ pattern: '**/[^_]*.md', base: './src/content/collections' }),
@@ -15,4 +15,15 @@ const collection = defineCollection({
     }),
 });
 
-export const collections = { collection };
+const links = defineCollection({
+  loader: file('src/data/links.json'),
+  schema: z.object({
+    id: z.string(),
+    name: z.string(),
+    text: z.string(),
+    href: z.string().url().optional(),
+    sections: z.array(z.enum(['contact', 'profile', 'social'])).nonempty(),
+  }),
+});
+
+export const collections = { collection, links };
