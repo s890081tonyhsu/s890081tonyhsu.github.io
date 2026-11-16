@@ -1,0 +1,28 @@
+---
+import { Icon } from 'astro-icon/components';
+
+type Props = {
+  socials: {
+    email: string;
+    facebook: string;
+    linkedin: string;
+    github: string;
+  };
+};
+
+const { socials } = Astro.props;
+const links = [
+  { href: socials.email, label: 'email', icon: 'lucide:at-sign' },
+  { href: socials.facebook, label: 'facebook', icon: 'simple-icons:facebook', title: 'Facebook' },
+  { href: socials.linkedin, label: 'linkedin', icon: 'simple-icons:linkedin', title: 'LinkedIn' },
+  { href: socials.github, label: 'github', icon: 'simple-icons:github', title: 'GitHub' },
+];
+---
+
+{
+  links.map(({ href, label, icon, title }) => (
+    <a href={href} aria-label={label}>
+      <Icon name={icon} size={48} title={title} role={title ? 'img' : undefined} />
+    </a>
+  ))
+}

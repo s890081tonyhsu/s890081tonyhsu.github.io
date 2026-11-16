@@ -4,6 +4,8 @@ import vue from '@astrojs/vue';
 
 import sitemap from '@astrojs/sitemap';
 
+import icon from 'astro-icon';
+
 // https://astro.build/config
 export default defineConfig({
   build: {
@@ -13,5 +15,5 @@ export default defineConfig({
     format: 'file',
   },
   site: 'https://s890081tonyhsu.github.io',
-  integrations: [vue(), sitemap()],
+  integrations: [vue(), icon(), sitemap()],
 });
