@@ -79,9 +79,10 @@ const personSchema = {
       left: 50%;
       width: 1px;
       height: 50%;
-      background-color: white;
-      transition: all 0.25s ease-in-out;
-      animation: 0.5s 1 normal home-divider-grow;
+      background-color: var(--color-fg);
+      transition: all var(--duration-fast) ease-in-out;
+      animation: var(--duration-base) 1 normal home-divider-grow;
+      animation-delay: var(--enter-frame);
       animation-fill-mode: backwards;
     }
 
@@ -92,14 +93,14 @@ const personSchema = {
 
     h1 span {
       font-size: 0.75em;
-      color: #aaa;
+      color: var(--color-fg-muted);
     }
 
     .head {
       text-align: right;
-      transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
-      animation: 1s 1 normal slide-in-from-right;
-      animation-delay: 0.5s;
+      transition: all var(--duration-fast) var(--ease-pop);
+      animation: var(--duration-slow) 1 normal slide-in-from-right;
+      animation-delay: var(--enter-lead);
       animation-fill-mode: backwards;
 
       img {
@@ -108,9 +109,9 @@ const personSchema = {
     }
 
     .bio {
-      transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
-      animation: 1s 1 normal slide-in-from-left;
-      animation-delay: 0.5s;
+      transition: all var(--duration-fast) var(--ease-pop);
+      animation: var(--duration-slow) 1 normal slide-in-from-left;
+      animation-delay: var(--enter-lead);
       animation-fill-mode: backwards;
     }
 
@@ -124,7 +125,7 @@ const personSchema = {
 
     @media (max-width: 959px) {
       flex-direction: column;
-      margin-top: 100px;
+      margin-top: var(--menu-clearance);
 
       &:after {
         width: 0;

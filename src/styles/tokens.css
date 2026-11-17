@@ -1,0 +1,33 @@
+/*
+ * Design tokens. Components use these by role; a value used once stays in its component.
+ */
+:root {
+  /* Color */
+  --color-bg: black;
+  --color-fg: white;
+  --color-fg-soft: #ddd; /* headings that sit just below the main text */
+  --color-fg-muted: #aaa; /* subtitles, dates, secondary links */
+  --color-fg-subtle: #888; /* body text of resume entries */
+  --color-border: #aaa;
+  --color-border-subtle: #888;
+
+  /* Layout */
+  --nav-height: 100px; /* desktop bottom nav bar; pages end with a spacer this tall */
+  --menu-clearance: 100px; /* mobile: space above content for the floating menu button */
+
+  /* Motion: how it moves */
+  --ease-pop: cubic-bezier(1, 0.5, 0.8, 1);
+  --duration-fast: 0.25s; /* hover and state changes */
+  --duration-base: 0.5s;
+  --duration-slow: 1s;
+
+  /*
+   * Motion: when it enters. Entrance choreography runs in beats; an element names the phase it
+   * belongs to instead of a raw delay, so changing --beat retimes every page and keeps the order.
+   */
+  --beat: 0.5s;
+  --enter-frame: 0s; /* page title, header, dividers */
+  --enter-lead: var(--beat); /* the main subject: avatar, card frame */
+  --enter-content: calc(var(--beat) * 2); /* what the subject frames: card image and text */
+  --stagger: 0.125s; /* gap between items of a list entering one after another */
+}
