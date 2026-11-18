@@ -52,8 +52,8 @@
   {
     "id": "linkedin",
     "order": 60,
-    "name": "linkedin",
-    "text": "Hsu, Meng Chien",
+    "name": "LinkedIn",
+    "text": "Hsu, Meng-Chieh",
     "href": "https://www.linkedin.com/in/otomesound",
     "sections": [
       "profile",
@@ -63,7 +63,7 @@
   {
     "id": "github",
     "order": 70,
-    "name": "github",
+    "name": "GitHub",
     "text": "s890081tonyhsu",
     "href": "https://github.com/s890081tonyhsu",
     "sections": [

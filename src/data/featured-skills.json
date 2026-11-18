@@ -2,7 +2,7 @@
   {
     "id": "frontend",
     "order": 10,
-    "name": "FrontEnd",
+    "name": "Front End",
     "items": [
       "React",
       "Sass"
@@ -23,7 +23,7 @@
     "name": "DevOps",
     "items": [
       "Docker",
-      "Gitlab CI"
+      "GitLab CI"
     ]
   },
   {

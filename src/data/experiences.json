@@ -37,7 +37,7 @@
     "kind": "volunteer",
     "name": "Paper: Efficient Fault-Tolerant Routing in IoT Wireless Sensor Networks Based on Bipartite-Flow Graph Modeling",
     "suffix": "Research Helper",
-    "text": "Write Experiment Code and Collect Experiment Result.",
+    "text": "Write Experiment Code and Collect Experiment Results.",
     "time": {
       "from": "2018-03",
       "to": "2019-01"
@@ -68,7 +68,7 @@
   {
     "id": "g0v-community-tw",
     "kind": "volunteer",
-    "name": "G0V Community, TW",
+    "name": "g0v Community, TW",
     "suffix": "Developer",
     "text": "Update UI for 2 projects (council-voter-guide, itaigi).",
     "time": {
@@ -103,7 +103,7 @@
     "kind": "education",
     "name": "National Taiwan University of Science and Technology",
     "suffix": "Master Student",
-    "text": "Study in Computer Science and Information Engineering, received Master Degree.",
+    "text": "Study in Computer Science and Information Engineering, received Master's Degree.",
     "time": {
       "from": "2019-09",
       "to": "2022-08"
@@ -114,7 +114,7 @@
     "kind": "education",
     "name": "Fu Jen Catholic University",
     "suffix": "Bachelor Student",
-    "text": "Study in Computer Science and Information Engineering, received Bachelor Degree.",
+    "text": "Study in Computer Science and Information Engineering, received Bachelor's Degree.",
     "time": {
       "from": "2015-09",
       "to": "2019-08"

@@ -1,6 +1,6 @@
 ---
 order: 2
-title: 'NekowizTW fairyMake'
+title: 'NekowizTW fairyMaker'
 subtitle: 'Custom Editor on Canvas'
 image: './images/nekowiztw-fairymaker.png'
 projectLink: 'https://github.com/s890081tonyhsu/fairyMaker'
