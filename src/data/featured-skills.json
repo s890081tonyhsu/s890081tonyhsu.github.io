@@ -11,7 +11,7 @@
   {
     "id": "packing",
     "order": 20,
-    "name": "Packing",
+    "name": "Build Tools",
     "items": [
       "Vite",
       "Webpack"
@@ -32,7 +32,7 @@
     "name": "Programming",
     "items": [
       "Rust",
-      "C/C++"
+      "C++"
     ]
   }
 ]

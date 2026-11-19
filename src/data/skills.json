@@ -6,28 +6,57 @@
     "name": "Front End",
     "items": [
       {
-        "name": "JavaScript/TypeScript",
+        "name": "Languages",
+        "joinable": true,
         "items": [
-          "Framework(React)"
+          "TypeScript",
+          "JavaScript",
+          "HTML",
+          "CSS"
         ]
       },
       {
-        "name": "CSS",
+        "name": "Frameworks",
+        "joinable": true,
         "items": [
-          "Framework(MUI)",
-          "Preprocessor(Sass)",
+          "React",
+          "Vue (maintenance)"
+        ]
+      },
+      {
+        "name": "State & Data",
+        "joinable": true,
+        "items": [
+          "Redux Toolkit",
+          "SWR",
+          "Axios"
+        ]
+      },
+      {
+        "name": "Styling",
+        "joinable": true,
+        "items": [
+          "MUI",
+          "Sass",
           "Tailwind CSS"
         ]
       },
       {
-        "name": "Packing Tool",
+        "name": "Build Tools",
+        "joinable": true,
         "items": [
           "Vite",
           "Webpack"
         ]
       },
       {
-        "name": "HTML"
+        "name": "Testing",
+        "joinable": true,
+        "items": [
+          "Jest",
+          "Vitest",
+          "Testing Library"
+        ]
       }
     ]
   },
@@ -38,7 +67,8 @@
     "name": "DevOps",
     "items": [
       {
-        "name": "Virtual Machine",
+        "name": "Container",
+        "joinable": true,
         "items": [
           "Docker"
         ]
@@ -51,10 +81,47 @@
         ]
       },
       {
-        "name": "Shell Scripts",
+        "name": "CI",
+        "joinable": true,
         "items": [
-          "Linux(bash, zsh)",
-          "Windows(cmd, powershell)"
+          "GitLab CI",
+          "GitHub Actions (personal projects)"
+        ]
+      },
+      {
+        "name": "Scripting",
+        "joinable": true,
+        "items": [
+          "Node.js (dev tooling)",
+          "bash",
+          "zsh",
+          "PowerShell",
+          "cmd"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "current-ai-assisted-development",
+    "order": 25,
+    "era": "current",
+    "name": "AI-Assisted Development",
+    "items": [
+      {
+        "name": "Tools",
+        "joinable": true,
+        "items": [
+          "Claude Code",
+          "OpenAI Codex",
+          "Gemini"
+        ]
+      },
+      {
+        "name": "Practices",
+        "joinable": true,
+        "items": [
+          "Agentic coding",
+          "Code review skill"
         ]
       }
     ]
@@ -66,12 +133,12 @@
     "name": "Programming",
     "items": [
       {
-        "name": "Console",
+        "name": "Languages",
         "joinable": true,
         "items": [
-          "Rust",
-          "C/C++",
-          "Go (practice projects)"
+          "Rust (personal research)",
+          "Go (practice projects)",
+          "C++"
         ]
       }
     ]
@@ -133,6 +200,8 @@
         "joinable": true,
         "items": [
           "MySQL",
+          "MS SQL",
+          "SQLite",
           "MongoDB"
         ]
       },
@@ -164,15 +233,8 @@
         "joinable": true,
         "items": [
           "Nginx",
-          "Apache"
-        ]
-      },
-      {
-        "name": "DBMS",
-        "joinable": true,
-        "items": [
-          "MySQL",
-          "MongoDB"
+          "Apache",
+          "IIS"
         ]
       },
       {
