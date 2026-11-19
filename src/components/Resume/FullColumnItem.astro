@@ -16,6 +16,15 @@ const { item } = Astro.props;
     {item.suffix && <span class="suffix">as {item.suffix}</span>}
   </h3>
   <p class="description">{item.text}</p>
+  {
+    item.highlights && (
+      <ul class="highlights">
+        {item.highlights.map((highlight) => (
+          <li>{highlight}</li>
+        ))}
+      </ul>
+    )
+  }
   <h4 class="time">
     <Icon name="lucide:calendar" size={32} />{item.time.from} - {item.time.to}
   </h4>

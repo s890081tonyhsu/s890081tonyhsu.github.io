@@ -48,7 +48,8 @@ const experiences = defineCollection({
     kind: z.enum(['work', 'volunteer', 'education']),
     name: z.string(),
     suffix: z.string().optional(),
-    text: z.string(),
+    text: z.string().describe('One-sentence summary.'),
+    highlights: z.array(z.string()).optional().describe('Bullet points shown under the summary.'),
     time: z.object({
       from: yearMonth,
       to: z.union([yearMonth, z.literal('now')]),

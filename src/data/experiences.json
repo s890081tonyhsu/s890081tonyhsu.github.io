@@ -4,7 +4,14 @@
     "kind": "work",
     "name": "Rayark Inc.",
     "suffix": "Frontend Developer",
-    "text": "Game Admin Development and Internal Frontend Project.",
+    "text": "Built back-office systems and internal tools for game teams, as part of the company's technology center.",
+    "highlights": [
+      "Developed the operations back office (React 18, TypeScript) for the operations, customer support, game design, and QA teams. Record data can reach tens of thousands of rows. Tables use pagination, with a default page size that fills one screen and more rows on request. Non-table lists use virtualization for \"show more\" and infinite scroll, which keeps scrolling back up responsive.",
+      "Built the front end of two internal AI tools: a workflow recorder for game designers, whose back end only relays LLM API calls, and a document search interface with AI-assisted search. Our self-hosted chat UI only accepted PDF uploads. When the LLM API started accepting images, I worked with AI to trace the existing TypeScript front-end and back-end code, extended the upload flow to images, and sent them to the API as base64, sizing files against the API limit with base64's 4/3 overhead in mind.",
+      "Migrated the build tooling from react-scripts to Vite, which cut dev server startup from about 1 minute to about 10 seconds and production builds from about 3 minutes to just over 1 minute. Upgraded Node.js, React, and related packages.",
+      "Fixed timeouts in component tests for a form with about 20 fields. The whole-form test always exceeded the 5-second limit, so I split it into a form shell and five section tests. A single-field validation test dropped from about 4 seconds to under 1 second. In form tests, I also avoided per-keystroke typing, because every keystroke fires onChange and reruns validation.",
+      "Used Claude, Codex, and Gemini for agentic coding, and built a code review skill that shortens review time."
+    ],
     "time": {
       "from": "2023-05",
       "to": "2026-11"

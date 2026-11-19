@@ -68,5 +68,10 @@ const { wide = false } = Astro.props;
     :global(li > ul) {
       font-size: 0.95em;
     }
+
+    /* Highlights are paragraph-long; a gap keeps them from reading as one block. */
+    :global(.highlights li + li) {
+      margin-top: 0.5em;
+    }
   }
 </style>
